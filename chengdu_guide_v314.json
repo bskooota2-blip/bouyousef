@@ -1,0 +1,623 @@
+[
+  {
+    "category": "مولات",
+    "ar": "تايكو لي",
+    "en": "Chengdu Taikoo Li",
+    "zh": "成都远洋太古里",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "مجمع آي إف إس",
+    "en": "Chengdu IFS",
+    "zh": "成都国际金融中心",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "مجمع إس كي بي",
+    "en": "Chengdu SKP",
+    "zh": "成都SKP",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "المركز العالمي",
+    "en": "New Century Global Center",
+    "zh": "新世纪环球中心",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "مجمع ميكس سي",
+    "en": "Chengdu MixC",
+    "zh": "成都万象城",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "رافلز سيتي",
+    "en": "Raffles City Chengdu",
+    "zh": "成都来福士广场",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "جوي سيتي",
+    "en": "Chengdu Joy City",
+    "zh": "成都大悦城",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "جيننيو واندا بلازا",
+    "en": "Jinniu Wanda Plaza",
+    "zh": "金牛万达广场",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "يينتاي إن 99",
+    "en": "Chengdu Yintai in99",
+    "zh": "成都银泰中心in99",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "تايمز أوتلت",
+    "en": "Chengdu Times Outlets",
+    "zh": "成都时代奥特莱斯",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مولات",
+    "ar": "مول كابيتالاند جيننيو",
+    "en": "CapitaMall Jinniu",
+    "zh": "凯德广场·金牛",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "أسواق",
+    "ar": "شارع تشونشي",
+    "en": "Chunxi Road",
+    "zh": "春熙路",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "أسواق",
+    "ar": "شارع جينلي",
+    "en": "Jinli Ancient Street",
+    "zh": "锦里古街",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "أسواق",
+    "ar": "أزقة كوانتشاي",
+    "en": "Kuanzhai Alleys",
+    "zh": "宽窄巷子",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "أسواق",
+    "ar": "سوق سونغشيانتشياو للتحف",
+    "en": "Songxianqiao Antique Market",
+    "zh": "送仙桥古玩市场",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "أسواق",
+    "ar": "شارع يانشيكو التجاري",
+    "en": "Yanshikou Shopping District",
+    "zh": "盐市口商圈",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "أسواق",
+    "ar": "حي ونشو فانغ",
+    "en": "Wenshu Fang",
+    "zh": "文殊坊",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "مركز أبحاث وتربية الباندا",
+    "en": "Chengdu Research Base of Giant Panda Breeding",
+    "zh": "成都大熊猫繁育研究基地",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "ساحة تيانفو",
+    "en": "Tianfu Square",
+    "zh": "天府广场",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "حديقة الشعب",
+    "en": "People’s Park",
+    "zh": "人民公园",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "معبد ووهـو",
+    "en": "Wuhou Shrine",
+    "zh": "武侯祠",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "معبد ونشو",
+    "en": "Wenshu Monastery",
+    "zh": "文殊院",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "متحف تشنغدو",
+    "en": "Chengdu Museum",
+    "zh": "成都博物馆",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "متحف سيتشوان",
+    "en": "Sichuan Museum",
+    "zh": "四川博物院",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "كوخ الشاعر دو فو",
+    "en": "Du Fu Thatched Cottage",
+    "zh": "杜甫草堂",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "نظام دوجيانغيان للري",
+    "en": "Dujiangyan Irrigation System",
+    "zh": "都江堰景区",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "جبل تشينغتشنغ",
+    "en": "Mount Qingcheng",
+    "zh": "青城山",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "بلدة هوانغلونغشي القديمة",
+    "en": "Huanglongxi Ancient Town",
+    "zh": "黄龙溪古镇",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "بلدة لوداي القديمة",
+    "en": "Luodai Ancient Town",
+    "zh": "洛带古镇",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "جسر جيويان",
+    "en": "Jiuyan Bridge",
+    "zh": "九眼桥",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "معبد داتسي",
+    "en": "Daci Temple",
+    "zh": "大慈寺",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "الحي الإبداعي إيسترن سابرب",
+    "en": "Eastern Suburb Memory",
+    "zh": "东郊记忆",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "برج التلفزيون تشنغدو",
+    "en": "West Pearl Tower",
+    "zh": "四川广播电视塔",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "سياحة",
+    "ar": "مركز جينشا الأثري",
+    "en": "Jinsha Site Museum",
+    "zh": "金沙遗址博物馆",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مطاعم",
+    "ar": "السلطان التركي – فرع فانغهوا",
+    "en": "The Sultan Turkish Restaurant – Fanghua",
+    "zh": "苏坦土耳其餐吧（芳华店）",
+    "address": "成都市武侯区芳华街25号附12号",
+    "cuisine": "تركي / شرق أوسطي",
+    "note": "يُذكر كمطعم حلال؛ تحقق من التشغيل والمكونات قبل الزيارة"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "سفاري – مأكولات شرق أوسطية",
+    "en": "Safari Middle Eastern Restaurant",
+    "zh": "Safari中东餐厅",
+    "address": "成都市科华中路150号",
+    "cuisine": "عربي / شرق أوسطي",
+    "note": "ورد في دليل مطاعم حلال؛ الاسم الصيني تقريبي للبحث، تأكد من الموقع"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "زمزم الباكستاني والهندي",
+    "en": "ZamZam Pakistani Restaurant",
+    "zh": "ZamZam巴基斯坦餐厅",
+    "address": "成都市高新区天府大道北段1480号8栋1层105号",
+    "cuisine": "هندي / باكستاني",
+    "note": "يُعرّف نفسه بأنه حلال؛ يُفضل التأكد مباشرة"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "سبايس ماجيك الهندي",
+    "en": "Spice Magic",
+    "zh": "香料客Spice Magic",
+    "address": "成都市高新区盛和一路99号凯德广场新南4楼",
+    "cuisine": "هندي",
+    "note": "لم يتم التحقق من شهادة حلال"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "إنديا كيتشن",
+    "en": "India Kitchen",
+    "zh": "印度厨房",
+    "address": "成都市武侯区高升桥东路6号罗马假日广场",
+    "cuisine": "هندي",
+    "note": "لم يتم التحقق من شهادة حلال"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "ميغا ماسالا",
+    "en": "Mega Masala",
+    "zh": "大马萨拉印度餐厅",
+    "address": "成都市成华区望平街25号附8号",
+    "cuisine": "هندي",
+    "note": "لم يتم التحقق من شهادة حلال"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "مطعم كاتماندو",
+    "en": "Kathmandu Nepalese & Indian",
+    "zh": "加德满都",
+    "address": "成都市青羊区浣锦路99号一楼",
+    "cuisine": "هندي / نيبالي",
+    "note": "لم يتم التحقق من شهادة حلال"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "تيان فانغ لو – صيني حلال",
+    "en": "Tianfanglou Halal Restaurant",
+    "zh": "天方楼",
+    "address": "成都市青羊区西域街108号",
+    "cuisine": "صيني حلال",
+    "note": "قرب مسجد هوانغتشنغ؛ تأكد من العنوان قبل الذهاب"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "مطعم يو شيانغ تسون الحلال",
+    "en": "Yuexiangcun Halal Restaurant",
+    "zh": "悦香村清真餐厅",
+    "address": "成都市青羊区西域街6号",
+    "cuisine": "صيني حلال",
+    "note": "مطعم صيني إسلامي قرب مسجد هوانغتشنغ"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "مطعم شينجيان بُغدا الحلال",
+    "en": "Xinjiang Bugda Muslim Restaurant",
+    "zh": "新疆天池穆斯林快餐厅",
+    "address": "成都市武侯区一环路南一段24号",
+    "cuisine": "صيني حلال / شينجياني",
+    "note": "مطبخ مسلم من منطقة شينجيان"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "مطعم شينجيان الغربي",
+    "en": "Xiyu Fengqing Xinjiang Restaurant",
+    "zh": "西域风情新疆主题餐厅",
+    "address": "成都市武侯区一环路南一段9号负一层",
+    "cuisine": "صيني حلال / شينجياني",
+    "note": "مطعم بطابع شينجيان"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "مطعم هوانغتشنغ الإسلامي",
+    "en": "Huangcheng Muslim Restaurant",
+    "zh": "皇城伊斯兰大餐厅",
+    "address": "成都市青羊区新华大道洛阳路29号",
+    "cuisine": "صيني حلال",
+    "note": "تحقق من توفر المطعم والبيانات على AMAP"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "بيتزا هت – تشونشي 🍕 بيتزا",
+    "en": "Pizza Hut – Chunxi Road",
+    "zh": "必胜客（春熙路店）",
+    "address": "成都市锦江区总府路8号",
+    "cuisine": "🍕 بيتزا",
+    "note": "غير مصنّف حلالًا؛ تحقق من المكونات"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "بيتزا هت – لووماشي 🍕 بيتزا",
+    "en": "Pizza Hut – Luomashi",
+    "zh": "必胜客（骡马市店）",
+    "address": "成都市青羊区青龙街51号",
+    "cuisine": "🍕 بيتزا",
+    "note": "غير مصنّف حلالًا؛ تحقق من المكونات"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "بلو سوشال كانتينا 🍕 بيتزا",
+    "en": "Blue Social Cantina",
+    "zh": "Blue Social Cantina",
+    "address": "成都市武侯区紫荆东路26号",
+    "cuisine": "🍕 بيتزا",
+    "note": "مطعم إيطالي؛ غير مصنّف حلالًا"
+  },
+  {
+    "category": "مطاعم",
+    "ar": "بلو ريفييرا 🍕 بيتزا",
+    "en": "Blue Riviera",
+    "zh": "Blue Riviera",
+    "address": "成都市高新区铁像寺水街二期6栋1楼14号",
+    "cuisine": "🍕 بيتزا",
+    "note": "مطعم إيطالي؛ غير مصنّف حلالًا"
+  },
+  {
+    "category": "فنادق",
+    "ar": "أبر هاوس تشنغدو",
+    "en": "Upper House Chengdu (formerly The Temple House)",
+    "zh": "成都博舍",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "نيكولو تشنغدو",
+    "en": "Niccolo Chengdu",
+    "zh": "成都尼依格罗酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "غراند حياة تشنغدو",
+    "en": "Grand Hyatt Chengdu",
+    "zh": "成都群光君悦酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "شانغريلا تشنغدو",
+    "en": "Shangri-La Chengdu",
+    "zh": "成都香格里拉大酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "جي دبليو ماريوت تشنغدو",
+    "en": "JW Marriott Hotel Chengdu",
+    "zh": "成都茂业JW万豪酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "ريتز كارلتون تشنغدو",
+    "en": "The Ritz-Carlton Chengdu",
+    "zh": "成都富力丽思卡尔顿酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "سانت ريجيس تشنغدو",
+    "en": "The St. Regis Chengdu",
+    "zh": "成都瑞吉酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "والدورف أستوريا تشنغدو",
+    "en": "Waldorf Astoria Chengdu",
+    "zh": "成都华尔道夫酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "دبليو تشنغدو",
+    "en": "W Chengdu",
+    "zh": "成都W酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "فنادق",
+    "ar": "ذا لانغبو تشنغدو",
+    "en": "The Langbo Chengdu",
+    "zh": "成都朗珀酒店",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مواصلات",
+    "ar": "مطار تيانفو الدولي",
+    "en": "Chengdu Tianfu International Airport",
+    "zh": "成都天府国际机场",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مواصلات",
+    "ar": "مطار شوانغليو الدولي",
+    "en": "Chengdu Shuangliu International Airport",
+    "zh": "成都双流国际机场",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مواصلات",
+    "ar": "محطة تشنغدو الشرقية",
+    "en": "Chengdu East Railway Station",
+    "zh": "成都东站",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مواصلات",
+    "ar": "محطة تشنغدو الجنوبية",
+    "en": "Chengdu South Railway Station",
+    "zh": "成都南站",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مواصلات",
+    "ar": "محطة تشنغدو الغربية",
+    "en": "Chengdu West Railway Station",
+    "zh": "成都西站",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مواصلات",
+    "ar": "محطة تيانفو سكوير للمترو",
+    "en": "Tianfu Square Metro Station",
+    "zh": "天府广场地铁站",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مواصلات",
+    "ar": "محطة تشونشي لو للمترو",
+    "en": "Chunxi Road Metro Station",
+    "zh": "春熙路地铁站",
+    "address": "",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مساجد",
+    "ar": "مسجد هوانغتشنغ",
+    "en": "Huangcheng Mosque",
+    "zh": "皇城清真寺",
+    "address": "四川省成都市青羊区小河街2号",
+    "cuisine": "",
+    "note": ""
+  },
+  {
+    "category": "مساجد",
+    "ar": "مسجد شارع غولو الجنوبي",
+    "en": "Gulou South Street Mosque",
+    "zh": "鼓楼南街清真寺",
+    "address": "四川省成都市青羊区鼓楼南街115号",
+    "cuisine": "",
+    "note": ""
+  }
+]
