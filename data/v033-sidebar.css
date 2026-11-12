@@ -1,0 +1,29 @@
+
+/* V033: right navigation & standalone account/updates services. No city CSS changes. */
+.sidebar .nav-button{flex:0 0 auto;min-height:90px;max-height:none}
+.by33-page{max-width:1040px;margin:20px auto 40px;padding:0 18px;color:#073460;font-family:Tahoma,'Segoe UI',Arial,sans-serif;box-sizing:border-box}
+.by33-page[hidden]{display:none!important}
+.by33-head{text-align:center;border:1px solid #70c5f2;border-radius:22px;background:linear-gradient(125deg,#e0f5ff,#fff);padding:25px 16px;margin-bottom:18px;box-shadow:0 4px 15px #124c6b12}
+.by33-head h1{margin:6px 0;color:#072f59;font-size:clamp(25px,3.2vw,34px)}
+.by33-head p{margin:6px 0 0;font-size:15px}.by33-head-icon{font-size:39px}
+.by33-auth-wrap,.by33-updates-wrap{max-width:790px;margin:auto;background:#fff;border:1px solid #7bc8f1;border-radius:20px;padding:22px;box-shadow:0 4px 18px #0f68991b}
+.by33-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:19px}
+.by33-tabs button,.by33-filter-row button{border:1px solid #c39339;border-radius:14px;padding:12px 8px;color:#06365a;background:#f5fbff;font-weight:700}
+.by33-tabs .is-active,.by33-filter-row .is-active{background:#057bbf;color:#fff}
+.by33-form{display:grid;gap:14px}.by33-form[hidden]{display:none!important}
+.by33-form label{display:grid;gap:8px;font-weight:700;font-size:15px}.by33-form input{padding:13px;border:1px solid #a5cde9;border-radius:11px;min-width:0;width:100%;font:inherit;direction:ltr;text-align:left}
+.by33-primary{background:#087cbb;color:#fff;border:0;border-radius:12px;padding:13px;font-weight:800;font-size:16px}
+.by33-link{color:#0764a3;border:1px solid #a9d4ec;border-radius:12px;background:#f6fbff;padding:10px 16px;font-weight:700}
+.by33-home{display:block;margin:18px auto 0;border:1px solid #c39437;background:linear-gradient(#fff,#e7f6ff);color:#06355a;font-weight:800;padding:12px 20px;border-radius:12px}
+.by33-message{min-height:1.6em;line-height:1.6;color:#075e87;font-weight:700}.by33-message.error{color:#b32625}
+.by33-note{font-size:13px;line-height:1.9;color:#526879;border-top:1px solid #e4edf1;padding-top:10px}
+.by33-member{border:1px solid #c7e8f6;border-radius:15px;padding:18px;background:#f2faff}.by33-member[hidden]{display:none!important}
+#by33Admin{margin-top:15px;border-top:1px solid #b8daec;padding-top:14px}#by33Admin[hidden]{display:none!important}
+.by33-statgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.by33-stat{padding:14px;border:1px solid #add8eb;border-radius:10px;background:white;text-align:center}.by33-stat strong{display:block;font-size:23px}
+.by33-filter-row{display:flex;gap:9px;flex-wrap:wrap;justify-content:center}.by33-filter-row button{font-size:14px;padding:9px 12px}
+.by33-count{text-align:center;color:#586d83;font-size:14px}.by33-updates-cards{display:grid;gap:12px}
+.by33-update{border:1px solid #add6eb;border-right:4px solid #d0a142;border-radius:15px;padding:16px 18px;background:#fcfeff}
+.by33-update h2{font-size:18px;margin:8px 0}.by33-update p{font-size:14px;line-height:1.8;margin:5px 0}.by33-update-meta{font-size:13px;color:#496e84}.by33-update a{display:inline-block;color:#056fa8;font-weight:800;margin-top:7px;text-decoration:underline}
+@media(max-width:680px){.by33-page{padding:0 10px;margin-top:14px}.by33-auth-wrap,.by33-updates-wrap{padding:13px}.by33-tabs button{font-size:13px}.by33-head{padding:16px 9px}.by33-statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.by33-brand{font-size:14px;font-weight:900;color:#075c90;margin-top:5px}

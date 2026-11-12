@@ -1,0 +1,55 @@
+
+#by36StorePage[hidden],#by36Viewer[hidden]{display:none!important}
+.by36-page{direction:rtl;max-width:1190px;margin:14px auto 35px;padding:10px 14px;color:#0a315b;font-family:Tahoma,Arial,sans-serif;box-sizing:border-box}
+.by36-page *{box-sizing:border-box}
+.by36-head{text-align:center;border:2px solid #d2aa4e;border-radius:25px;background:linear-gradient(130deg,#def2ff,#fff 54%,#ebf8ff);box-shadow:0 8px 24px #17477519;padding:20px;margin:12px 0 22px}
+.by36-head h1{font-size:clamp(28px,4vw,39px);margin:5px 0;color:#073e75}.by36-head p{font-size:15px;margin:9px 0}
+.by36-kicker{color:#226696;font-size:13px;font-weight:800}.by36-back,.by36-action{border:1.5px solid #69b9e6;background:linear-gradient(#fff,#e1f4ff);border-radius:13px;padding:11px 15px;color:#095482;font-weight:800;cursor:pointer;font-size:15px}
+.by36-head .by36-back{float:right}.by36-head:after{content:'';display:block;clear:both}
+.by36-cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin:20px 0}
+.by36-tile{min-width:0;border:2px solid #d9b259;border-radius:19px;background:linear-gradient(140deg,#fff,#e6f5ff);padding:18px 9px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;box-shadow:0 5px 15px #07457715;color:#09386c;cursor:pointer;font-weight:800;min-height:158px}
+.by36-tile img{width:100px;height:100px;object-fit:contain;border-radius:12px;background:#fff}.by36-tile strong{font-size:17px}.by36-tile small{font-size:12px}.by36-tile[disabled]{cursor:not-allowed;opacity:.65;background:#edf0f4;border-color:#c4cdd7}
+.by36-toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;justify-content:space-between;margin:14px 0}
+.by36-toolbar h2{color:#083b6b;font-size:clamp(20px,3vw,29px);margin:6px}
+.by36-note{background:#fff8e5;border:1px solid #e2c478;border-radius:12px;padding:13px;margin:15px 0;line-height:1.8}
+.by36-pics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:15px 0;align-items:start}
+.by36-photo{min-width:0;border:1px solid #d9b259;border-radius:15px;overflow:hidden;background:#fff;box-shadow:0 6px 18px #11447718}
+.by36-photo img{width:100%;height:auto;display:block;cursor:zoom-in;object-fit:contain}
+.by36-photo-foot{display:flex;justify-content:space-between;align-items:center;padding:9px;font-weight:800;font-size:14px}
+.by36-photo-foot button{border:1px solid #9ccde8;background:#eff9ff;border-radius:9px;padding:8px;cursor:pointer}
+.by36-contacts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:18px 0}.by36-contacts a{border-radius:12px;padding:13px 20px;text-decoration:none;background:#e2f7ed;color:#09643b;font-weight:800}
+.by36-bottom{text-align:center;margin:20px 0}
+.by36-viewer{position:fixed;inset:0;background:#000e;z-index:2147483000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:20px}
+.by36-viewer img{max-width:96vw;max-height:76vh;object-fit:contain;background:#fff;border-radius:8px}.by36-viewer p{color:#fff}
+.by36-close{background:white;border:0;padding:11px 22px;border-radius:11px;font-weight:800;cursor:pointer}
+@media(max-width:850px){.by36-pics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.by36-page{padding:8px}.by36-head .by36-back{float:none}.by36-cardgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.by36-tile{min-height:125px;padding:10px 4px}.by36-tile img{width:70px;height:70px}.by36-tile strong{font-size:13px}.by36-pics{gap:8px}.by36-photo-foot{font-size:12px}}
+
+/* V041.7: Normalize store category tiles, preserve existing brand/product gallery and locked sections. */
+#by36StorePage .by40-store-grid,#by36StorePage .by41-category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,240px));justify-content:center;align-items:stretch;gap:16px;margin:20px 0}
+#by36StorePage .by40-store-grid .by36-tile,#by36StorePage .by41-category-grid .by36-tile{width:100%;min-width:0;min-height:280px;height:280px;max-width:240px;padding:12px;border-radius:16px;gap:8px;justify-content:center;text-align:center}
+#by36StorePage .by40-store-grid .by36-tile img,#by36StorePage .by41-category-grid .by36-tile img{width:200px;height:200px;max-width:100%;max-height:200px;aspect-ratio:1/1;object-fit:contain;flex:0 1 auto;border-radius:12px;background:transparent;display:block;margin-inline:auto}
+#by36StorePage .by40-store-grid .by36-tile strong,#by36StorePage .by41-category-grid .by36-tile strong{font-size:15px;line-height:1.35}
+#by36StorePage .by40-store-grid .by36-tile small,#by36StorePage .by41-category-grid .by36-tile small{font-size:12px;line-height:1.4}
+#by36StorePage .by41-category-grid .by36-tile[disabled]{cursor:not-allowed;opacity:.76}
+@media(max-width:560px){
+ #by36StorePage .by40-store-grid,#by36StorePage .by41-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ #by36StorePage .by40-store-grid .by36-tile,#by36StorePage .by41-category-grid .by36-tile{min-height:0;height:auto;max-width:none;min-width:0;padding:9px 5px;gap:5px}
+ #by36StorePage .by40-store-grid .by36-tile img,#by36StorePage .by41-category-grid .by36-tile img{width:min(100%,160px);height:auto;aspect-ratio:1/1;max-height:160px}
+ #by36StorePage .by40-store-grid .by36-tile strong,#by36StorePage .by41-category-grid .by36-tile strong{font-size:13px}
+ #by36StorePage .by40-store-grid .by36-tile small,#by36StorePage .by41-category-grid .by36-tile small{font-size:11px}
+}
+
+/* V041.11: Only the bags-and-shoes main store category tile uses the AH cart artwork. */
+#by36StorePage .by40-store-grid .by36-tile[data-path="categories"] img.by41-categories-ah-cart{display:block;width:min(200px,100%);height:200px;object-fit:contain;object-position:center;margin:0 auto;border:0;background:transparent;border-radius:14px;}
+
+/* V041.15: Dior 012-019 only: visually enlarge centered content with original JPG bytes unchanged. */
+#by36StorePage .by36-photo .by41-dior-zoom-frame{
+  width:100%; aspect-ratio:1 / 1; overflow:hidden; position:relative; background:#f9f1e9;
+}
+#by36StorePage .by36-photo .by41-dior-zoom-frame > img{
+  width:100%; height:100%; max-width:none; display:block; object-fit:contain;
+  object-position:center; transform-origin:center center; cursor:zoom-in;
+}
+#by36StorePage .by36-photo .by41-dior-zoom-tall > img{transform:scale(2.45)}
+#by36StorePage .by36-photo .by41-dior-zoom-wide > img{transform:scale(2.00)}
