@@ -57,7 +57,7 @@
   if(r.signatureDrink)addP(main,'gz-info gz-special-drink','☕ المشروب المميز: '+r.signatureDrink);
   if(r.nearby)addP(main,'gz-info',r.nearby);
   const side=element('div','gz-place-side',sectionIcon(r.section));
-  article.append(actionsWrap,main,side);return article;
+  article.append(actionsWrap,main,side);return window.BY2_FAVORITES.addHeart(article,r,'guangzhou');
  }
  function currentListing(){return document.getElementById('gzListing')}
 function buildGuangzhouInformation(box){
@@ -127,7 +127,7 @@ function buildGuangzhouInformation(box){
   returns.append(backCity,homeBtn);tools.append(returns);panel.append(tools);
   const controls=element('div','gz-controls'),input=element('input');input.type='search';input.placeholder=m.search;input.value=localSearch;input.setAttribute('aria-label',m.search);input.addEventListener('input',()=>{localSearch=input.value;pageSize=32;updateGrid()});
   controls.append(input);const pills=element('div','gz-pills');
-  for(const filter of ['الكل',...filterNames]){const pill=element('button','gz-pill'+(selectedFilter===filter?' active':''));pill.type='button';pill.setAttribute('aria-pressed',String(selectedFilter===filter));pill.append(element('span','gz-filter-icon',filterIcon(filter)),element('span','gz-filter-label',filter==='الكل'?m.all:filter));pill.addEventListener('click',()=>{selectedFilter=filter;selectedCafeTag='الكل';pageSize=32;renderListings()});pills.append(pill)}
+  for(const filter of ['الكل',...filterNames,'❤️ المفضلة']){const pill=element('button','gz-pill'+(selectedFilter===filter?' active':'')+(filter==='❤️ المفضلة'?' by2-fav-pill':''));pill.type='button';pill.setAttribute('aria-pressed',String(selectedFilter===filter));pill.append(element('span','gz-filter-icon',(filter==='❤️ المفضلة'?'♥':filterIcon(filter))),element('span','gz-filter-label',filter==='الكل'?m.all:filter));pill.addEventListener('click',()=>{selectedFilter=filter;selectedCafeTag='الكل';pageSize=32;renderListings()});pills.append(pill)}
   controls.append(pills);
   if(activeSectionId==='dining'&&selectedFilter==='الكافيهات'){
    const tagWrap=element('div','gz-cafe-tag-wrap');tagWrap.append(element('div','gz-cafe-tag-heading','☕ أنواع الكافيهات'));
@@ -139,9 +139,9 @@ function buildGuangzhouInformation(box){
   panel.append(controls);
   const counter=element('p','gz-count'),grid=element('div','gz-grid'),pager=element('div','gz-pagination');panel.append(counter,grid,pager);box.append(panel);
   if(activeSectionId==='information'){controls.hidden=true;counter.hidden=true;buildGuangzhouInformation(grid);return;}
-  function updateGrid(){const q=clean(localSearch);const filtered=source.filter(r=>(selectedFilter==='الكل'||subtypeFor(r,activeSectionId)===selectedFilter)&&(selectedCafeTag==='الكل'||(Array.isArray(r.cafeTags)&&r.cafeTags.includes(selectedCafeTag)))&&(!q||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.metro,r.note,r.subtype,r.addressAr,...(r.searchAliases||[])].some(v=>clean(v).includes(q))));
+  function updateGrid(){const q=clean(localSearch);const filtered=source.filter(r=>(selectedFilter==='الكل'||(selectedFilter==='❤️ المفضلة'&&window.BY2_FAVORITES.isSaved('guangzhou',r.id))||subtypeFor(r,activeSectionId)===selectedFilter)&&(selectedCafeTag==='الكل'||(Array.isArray(r.cafeTags)&&r.cafeTags.includes(selectedCafeTag)))&&(!q||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.metro,r.note,r.subtype,r.addressAr,...(r.searchAliases||[])].some(v=>clean(v).includes(q))));
    counter.textContent=m.found+': '+filtered.length;grid.replaceChildren();pager.replaceChildren();filtered.slice(0,pageSize).forEach(r=>grid.append(recordCard(r)));
-   if(!filtered.length)grid.append(element('div','gz-empty',m.noResult));
+   if(!filtered.length)grid.append(element('div','gz-empty',selectedFilter==='❤️ المفضلة'?'لم تقم بإضافة أماكن إلى المفضلة بعد ❤️':m.noResult));
    if(filtered.length>pageSize){const b=element('button','',m.more+' ('+(filtered.length-pageSize)+')');b.type='button';b.addEventListener('click',()=>{pageSize+=32;updateGrid()});pager.append(b)}
    if(highlighted){const hit=box.querySelector('#place-'+highlighted);if(hit){if(window.BY3_GLOBAL_TARGET&&window.BY3_GLOBAL_TARGET.city===0){window.BY3_GLOBAL_TARGET=null;hit.classList.add('by3-search-highlight');}requestAnimationFrame(()=>hit.scrollIntoView({block:'center',behavior:'smooth'}));highlighted=''}}
   }
@@ -153,6 +153,7 @@ function buildGuangzhouInformation(box){
   const construction=area.querySelector('.construction-box');if(construction)construction.hidden=active;
   if(active){renderListings()}
  };
+ window.BY2_FAVORITES.subscribe(()=>{if(state.kind==='section'&&state.city===0)renderListings()});
  searchNow=function(){baseSearch();if(!window.BY3_GUANGZHOU)return;const term=clean(document.getElementById('searchInput').value);if(!term||term.length<2)return;
   const matches=store.items.filter(r=>[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.metro,r.subtype,r.addressAr,...(r.searchAliases||[])].some(v=>clean(v).includes(term))).slice(0,32);
   const out=document.getElementById('searchResults');if(matches.length){const heading=element('p','',ui[lang].searchMatches+' ('+matches.length+(matches.length===32?'+':'')+')');out.append(heading)}

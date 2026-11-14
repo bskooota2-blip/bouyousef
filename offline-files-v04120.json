@@ -1,5 +1,5 @@
 {
-  "version": "v041.20.0",
+  "version": "v041.21.0",
   "files": [
     "./app-icon-1024.png",
     "./apple-touch-icon.png",
@@ -233,7 +233,9 @@
     "./manifest.json",
     "./offline-download.js",
     "./offline-download.css",
-    "./assets/mobile-social-v04120-1.css"
+    "./assets/mobile-social-v04120-1.css",
+    "./data/favorites-v04121.js",
+    "./assets/favorites-v04121.css"
   ],
   "note": "Only same-origin public static files; no API, login or external content, videos excluded."
 }
