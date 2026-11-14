@@ -1,10 +1,15 @@
 'use strict';
 (function(){
  const DB=window.BY3_OTHER_CITIES?.cities||{};
+ const loc=()=>window.BY2_L10N;
+ const tr=v=>loc()?.term(v)||v;
+ const placeName=r=>loc()?.place(r)||r.ar||r.en||r.zh;
+ const currentLang=()=>loc()?.language()||'ar';
+ const localizedInfo=(icon,ar,en,zh,value)=>icon+' '+(currentLang()==='en'?en:currentLang()==='zh'?zh:ar)+': '+value;
  const labels={markets:'الأسواق',malls:'المجمعات التجارية',dining:'المطاعم والكافيهات',tourism:'الأماكن السياحية',hotels:'الفنادق',transport:'المواصلات',mosques:'المساجد',information:'معلومات المدينة'};
  const icons={markets:'🏪',malls:'🛍️',dining:'🍽️',tourism:'🏞️',hotels:'🏨',transport:'🚆',mosques:'🕌',information:'ℹ️'};
  const make=(tag,cls,txt)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n;};
- const normalize=v=>String(v||'').toLocaleLowerCase().trim();
+ const normalize=v=>String(v||'').normalize('NFKC').toLocaleLowerCase().replace(/[\u064b-\u065f\u0670]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/\s+/g,' ').trim();
  const available=v=>typeof v==='string' && !!v.trim() && !/^(?:null|undefined|nan|n\/a|غير موثق)$/i.test(v.trim());
  let filter='الكل',regionFilter='الكل',searchTerm='',max=32,lastKey='';
  let beijingDiningGroup='الكل'; // parent filter matches Guangzhou's single-row cuisine categories
@@ -51,14 +56,15 @@
  function place(r,citySlug){
   const article=make('article','gz-place by3-place');article.id='place-'+r.id;
   const content=make('div','gz-place-main by3-place-main');
-  content.append(make('h3','gz-place-name',r.ar));
-  if(available(r.en))content.append(make('p','gz-en',r.en));
+  content.append(make('h3','gz-place-name',placeName(r)));
+  if(available(r.ar)&&currentLang()!=='ar')content.append(make('p','gz-info by2-original-arabic',r.ar));
+  if(available(r.en)&&r.en!==placeName(r))content.append(make('p','gz-en',r.en));
   if(available(r.zh))content.append(make('p','gz-zh',r.zh));
-  if(available(r.sourceCategory))content.append(make('span','gz-tag',r.sourceCategory));
-  if(available(r.addressZh))content.append(make('p','gz-info','📍 العنوان الصيني: '+r.addressZh));
-  if(available(r.addressEn))content.append(make('p','gz-info','📍 العنوان الإنجليزي: '+r.addressEn));
-  if(available(r.metro))content.append(make('p','gz-info','🚇 المترو: '+r.metro));
-  if(available(r.note))content.append(make('p','gz-info','ℹ️ '+r.note));
+  if(available(r.sourceCategory))content.append(make('span','gz-tag',tr(r.sourceCategory)));
+  if(available(r.addressZh))content.append(make('p','gz-info','📍 '+tr('العنوان الصيني')+': '+r.addressZh));
+  if(available(r.addressEn))content.append(make('p','gz-info','📍 '+tr('العنوان الإنجليزي')+': '+r.addressEn));
+  if(available(r.metro))content.append(make('p','gz-info','🚇 '+tr('المترو')+': '+r.metro));
+  if(available(r.note)){const note=make('p','gz-info','ℹ️ '+r.note);if(currentLang()!=='ar')note.lang='ar';content.append(note);}
   const actions=make('div','gz-place-actions by3-place-actions');
   function action(label,symbol,value,cls){
    if(!available(value))return;
@@ -131,15 +137,16 @@
    const a=make('a','gz-amap gz-action gz-action-amap');a.href='https://uri.amap.com/search?keyword='+encodeURIComponent(destination)+'&city='+encodeURIComponent(cityCode||'深圳');a.target='_blank';a.rel='noopener noreferrer';a.title='البحث عن الوجهة في AMAP (ليس عنوانًا مؤكدًا)';a.setAttribute('aria-label',a.title);a.append(make('span','gz-action-icon','➤'),make('span','gz-action-label','AMAP'));actions.append(a);}
   actionsWrap.append(actions);
   const main=make('div','gz-place-main by3-place-main'),top=make('div','gz-place-top');
-  if(available(r.subtype)&&!(shanghaiDining&&r.subtype==='المخابز'))top.append(make('span','gz-tag',r.subtype));else if(available(r.sourceCategory))top.append(make('span','gz-tag',r.sourceCategory));else top.append(make('span','gz-tag',labels[r.section]||r.section));main.append(top);
-  main.append(make('h3','',r.ar||r.en||r.zh));
-  if(available(r.en))main.append(make('p','gz-en',r.en));
-  if(available(r.zh))main.append(make('p','gz-zh',r.zh));
-  if(available(r.addressZh))main.append(make('p','gz-info',scopedChineseOnly&&!fullChineseAddress?'📍 المنطقة / وصف الموقع (عنوان غير تفصيلي): '+r.addressZh:'📍 العنوان الصيني: '+r.addressZh));
-  if(available(r.addressEn))main.append(make('p','gz-info','📍 العنوان الإنجليزي: '+r.addressEn));
-  if(available(r.metro))main.append(make('p','gz-info','🚇 المترو: '+r.metro));
-  if(cityCode==='上海'&&r.section==='markets'&&Array.isArray(r.undergroundGoods)&&r.undergroundGoods.length)main.append(make('p','gz-info','🛍️ البضائع: '+r.undergroundGoods.join(' · ')));
-  if(available(r.note))main.append(make('p','gz-info','ℹ️ '+r.note));
+  if(available(r.subtype)&&!(shanghaiDining&&r.subtype==='المخابز'))top.append(make('span','gz-tag',tr(r.subtype)));else if(available(r.sourceCategory))top.append(make('span','gz-tag',tr(r.sourceCategory)));else top.append(make('span','gz-tag',labels[r.section]||r.section));main.append(top);
+  main.append(make('h3','',placeName(r)));
+  if(available(r.ar)&&currentLang()!=='ar')main.append(make('p','gz-info by2-original-arabic',r.ar));
+  if(available(r.en)&&r.en!==placeName(r))main.append(make('p','gz-en',r.en));
+  if(available(r.zh)&&r.zh!==placeName(r))main.append(make('p','gz-zh',r.zh));
+  if(available(r.addressZh))main.append(make('p','gz-info',scopedChineseOnly&&!fullChineseAddress?'📍 '+tr('المنطقة / وصف الموقع (عنوان غير تفصيلي)')+': '+r.addressZh:'📍 '+tr('العنوان الصيني')+': '+r.addressZh));
+  if(available(r.addressEn))main.append(make('p','gz-info','📍 '+tr('العنوان الإنجليزي')+': '+r.addressEn));
+  if(available(r.metro))main.append(make('p','gz-info','🚇 '+tr('المترو')+': '+r.metro));
+  if(cityCode==='上海'&&r.section==='markets'&&Array.isArray(r.undergroundGoods)&&r.undergroundGoods.length)main.append(make('p','gz-info','🛍️ '+tr('البضائع')+': '+r.undergroundGoods.join(' · ')));
+  if(available(r.note)){const note=make('p','gz-info','ℹ️ '+(currentLang()==='ar'?'':currentLang()==='en'?'Original note (Arabic): ':'原始备注（阿拉伯语）：')+r.note);if(currentLang()!=='ar')note.lang='ar';main.append(note);}
   if(available(r.region))main.append(make('p','gz-info','🗺️ المنطقة: '+r.region));
   if(available(r.sourceCaution)&&!(cityCode==='上海'&&r.section==='dining'))main.append(make('p','gz-info','⚠️ '+r.sourceCaution));
   const beijingDiningIcon=cityCode==='北京'&&r.section==='dining' ? (/مخابز|الحلويات التقليدية/.test(String(r.subtype||''))?'🥐':/كافيه/.test(String(r.subtype||''))?'☕':'🍽️') : null;
@@ -153,7 +160,7 @@
  }
  function info(box,city,records){
   const c=DB[city.slug],root=make('div','gz-info-detail');root.dir='rtl';root.lang='ar';
-  if(typeof lang!=='undefined' && lang!=='ar')root.append(make('p','gz-info-lang-note','معلومات المدينة متاحة بالعربية حاليًا.'));
+  if(typeof lang!=='undefined' && lang!=='ar')root.append(make('p','gz-info-lang-note',currentLang()==='en'?'City information below is currently available in Arabic only.':'以下城市信息目前仅提供阿拉伯语。'));
   root.append(make('div','gz-info-intro',c.intro));
   const layout=make('div','gz-info-layout'),nearCol=make('div','gz-info-column'),highCol=make('div','gz-info-column');
   const panel=(parent,icon,title)=>{const n=make('section','gz-info-panel-block');n.append(make('h3','gz-info-title',icon+' '+title));parent.append(n);return n;};
@@ -204,15 +211,15 @@
    }else{const index=relevant.findIndex(x=>String(x.id)===String(globalTarget.id));max=Math.max(32,index+1);}
   }
 
-  wrapper.replaceChildren();const panel=make('div','gz-panel');
+  wrapper.replaceChildren();wrapper.lang=currentLang();wrapper.dir=currentLang()==='ar'?'rtl':'ltr';const panel=make('div','gz-panel');
   const header=make('div','gz-panel-head'),heading=make('div','gz-panel-title-wrap');
-  heading.append(make('div','gz-section-title',city.ar+' / '+(labels[id]||id)),make('div','gz-section-count','عدد الأماكن: '+relevant.length));
+  heading.append(make('div','gz-section-title',cityName(state.city)+' / '+tr(labels[id]||id)),make('div','gz-section-count',tr('عدد الأماكن')+': '+relevant.length));
   header.append(heading,make('div','gz-panel-icon',icons[id]||'📍'));panel.append(header);
   const nav=make('div','gz-section-tools'),ret=make('div','gz-return-buttons');
-  ret.append(button('العودة لأقسام المدينة',()=>navigate({kind:'city',city:state.city})),button('العودة إلى الرئيسية',()=>navigate({kind:'home'})));
+  ret.append(button(tr('العودة لأقسام المدينة'),()=>navigate({kind:'city',city:state.city})),button(tr('العودة إلى الرئيسية'),()=>navigate({kind:'home'})));
   nav.append(ret);panel.append(nav);
   if(id==='information'){const content=make('div',(city.slug==='shenzhen'||city.slug==='foshan'||city.slug==='yiwu'||city.slug==='guilin'||city.slug==='yangshuo'||city.slug==='zhangjiajie'||city.slug==='chongqing'||city.slug==='hainan'||city.slug==='shanghai'||city.slug==='beijing'||city.slug==='yangshuo')?'gz-shenzhen-information':'gz-grid gz-other-information-grid');panel.append(content);if(record)info(content,city,rows);else content.append(make('p','gz-empty','لا توجد معلومات من المصدر.'));wrapper.append(panel);return;}
-  const tools=make('div','gz-controls'),input=make('input');input.type='search';input.value=searchTerm;input.placeholder='ابحث داخل القسم...';if(city.slug!=='yiwu' && city.slug!=='guilin' && city.slug!=='yangshuo' && city.slug!=='zhangjiajie' && city.slug!=='chongqing' && city.slug!=='hainan' && city.slug!=='shanghai' && city.slug!=='beijing')tools.append(input);
+  const tools=make('div','gz-controls'),input=make('input');input.type='search';input.value=searchTerm;input.placeholder=tr('ابحث داخل القسم...');if(city.slug!=='yiwu' && city.slug!=='guilin' && city.slug!=='yangshuo' && city.slug!=='zhangjiajie' && city.slug!=='chongqing' && city.slug!=='hainan' && city.slug!=='shanghai' && city.slug!=='beijing')tools.append(input);
   const beijingDining=city.slug==='beijing'&&id==='dining';
   const groupPills=beijingDining?make('div','gz-pills by3-beijing-primary'):null;
   const pills=make('div','gz-pills');
@@ -222,7 +229,7 @@
   const counter=make('p','gz-count'),grid=make('div','gz-grid'),pager=make('div','gz-pagination');panel.append(counter,grid,pager);wrapper.append(panel);
   const shenzhen=city.slug==='shenzhen'||city.slug==='foshan'||city.slug==='yiwu'||city.slug==='guilin'||city.slug==='yangshuo'||city.slug==='zhangjiajie'||city.slug==='chongqing'||city.slug==='hainan'||city.slug==='shanghai'||city.slug==='yangshuo'||city.slug==='beijing';
   const subtypes=city.slug==='shanghai'&&id==='mosques'?[]:[...new Set(relevant.map(r=>r.subtype).filter(Boolean))];if(city.slug==='beijing' && id==='mosques')subtypes.splice(0,subtypes.length);if(city.slug==='shanghai'&&id==='dining'){const order=['المطاعم العربية','المطاعم التركية','المطاعم الهندية والباكستانية','المطاعم الإيرانية','المطاعم الآسيوية الحلال','المطاعم الأوروبية','البيتزا','المأكولات البحرية','الكافيهات','المخابز'];subtypes.splice(0,subtypes.length,...order);}if(city.slug==='beijing'&&id==='hotels'){const order=['5 نجوم','4 نجوم','3 نجوم','غير مصنفة'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}if(city.slug==='beijing'&&id==='transport'){const order=['المطارات','محطات القطارات','المترو والمواصلات الأخرى'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}if((city.slug==='guilin'||city.slug==='yangshuo'||city.slug==='zhangjiajie'||city.slug==='chongqing'||city.slug==='hainan'||city.slug==='shanghai')&&id==='hotels'){const order=['5 نجوم','4 نجوم','3 نجوم','غير مصنفة'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}
-  if(shenzhen){panel.classList.add('v022-shenzhen-panel');input.setAttribute('aria-label','البحث في قسم '+(labels[id]||id));}
+  if(shenzhen){panel.classList.add('v022-shenzhen-panel');input.setAttribute('aria-label',tr('ابحث داخل القسم...')+' — '+tr(labels[id]||id));}
 
   function paint(){
    if(regionPills){regionPills.replaceChildren();const availableRegions=[...new Set(relevant.map(r=>r.region).filter(Boolean))];['الكل',...availableRegions].forEach(reg=>{const b=button((reg==='الكل'?'🏝️ ':'📍 ')+reg,()=>{regionFilter=reg;filter='الكل';max=32;paint()},'gz-pill'+(regionFilter===reg?' active':''));b.setAttribute('aria-pressed',String(regionFilter===reg));regionPills.append(b)})}
@@ -241,7 +248,7 @@
     });
     const groupOrder=['الكل','❤️ المفضلة',...availableCuisine,...(relevant.some(isCafe)?['الكافيهات']:[]),...(relevant.some(isBakery)?['المخابز']:[])];
     if(!groupOrder.includes(beijingDiningGroup))beijingDiningGroup='الكل';
-    const labelOf=g=>g==='الكل'?'الكل':g;
+    const labelOf=g=>tr(g);
     groupPills.replaceChildren();
     for(const g of groupOrder){
      const btn=button('',()=>{beijingDiningGroup=g;filter='الكل';max=32;paint()},'gz-pill'+(beijingDiningGroup===g?' active':'')+(g==='❤️ المفضلة'?' by2-fav-pill':''));
@@ -269,16 +276,16 @@
      if(beijingDiningGroup==='المخابز'&&tags.firstElementChild)tags.firstElementChild.textContent='🥐 الكل';
      pills.append(tags);
     }
-    matches=groupItems.filter(r=>(filter==='الكل'||tagsOf(r).includes(filter))&&(!searchTerm||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.note,r.metro].some(t=>normalize(t).includes(normalize(searchTerm)))));
+    matches=groupItems.filter(r=>(filter==='الكل'||tagsOf(r).includes(filter))&&(!searchTerm||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.note,r.metro,r.subtype,r.sourceCategory,...(r.searchAliases||[])].some(t=>normalize(t).includes(normalize(searchTerm)))));
    }else{
-    ['الكل',...subtypes,'❤️ المفضلة'].forEach(f=>pills.append((()=>{const b=button('',()=>{filter=f;if(f==='❤️ المفضلة')regionFilter='الكل';max=32;paint()},'gz-pill'+(filter===f?' active':'')+(f==='❤️ المفضلة'?' by2-fav-pill':''));b.setAttribute('aria-pressed',String(filter===f));b.append(make('span','gz-filter-icon',city.slug==='shanghai'&&id==='markets'&&f==='الأنفاق والسراديب'?'🚇':(f==='❤️ المفضلة'?'♥':filterIcon(f))),make('span','gz-filter-label',f));return b})()));
-    matches=relevant.filter(r=>(filter==='الكل'||(filter==='❤️ المفضلة'&&window.BY2_FAVORITES.isSaved(city.slug,r.id))||r.subtype===filter||(city.slug==='beijing'&&Array.isArray(r.v0313Tags)&&r.v0313Tags.includes(filter)))&&(city.slug!=='hainan'||regionFilter==='الكل'||r.region===regionFilter)&&(!searchTerm||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.note,r.metro].some(t=>normalize(t).includes(normalize(searchTerm)))));
+    ['الكل',...subtypes,'❤️ المفضلة'].forEach(f=>pills.append((()=>{const b=button('',()=>{filter=f;if(f==='❤️ المفضلة')regionFilter='الكل';max=32;paint()},'gz-pill'+(filter===f?' active':'')+(f==='❤️ المفضلة'?' by2-fav-pill':''));b.setAttribute('aria-pressed',String(filter===f));b.append(make('span','gz-filter-icon',city.slug==='shanghai'&&id==='markets'&&f==='الأنفاق والسراديب'?'🚇':(f==='❤️ المفضلة'?'♥':filterIcon(f))),make('span','gz-filter-label',tr(f)));return b})()));
+    matches=relevant.filter(r=>(filter==='الكل'||(filter==='❤️ المفضلة'&&window.BY2_FAVORITES.isSaved(city.slug,r.id))||r.subtype===filter||(city.slug==='beijing'&&Array.isArray(r.v0313Tags)&&r.v0313Tags.includes(filter)))&&(city.slug!=='hainan'||regionFilter==='الكل'||r.region===regionFilter)&&(!searchTerm||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.note,r.metro,r.subtype,r.sourceCategory,...(r.searchAliases||[])].some(t=>normalize(t).includes(normalize(searchTerm)))));
    }
-   counter.textContent='عدد الأماكن: '+matches.length;grid.replaceChildren();pager.replaceChildren();
+   counter.textContent=tr('عدد الأماكن')+': '+matches.length;grid.replaceChildren();pager.replaceChildren();
    matches.slice(0,max).forEach(x=>grid.append(shenzhen?shenzhenPlace(x,city.slug==='foshan'?'佛山':city.slug==='yiwu'?'义乌':city.slug==='guilin'?'桂林':city.slug==='yangshuo'?'阳朔':city.slug==='zhangjiajie'?'张家界':city.slug==='chongqing'?'重庆':city.slug==='hainan'?'海南':city.slug==='shanghai'?'上海':city.slug==='beijing'?'北京':'深圳'):place(x,city.slug)));
    if(globalTarget&&window.BY3_GLOBAL_TARGET===globalTarget){const hit=[...grid.querySelectorAll('.by3-place')].find(el=>el.id==='place-'+globalTarget.id);if(hit){window.BY3_GLOBAL_TARGET=null;hit.classList.add('by3-search-highlight');requestAnimationFrame(()=>requestAnimationFrame(()=>hit.scrollIntoView({block:'center',behavior:'smooth'})));}}
-   if(!matches.length)grid.append(make('p','gz-empty',(filter==='❤️ المفضلة'||beijingDiningGroup==='❤️ المفضلة')?'لم تقم بإضافة أماكن إلى المفضلة بعد ❤️':city.slug==='shanghai'&&id==='dining'?'لا توجد أماكن موثقة حاليًا لهذا التصنيف.':'لا توجد مواقع في هذا القسم ضمن النسخة المصدر.'));
-   if(max<matches.length)pager.append(button('عرض المزيد ('+(matches.length-max)+')',()=>{max+=32;paint()}));
+   if(!matches.length)grid.append(make('p','gz-empty',(filter==='❤️ المفضلة'||beijingDiningGroup==='❤️ المفضلة')?tr('لم تقم بإضافة أماكن إلى المفضلة بعد ❤️'):city.slug==='shanghai'&&id==='dining'?tr('لا توجد أماكن موثقة حاليًا لهذا التصنيف.'):tr('لا توجد مواقع في هذا القسم ضمن النسخة المصدر.')));
+   if(max<matches.length)pager.append(button(tr('عرض المزيد')+' ('+(matches.length-max)+')',()=>{max+=32;paint()}));
   }
   if(city.slug!=='yiwu' && city.slug!=='guilin' && city.slug!=='yangshuo' && city.slug!=='zhangjiajie' && city.slug!=='chongqing' && city.slug!=='hainan' && city.slug!=='shanghai' && city.slug!=='beijing')input.addEventListener('input',()=>{searchTerm=input.value;max=32;paint()});paint();
  };

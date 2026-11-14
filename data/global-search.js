@@ -33,14 +33,18 @@
    return score(b)-score(a);
   });
  }
- function render(){const q=input.value.trim();resultBox.replaceChildren();if(!q){count.textContent='اكتب كلمة للبحث في المدن والأماكن والمطاعم والفنادق وغيرها.';return;}
-  const matches=findMatches(q);count.textContent=matches.length?'عدد النتائج: '+matches.length+(matches.length>150?' — تُعرض أول 150 نتيجة':''):'لا توجد نتائج مطابقة.';
-  if(!matches.length){resultBox.append(el('div','by3-global-search-empty','جرّب اسمًا آخر بالعربية أو الإنجليزية أو الصينية.'));return;}
+ const language=()=>window.BY2_L10N?.language()||'ar';
+ const msg=(ar,en,zh)=>language()==='en'?en:language()==='zh'?zh:ar;
+ const displayCity=i=>language()==='en'?cities[i].en:language()==='zh'?zhCity[i]:cities[i].ar;
+ const displaySection=id=>{const sec=sections.find(s=>s.id===id);return sec?.[language()]||id};
+ function render(){const q=input.value.trim();resultBox.replaceChildren();if(!q){count.textContent=msg('اكتب كلمة للبحث في المدن والأماكن والمطاعم والفنادق وغيرها.','Search cities, markets, restaurants, hotels and more.','搜索城市、市场、餐厅、酒店等。');return;}
+  const matches=findMatches(q);count.textContent=matches.length?msg('عدد النتائج: ','Results: ','结果数：')+matches.length+(matches.length>150?msg(' — تُعرض أول 150 نتيجة',' — first 150 shown',' — 仅显示前150条'):''):msg('لا توجد نتائج مطابقة.','No matching results.','没有匹配结果。');
+  if(!matches.length){resultBox.append(el('div','by3-global-search-empty',msg('جرّب اسمًا آخر بالعربية أو الإنجليزية أو الصينية.','Try a different name in Arabic, English or Chinese.','试试阿拉伯语、英语或中文名称。')));return;}
   matches.slice(0,150).forEach(d=>{
    const card=el('article','by3-global-result'),body=el('div','by3-global-result-main');
-   body.append(el('strong','',d.name));const where=d.type==='service'?'خدمات الموقع':d.type==='city'?'المدن':cities[d.city].ar+(d.type==='place'?' — '+sectionTitle(d.section):' — الأقسام');
+   body.append(el('strong','',d.type==='place'?(language()==='en'?(d.en||d.name):language()==='zh'?(d.zh||d.name):d.name):d.type==='city'?displayCity(d.city):d.type==='section'?displaySection(d.section):d.type==='service'?(locales[language()]?.['nav_'+d.service]||d.name):d.name));const where=d.type==='service'?msg('خدمات الموقع','Site services','网站服务'):d.type==='city'?msg('المدن','Cities','城市'):displayCity(d.city)+(d.type==='place'?' — '+displaySection(d.section):' — '+msg('الأقسام','Sections','栏目'));
    body.append(el('small','',where));if(d.type==='place'&&d.en)body.append(el('small','',d.en));if(d.type==='place'&&d.zh)body.append(el('small','',d.zh));if(d.description)body.append(el('p','',d.description.slice(0,160)));
-   const jump=el('button','',d.type==='place'?'الانتقال إلى الموقع':'الانتقال');jump.type='button';jump.addEventListener('click',()=>{
+   const jump=el('button','',d.type==='place'?msg('الانتقال إلى الموقع','Go to place','查看地点'):msg('الانتقال','Open','打开'));jump.type='button';jump.addEventListener('click',()=>{
     const dest=d.type==='service'?{kind:'service',service:d.service}:d.type==='city'?{kind:'city',city:d.city}:{kind:'section',city:d.city,section:d.section};
     window.BY3_GLOBAL_TARGET=d.type==='place'?{city:d.city,section:d.section,id:d.id}:null;window.BY3_GLOBAL_SCROLL_ID=d.type==='place'?d.id:null;
     close();if(location.hash===urlFor(dest)){renderRoute('navigate');}else{navigate(dest);}
