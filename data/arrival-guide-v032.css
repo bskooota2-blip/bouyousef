@@ -1,0 +1,133 @@
+/* V032: self-contained China Arrival Card page. No city styles overridden. */
+#by3ArrivalGuide[hidden]{display:none!important}
+#by3ArrivalGuide{width:min(1160px,calc(100% - 22px));margin:16px auto 40px;font-family:inherit;color:#07345d;box-sizing:border-box}
+#by3ArrivalGuide *,#by3ArrivalGuide *::before,#by3ArrivalGuide *::after{box-sizing:border-box}
+#by3ArrivalGuide .by3-ac-hero{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:10px;align-items:center;background:linear-gradient(120deg,#e5f5ff,#ffffff 58%,#caeafa);border:2px solid #86c8ef;border-radius:25px;padding:25px 30px;box-shadow:0 7px 22px #0369a117;min-height:212px}
+#by3ArrivalGuide .by3-ac-hero-copy{text-align:right;min-width:0}
+#by3ArrivalGuide .by3-ac-hero h1{font-size:clamp(25px,3vw,39px);margin:7px 0;color:#002f59;line-height:1.4}
+#by3ArrivalGuide .by3-ac-hero p{font-size:22px;font-weight:bold;color:#266697;margin:0 0 10px;direction:ltr;text-align:right}
+#by3ArrivalGuide .by3-ac-hero strong{display:block;color:#005d92;font-size:18px}
+#by3ArrivalGuide .by3-ac-kicker{color:#956414;font-weight:800}
+#by3ArrivalGuide .by3-ac-hero-icon{display:flex;align-items:center;justify-content:center;font-size:98px;line-height:1;position:relative;background:linear-gradient(130deg,#c8e8ff,#fff);border-radius:28px;height:168px;border:2px solid #efc97d}
+#by3ArrivalGuide .by3-ac-hero-icon span{position:absolute;font-size:48px;bottom:13px;left:20px}
+#by3ArrivalGuide .by3-ac-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:17px 0}
+#by3ArrivalGuide .by3-ac-action{border-radius:16px!important;min-height:70px;border:2px solid #e0af56;background:#fff;box-shadow:0 5px 11px #0063a416;display:flex;align-items:center;justify-content:center;gap:8px;color:#08385e!important;font-weight:800;font-size:17px;text-align:center;padding:10px;text-decoration:none!important;cursor:pointer;white-space:normal;line-height:1.5}
+#by3ArrivalGuide .by3-ac-primary{background:linear-gradient(180deg,#1998dc,#005d9d);border-color:#0077c3;color:#fff!important}
+#by3ArrivalGuide .by3-ac-action:focus-visible,#by3ArrivalGuide .by3-ac-zoom:focus-visible{outline:3px solid #f3ab2a;outline-offset:3px}
+#by3ArrivalGuide .by3-ac-alert{background:#fff6c8;border:1px solid #e9c55e;border-radius:14px;padding:14px;font-size:16px;line-height:1.8;color:#5d420c}
+#by3ArrivalGuide .by3-ac-alert a{overflow-wrap:anywhere;color:#005b9d}
+#by3ArrivalGuide .by3-ac-steps,#by3ArrivalGuide .by3-ac-faq{background:#f1faff;border:1px solid #9bd0ee;border-radius:24px;padding:22px;margin-top:18px}
+#by3ArrivalGuide h2{font-size:25px;color:#074471;text-align:center;margin:0 0 10px}
+#by3ArrivalGuide .by3-ac-small{text-align:center;color:#536b80;font-size:15px;line-height:1.8;max-width:850px;margin:0 auto 19px}
+#by3ArrivalGuide .by3-ac-steps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#by3ArrivalGuide .by3-ac-step{position:relative;background:#fff;border:1.5px solid #e0b65f;border-radius:19px;padding:19px 12px 15px;min-width:0;text-align:center;box-shadow:0 4px 12px #0c569a0a}
+#by3ArrivalGuide .by3-ac-step h3{font-size:19px;color:#11395e;margin:4px 25px 12px 0;min-height:48px;line-height:1.5}
+#by3ArrivalGuide .by3-ac-number{position:absolute;top:12px;right:12px;display:grid;place-items:center;border-radius:50%;background:#c69126;border:2px solid #f6dc9c;color:white;width:35px;height:35px;font-weight:900}
+#by3ArrivalGuide .by3-ac-step img{width:100%;height:auto;aspect-ratio:960/580;object-fit:contain;border:1px solid #a4cce6;border-radius:12px;background:#f0f9ff}
+#by3ArrivalGuide .by3-ac-step p{font-size:15px;color:#4b6274;line-height:1.9;text-align:right;min-height:78px;margin:11px 4px}
+#by3ArrivalGuide .by3-ac-zoom{border:1px solid #67a9d4;background:#e9f7ff;color:#075788;border-radius:9px;padding:9px 15px;cursor:pointer;font-weight:700;width:100%;font-family:inherit}
+#by3ArrivalGuide .by3-ac-footnote{padding:13px;margin-top:14px;border-radius:13px;background:#e4f1fd;color:#27516f;text-align:center;line-height:1.8}
+#by3ArrivalGuide .by3-ac-faq details{background:white;border:1px solid #c8def1;border-radius:12px;margin:9px 0;padding:14px 17px}
+#by3ArrivalGuide .by3-ac-faq summary{cursor:pointer;font-size:17px;font-weight:800;color:#074a7a}
+#by3ArrivalGuide .by3-ac-faq details p{line-height:1.95;color:#415b6f;font-size:15px;margin:10px 0 0}
+#by3ArrivalGuide .by3-ac-sources{background:#fff;border:1px solid #d0e3ee;border-radius:13px;padding:15px;font-size:14px;line-height:2;margin-top:17px;color:#46677e}
+#by3ArrivalGuide .by3-ac-sources a{color:#06578c;margin:0 5px;overflow-wrap:anywhere}
+#by3AcImageDialog{max-width:min(96vw,1080px);max-height:94vh;border:2px solid #d0a65d;border-radius:16px;padding:12px;background:#fff;box-shadow:0 20px 70px #1238}
+#by3AcImageDialog::backdrop{background:#00172bc7}
+#by3AcImageDialog img{max-width:100%;max-height:78vh;display:block;margin:auto}
+#by3AcCloseImage{background:#0c75b4;color:white;border:0;padding:8px 18px;border-radius:10px;font-family:inherit;cursor:pointer;display:block;margin:0 0 10px auto}
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-steps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#by3ArrivalGuide{width:calc(100% - 12px);margin:10px auto 30px}#by3ArrivalGuide .by3-ac-hero{grid-template-columns:1fr;padding:18px 13px;min-height:0}#by3ArrivalGuide .by3-ac-hero-icon{height:110px;font-size:60px;grid-row:1}#by3ArrivalGuide .by3-ac-hero-icon span{font-size:32px}#by3ArrivalGuide .by3-ac-hero h1{font-size:24px}#by3ArrivalGuide .by3-ac-hero p{font-size:18px}#by3ArrivalGuide .by3-ac-hero strong{font-size:15px}#by3ArrivalGuide .by3-ac-actions{gap:8px}#by3ArrivalGuide .by3-ac-action{font-size:14px;min-height:72px;padding:8px}#by3ArrivalGuide .by3-ac-steps,#by3ArrivalGuide .by3-ac-faq{padding:14px 9px;border-radius:15px}#by3ArrivalGuide .by3-ac-steps-grid{grid-template-columns:1fr}#by3ArrivalGuide h2{font-size:21px}#by3ArrivalGuide .by3-ac-step h3{min-height:0}#by3ArrivalGuide .by3-ac-step p{min-height:0}#by3ArrivalGuide .by3-ac-alert{font-size:14px}}
+
+/* Branding remains untouched throughout the website; hide it only on the arrival-guide route at the user's request. */
+body.by3-arrival-route .approved-header,body.by3-arrival-route .footer{display:none!important}
+body.by3-arrival-route .site-hero{padding-bottom:7px;min-height:0}
+
+/* V032.1: Video section scoped to China arrival-card route only. */
+#by3ArrivalGuide .by3-ac-video-section{background:#f0f9ff;border:1.5px solid #96caec;border-radius:24px;padding:21px;margin:18px 0;scroll-margin-top:24px}
+#by3ArrivalGuide .by3-ac-video-section video{display:block;width:100%;max-width:890px;aspect-ratio:16/9;margin:10px auto 0;border:3px solid #d8b36b;border-radius:17px;background:#002c50;box-shadow:0 7px 19px #00457618}
+#by3ArrivalGuide .by3-ac-video-actions{text-align:center;font-size:15px;line-height:1.8;margin:16px auto 7px}
+#by3ArrivalGuide .by3-ac-video-actions a{color:#0066a8;font-weight:800;overflow-wrap:anywhere}
+#by3ArrivalGuide .by3-ac-video-note{max-width:890px;margin:8px auto 0;color:#566b7b;font-size:14px;line-height:1.8;text-align:center}
+#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#by3ArrivalGuide .by3-ac-video-section{padding:14px 9px;border-radius:15px}#by3ArrivalGuide .by3-ac-video-section video{border-radius:10px}#by3ArrivalGuide .by3-ac-video-actions{font-size:13px}}
+
+/* V032.1: Video section scoped to China arrival-card route only. */
+#by3ArrivalGuide .by3-ac-video-section{background:#f0f9ff;border:1.5px solid #96caec;border-radius:24px;padding:21px;margin:18px 0;scroll-margin-top:24px}
+#by3ArrivalGuide .by3-ac-video-section video{display:block;width:100%;max-width:890px;aspect-ratio:16/9;margin:10px auto 0;border:3px solid #d8b36b;border-radius:17px;background:#002c50;box-shadow:0 7px 19px #00457618}
+#by3ArrivalGuide .by3-ac-video-actions{text-align:center;font-size:15px;line-height:1.8;margin:16px auto 7px}
+#by3ArrivalGuide .by3-ac-video-actions a{color:#0066a8;font-weight:800;overflow-wrap:anywhere}
+#by3ArrivalGuide .by3-ac-video-note{max-width:890px;margin:8px auto 0;color:#566b7b;font-size:14px;line-height:1.8;text-align:center}
+#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#by3ArrivalGuide .by3-ac-video-section{padding:14px 9px;border-radius:15px}#by3ArrivalGuide .by3-ac-video-section video{border-radius:10px}#by3ArrivalGuide .by3-ac-video-actions{font-size:13px}}
+
+/* V032.1: Video section scoped to China arrival-card route only. */
+#by3ArrivalGuide .by3-ac-video-section{background:#f0f9ff;border:1.5px solid #96caec;border-radius:24px;padding:21px;margin:18px 0;scroll-margin-top:24px}
+#by3ArrivalGuide .by3-ac-video-section video{display:block;width:100%;max-width:890px;aspect-ratio:16/9;margin:10px auto 0;border:3px solid #d8b36b;border-radius:17px;background:#002c50;box-shadow:0 7px 19px #00457618}
+#by3ArrivalGuide .by3-ac-video-actions{text-align:center;font-size:15px;line-height:1.8;margin:16px auto 7px}
+#by3ArrivalGuide .by3-ac-video-actions a{color:#0066a8;font-weight:800;overflow-wrap:anywhere}
+#by3ArrivalGuide .by3-ac-video-note{max-width:890px;margin:8px auto 0;color:#566b7b;font-size:14px;line-height:1.8;text-align:center}
+#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#by3ArrivalGuide .by3-ac-video-section{padding:14px 9px;border-radius:15px}#by3ArrivalGuide .by3-ac-video-section video{border-radius:10px}#by3ArrivalGuide .by3-ac-video-actions{font-size:13px}}
+
+/* V032.2: user-supplied step photographs, arrival page only */
+#by3ArrivalGuide .by3-ac-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+#by3ArrivalGuide .by3-ac-photo-step{padding:18px 13px 16px;display:flex;flex-direction:column}
+#by3ArrivalGuide .by3-ac-photo-step h3{min-height:0;padding-inline:24px 8px;margin:4px 0 13px;font-size:19px}
+#by3ArrivalGuide .by3-ac-photo-step img{width:100%;height:auto;aspect-ratio:1080/1860;object-fit:contain;background:#f8fcff;border-radius:12px;border:1px solid #c0def1}
+#by3ArrivalGuide .by3-ac-photo-step p{min-height:0;flex:1;font-size:15px;margin:12px 4px 16px;line-height:1.75}
+#by3ArrivalGuide .by3-ac-photo-step .by3-ac-zoom{margin-top:auto}
+#by3ArrivalGuide .by3-ac-authenticity{font-size:14px;text-align:center;margin:0 auto 18px;padding:10px 14px;color:#425c70;background:#fff9e7;border:1px solid #eddca6;border-radius:12px;line-height:1.8}
+#by3ArrivalGuide .by3-ac-overview{margin-top:16px;border:1px solid #98c8e8;border-radius:14px;padding:12px;background:#fff}
+#by3ArrivalGuide .by3-ac-overview summary{color:#075889;font-weight:800;cursor:pointer;font-size:17px}
+#by3ArrivalGuide .by3-ac-overview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+#by3ArrivalGuide .by3-ac-overview-grid figure{margin:0;padding:8px;border:1px solid #c9e1f0;border-radius:10px;text-align:center}
+#by3ArrivalGuide .by3-ac-overview-grid img{width:100%;height:auto;max-height:750px;object-fit:contain}
+#by3ArrivalGuide .by3-ac-overview-grid figcaption{font-size:14px;color:#315a76;margin-top:5px}
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#by3ArrivalGuide .by3-ac-photo-grid{grid-template-columns:1fr}#by3ArrivalGuide .by3-ac-photo-step{padding:14px 10px}#by3ArrivalGuide .by3-ac-photo-step img{max-width:440px;margin:auto}#by3ArrivalGuide .by3-ac-overview-grid{grid-template-columns:1fr}}
+
+
+/* V033.1: only the selected guide panel is visible. Scoped to arrival route. */
+#by3ArrivalGuide [hidden]{display:none!important}
+#by3ArrivalGuide .by3-ac-hero-v0331{direction:ltr;display:grid;grid-template-columns:minmax(115px,1fr) minmax(0,2.75fr) minmax(115px,1fr);gap:0;align-items:stretch;min-height:286px;overflow:hidden;padding:10px 12px;background:linear-gradient(125deg,#bde4fa 0%,#eefaff 28%,#f9fdff 53%,#d3efff 100%);border:2px solid #75c4ee;border-radius:25px;box-shadow:0 8px 23px rgba(0,85,160,.12)}
+#by3ArrivalGuide .by3-ac-hero-decoration{align-self:stretch;min-width:0;overflow:hidden;border-radius:20px}
+#by3ArrivalGuide .by3-ac-hero-decoration img{width:100%;height:100%;object-fit:cover;display:block}
+#by3ArrivalGuide .by3-ac-decoration-left img{object-position:center center}
+#by3ArrivalGuide .by3-ac-decoration-right img{object-position:center center}
+#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-hero-copy{text-align:center;direction:rtl;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:15px 10px;gap:10px;min-width:0}
+#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-kicker{display:inline-block;padding:9px 22px;border:1px solid #dba23e;color:#654309;border-radius:999px;background:linear-gradient(180deg,#fff8d5,#ffdd7b);font-size:15px;font-weight:800}
+#by3ArrivalGuide .by3-ac-hero-title-panel{width:100%;max-width:660px;min-width:0;background:linear-gradient(155deg,#074a93,#073365 75%,#062553);color:#fff;border:3px solid #e6b34d;border-radius:28px;padding:18px 10px;box-shadow:inset 0 0 0 2px #fff3b4,0 7px 15px #053b7729}
+#by3ArrivalGuide .by3-ac-hero-v0331 h1{color:#fff;font-size:clamp(24px,3.3vw,42px);line-height:1.35;margin:0 0 6px;text-align:center;text-wrap:balance;text-shadow:0 2px 2px #001d467a}
+#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-hero-title-panel p{font-size:clamp(17px,2.1vw,27px);color:#e9f5ff;text-align:center;direction:ltr;margin:0}
+#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-hero-subtitle{max-width:100%;font-size:clamp(14px,1.45vw,19px);background:linear-gradient(#fff5c6,#ffe298);color:#4d3e18;padding:10px 18px;border-radius:22px;border:1px solid #d5a949;line-height:1.55;text-align:center}
+#by3ArrivalGuide .by3-ac-close-section{display:block;margin:7px auto 18px 0;padding:10px 19px;border:1.5px solid #d0a451;border-radius:10px;background:#fff;color:#07527c;font:inherit;font-weight:800;cursor:pointer}
+#by3ArrivalGuide .by3-ac-close-section:focus-visible{outline:3px solid #f0b83b;outline-offset:3px}
+#by3ArrivalGuide .by3-ac-action[aria-expanded="true"]{box-shadow:inset 0 0 0 2px #0a6caa,0 5px 11px #0063a416;background:#e7f7ff}
+#by3ArrivalGuide .by3-ac-video-section,#by3ArrivalGuide .by3-ac-steps,#by3ArrivalGuide .by3-ac-faq{scroll-margin-top:18px}
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-hero-v0331{grid-template-columns:minmax(100px,1fr) minmax(0,2.75fr) minmax(100px,1fr);min-height:235px}}
+@media(max-width:550px){#by3ArrivalGuide .by3-ac-hero-v0331{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px;padding:10px;min-height:0}#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-hero-copy{grid-column:1/-1;grid-row:1;padding:7px 1px 0;gap:8px}#by3ArrivalGuide .by3-ac-hero-decoration{height:105px;border-radius:14px}#by3ArrivalGuide .by3-ac-decoration-left{grid-row:2;grid-column:1}#by3ArrivalGuide .by3-ac-decoration-right{grid-row:2;grid-column:2}#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-kicker{font-size:12px;padding:5px 12px}#by3ArrivalGuide .by3-ac-hero-title-panel{padding:12px 5px;border-radius:18px}#by3ArrivalGuide .by3-ac-hero-v0331 h1{font-size:clamp(21px,6vw,27px)}#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-hero-title-panel p{font-size:17px}#by3ArrivalGuide .by3-ac-hero-v0331 .by3-ac-hero-subtitle{padding:7px 11px;font-size:13px}#by3ArrivalGuide .by3-ac-action{min-width:0}#by3ArrivalGuide .by3-ac-close-section{margin-right:auto;margin-left:0}}
+/* Keep the home button centered as the fifth item on narrow screens. */
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-actions>.by3-ac-action:last-child{grid-column:1/-1;justify-self:center;width:min(100%,330px)}}
+
+
+/* V033.2: scoped navigation and video-interface removal; media file retained in assets. */
+#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(4,minmax(0,1fr));}
+#by3ArrivalGuide .by3-ac-top-navigation{display:flex;justify-content:flex-start;margin:0 0 12px;padding:0;}
+#by3ArrivalGuide .by3-ac-main-home,
+#by3ArrivalGuide .by3-ac-photo-navigation button{font-family:inherit;font-size:16px;font-weight:800;color:#064676;background:linear-gradient(180deg,#fff,#ddf2ff);border:1.5px solid #6ab4e6;border-radius:13px;padding:12px 20px;box-shadow:0 3px 10px #075f9317;cursor:pointer;}
+#by3ArrivalGuide .by3-ac-main-home:focus-visible,
+#by3ArrivalGuide .by3-ac-photo-navigation button:focus-visible,
+#by3ArrivalGuide .by3-ac-floating-top:focus-visible{outline:3px solid #e5b34f;outline-offset:3px;}
+#by3ArrivalGuide .by3-ac-photo-navigation{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin:16px 0 19px;padding:12px;border-radius:16px;background:#e4f3ff;border:1px solid #9ecfec;}
+#by3ArrivalGuide .by3-ac-steps > .by3-ac-photo-navigation:last-child{margin:20px 0 0;}
+#by3ArrivalGuide .by3-ac-floating-top{position:fixed;bottom:max(18px,env(safe-area-inset-bottom));left:18px;z-index:33;border:2px solid #e5b34f;border-radius:14px;padding:10px 13px;font-family:inherit;font-size:14px;font-weight:800;color:white;background:linear-gradient(160deg,#087dbd,#064a84);box-shadow:0 5px 16px #002f5073;cursor:pointer;}
+#by3ArrivalGuide .by3-ac-floating-top[hidden]{display:none!important;}
+#by3ArrivalGuide .by3-ac-actions > .by3-ac-action:last-child{grid-column:auto;justify-self:stretch;width:auto;}
+@media(max-width:900px){#by3ArrivalGuide .by3-ac-actions{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:550px){#by3ArrivalGuide .by3-ac-top-navigation{margin:0 0 10px;}#by3ArrivalGuide .by3-ac-main-home{font-size:14px;padding:10px 14px;}#by3ArrivalGuide .by3-ac-photo-navigation{gap:8px;padding:9px;}#by3ArrivalGuide .by3-ac-photo-navigation button{font-size:13px;padding:10px 8px;flex:1 1 130px;}#by3ArrivalGuide .by3-ac-floating-top{bottom:max(14px,env(safe-area-inset-bottom));left:10px;padding:10px 12px;font-size:13px;}}
+/* V033.2: the arrival page supplies its own top home control; suppress the global duplicate only here. */
+body.by3-arrival-route .site-hero .top-home{display:none!important}

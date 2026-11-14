@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 960 580">
+ <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#eaf7ff"/><stop offset="1" stop-color="#f8fcff"/></linearGradient><filter id="sh"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0065a6" flood-opacity=".12"/></filter></defs>
+ <rect width="960" height="580" rx="30" fill="url(#bg)"/><rect x="38" y="32" width="884" height="516" rx="28" fill="white" stroke="#dfae54" stroke-width="3" filter="url(#sh)"/>
+ <rect x="38" y="32" width="884" height="88" rx="28" fill="#086eae"/><rect x="38" y="92" width="884" height="28" fill="#086eae"/>
+ <text x="860" y="85" text-anchor="end" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="white">المراجعة والإرسال</text>
+ <circle cx="106" cy="77" r="29" fill="#f6d281"/><text x="106" y="88" text-anchor="middle" font-family="Arial" font-size="32" font-weight="bold" fill="#214366">06</text>
+ <text x="480" y="183" text-anchor="middle" font-family="Arial" font-size="25" fill="#48627a">Review &amp; Submit</text>
+ <rect x="147" y="216" width="666" height="188" rx="23" fill="#e9f5ff" stroke="#7cc0ed" stroke-width="3"/>
+ <circle cx="480" cy="307" r="57" fill="#d5ebfc"/><text x="480" y="330" text-anchor="middle" font-family="Arial" font-size="70">✓</text>
+ <text x="480" y="449" text-anchor="middle" font-family="Arial" font-size="28" fill="#0d5281">راجع ثم أرسل من الموقع الرسمي</text>
+ <rect x="205" y="477" width="550" height="42" rx="16" fill="#fff2cb"/>
+ <text x="480" y="504" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold" fill="#825a15">رسم توضيحي · ليس لقطة من الموقع الرسمي</text>
+ </svg>

@@ -1,0 +1,131 @@
+/* V041.20.2 — mobile header approved 4+3 layout. Only <=680px. */
+@media (max-width: 680px) {
+  .site-hero .header-tools,
+  body.gz-v008 .site-hero .header-tools {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: 7px 5px !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    padding: 8px max(7px, env(safe-area-inset-right, 0px)) 6px max(7px, env(safe-area-inset-left, 0px)) !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    box-sizing: border-box !important;
+    direction: ltr !important;
+  }
+  .site-hero .header-tools > .social.by41-social {
+    display: contents !important;
+    position: static !important;
+  }
+  .site-hero .header-tools > .social.by41-social > .social-chip {
+    grid-column: span 3;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 66px !important;
+    padding: 6px 2px !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    text-align: center !important;
+    white-space: normal !important;
+    text-decoration: none;
+  }
+  .site-hero .header-tools .social-chip b {
+    font-size: 19px !important;
+    line-height: 1.15 !important;
+  }
+  .site-hero .header-tools .social-chip span {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(9px, 2.5vw, 12px) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    overflow-wrap: anywhere;
+  }
+  .site-hero .header-tools .social-chip small {
+    display: none !important;
+  }
+  .site-hero .header-tools #by38HomeSignout:not([hidden]) {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 43px;
+    padding: 6px 3px !important;
+    box-sizing: border-box;
+    font-size: clamp(10px, 3vw, 13px) !important;
+    white-space: normal;
+    text-align: center;
+  }
+  .site-hero .header-tools > .header-actions {
+    grid-column: 5 / span 4;
+    grid-row: 2;
+    width: 100%;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: stretch !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .site-hero .header-tools > .header-actions .lang-control {
+    display: flex !important;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 43px;
+    padding: 4px 2px !important;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .site-hero .header-tools .lang-control span {display:none !important;}
+  .site-hero .header-tools .lang-control select {
+    box-sizing: border-box;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    font-size: clamp(10px, 3vw, 13px) !important;
+    padding: 5px 1px !important;
+  }
+  .site-hero .header-tools > #mobileMenu {
+    grid-column: 9 / span 4;
+    grid-row: 2;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 43px;
+    margin: 0 !important;
+    padding: 6px 2px !important;
+    box-sizing: border-box !important;
+    border-radius: 12px !important;
+    font-size: clamp(11px, 3vw, 14px) !important;
+    white-space: normal !important;
+    z-index: 20;
+  }
+  /* Guests have no sign-out control. Rebalance the two existing tools. */
+  .site-hero .header-tools:not(:has(#by38HomeSignout:not([hidden]))) > .header-actions {grid-column:1 / span 6;}
+  .site-hero .header-tools:not(:has(#by38HomeSignout:not([hidden]))) > #mobileMenu {grid-column:7 / span 6;}
+  body:not(.gz-v010):not(.gz-v008) .site-hero .approved-header.by41-compact-header {
+    margin-top: 3px !important;
+  }
+  .site-hero .top-home {margin-top: 5px !important;}
+}
