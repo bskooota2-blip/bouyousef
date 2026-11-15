@@ -36,6 +36,51 @@
   if(/كافيه|مقهى/.test(x))return '☕';if(/عرب/.test(x))return '🥙';if(/ترك/.test(x))return '🥘';if(/هند|باكستان/.test(x))return '🍛';if(/إيران/.test(x))return '🍢';if(/بيتزا/.test(x))return '🍕';if(/مخبز|مخابز/.test(x))return '🥐';if(/كافيه|قهوة/.test(x))return '☕';if(/آسيوي|حلال/.test(x))return '🍜';if(/مطعم/.test(x))return '🍽️';
   if(/5 نجوم/.test(x))return '🌟';if(/4 نجوم/.test(x))return '⭐';if(/3 نجوم/.test(x))return '🏨';if(/فنادق/.test(x))return '🛏️';if(/مطار/.test(x))return '✈️';if(/قطار/.test(x))return '🚆';if(/سراديب|أنفاق/.test(x))return '🏬';if(/سياح/.test(x))return '📸';return '📍'}
  function sectionIcon(sectionId){return sectionId==='markets'?'🏪':sectionId==='malls'?'🛍️':sectionId==='dining'?'☕':sectionId==='tourism'?'📸':sectionId==='hotels'?'🏨':sectionId==='transport'?'🚌':sectionId==='mosques'?'🕌':'ℹ️'}
+  // Metro cards: show only the known station name, line number and confirmed exit.
+  // Preserve the complete source field r.metro without rewriting source data.
+  function metroCompact(raw){
+    const original=String(raw||'').trim();
+    if(!original||/^(?:تحقق|محطتان)/.test(original))return '';
+    // Remove guidance, routes, distances and verification notes from visible text.
+    let value=original.split(/[؛;]/,1)[0].trim();
+    value=value.replace(/\([^()]*?(?:تحقق|راجع|يحتاج|بحسب|قد يلزم|نحو|verify|أقرب|متر|المول)[^()]*\)/gi,'').trim();
+    // Station names may appear in English followed by a Chinese name in parentheses.
+    let station='';
+    const chineseFirst=value.match(/^([\u3400-\u9fff]+站)(?:\s*\(([^)]*)\))?/);
+    if(chineseFirst){
+      station=chineseFirst[1]+(chineseFirst[2]&&!/(?:الخط|المخرج|line|exit)/i.test(chineseFirst[2])?' ('+chineseFirst[2]+')':'');
+    }else{
+      const prefix=value.split(/\s+[–—-]\s+|\s+\b(?:Lines?|Exits?|L\d)\b|\s+الخط(?:ان)?\b|\s+المخرج\b|\s+المخارج\b/i)[0].trim();
+      station=prefix.replace(/\s*\((?:Lines?|Exits?|الخط|المخرج)[^)]*\)/gi,'').trim();
+      // Support bilingual station names separated by an en dash.
+      const bilingual=value.match(/^(.+?)\s+[–—]\s+([\u3400-\u9fff]+站)/);
+      if(bilingual)station=bilingual[1].trim()+' ('+bilingual[2]+')';
+    }
+    station=station.replace(/\s*\([^)]*?(?:الخط|المخرج|Line|Exit)[^)]*\)/gi,'').trim();
+    // Strip incidental descriptive fragments; do not invent an unconfirmed station.
+    if(!station||/(?:تحقق|راجع|المسافة|محطتان|أقرب محطة|مخرج عبر)/.test(station))return '';
+    station=station.replace(/\s*[-–—]\s*$/,'').replace(/\s*\([^)]*$/,'').trim();
+    let line='';
+    const arabic=value.match(/(?:الخط(?:ان)?|خط\s*المترو)\s*([0-9٠-٩]+(?:\s*(?:و|\/|،|,|&|and)\s*[0-9٠-٩]+)*)/i);
+    const english=value.match(/\bLines?\s*([0-9]+(?:\s*(?:\/|,|&|and)\s*[0-9]+)*)/i);
+    const shorthand=value.match(/\bL([0-9]+(?:\/L?[0-9]+)*)/i);
+    const apm=/\bAPM\b/i.test(original);
+    let rawLine=arabic?.[1]||english?.[1]||shorthand?.[1]||'';
+    if(rawLine){
+      const digits=(rawLine.match(/[0-9٠-٩]+/g)||[]).map(x=>x.replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d))).filter(Boolean);
+      const key=Array.from(new Set(digits)).join('/');
+      line=lang==='en'?'Line '+key:lang==='zh'?'地铁'+key+'号线':'الخط '+key;
+    }else if(apm){line='APM';}
+    let exit='';
+    const exitMatch=original.match(/(?:المخرج|المخارج|مخرج|Exits?)\s*([A-Z0-9]+(?:\s*(?:أو|or|\/|,|،)\s*[A-Z0-9]+)*)/i);
+    if(exitMatch){
+      const val=exitMatch[1].replace(/\s*(?:أو|or|،|,)\s*/gi,'/').replace(/\s*\/\s*/g,'/').trim();
+      // A stated but explicitly unconfirmed exit should not be presented as certain.
+      const unconfirmed=/(?:يحتاج تأكيد|غير مؤكد|راجع المخرج|تأكد من المخرج|verify)/i.test(original);
+      if(!unconfirmed)exit=lang==='en'?'Exit '+val:lang==='zh'?val+'号出口':'المخرج '+val;
+    }
+    return [station,line,exit].filter(Boolean).join(' — ');
+  }
  function recordCard(r){const m=ui[lang],article=element('article','gz-place');article.id='place-'+r.id;article.dataset.placeId=r.id;if(r.id===highlighted)article.classList.add('highlight');
   const actionsWrap=element('div','gz-place-actions');
   const actions=element('div','gz-buttons');
@@ -47,27 +92,19 @@
   if(target){addAction('◔',m.copyDidi,target,'gz-action-didi');const anchor=element('a','gz-amap gz-action gz-action-amap');anchor.href='https://uri.amap.com/search?keyword='+encodeURIComponent(target)+'&city='+encodeURIComponent('广州');anchor.target='_blank';anchor.rel='noopener noreferrer';anchor.title=m.amap;anchor.setAttribute('aria-label',m.amap);anchor.append(element('span','gz-action-icon','➤'),element('span','gz-action-label','AMAP'));actions.append(anchor)}
   actionsWrap.append(actions);
   const main=element('div','gz-place-main');
-  const top=element('div','gz-place-top');
-  top.append(element('span','gz-tag',window.BY2_L10N?.term(subtypeFor(r,state.section)||r.sourceCategory||'')||(subtypeFor(r,state.section)||r.sourceCategory||'')));
-  if(r.new)top.append(element('span','gz-tag',m.newLabel));
-  if(r.addedText)top.append(element('span','gz-tag',r.addedText));
-  if(r.cafeTags)r.cafeTags.forEach(tag=>top.append(element('span','gz-tag gz-cafe-badge',({'سياحي':'📸 سياحي','إطلالة':'🌆 ذو إطلالة','تراثي':'🏛️ تراثي','طبيعة':'🌿 وسط الطبيعة','مبتكر':'🧪 مشروبات مبتكرة','تقديم مميز':'🎨 تقديم مميز'})[tag]||tag)));
-  main.append(top);
-  const suffixText=r.titleSuffixAr?' ('+r.titleSuffixAr+')':'';const arabicTitle=(lang==='ar'&&suffixText&&r.ar.endsWith(suffixText))?r.ar.slice(0,-suffixText.length):name(r);const heading=element('h3','',arabicTitle);if(lang==='ar'&&r.titleSuffixAr){const suffix=element('small','gz-title-suffix',suffixText);suffix.style.cssText='font-size:.64em;font-weight:700;color:#536f80;white-space:nowrap;margin-inline-start:6px;display:inline';heading.append(suffix)}const opening=openingText(r);if(opening){const year=element('small','by2-opening-year',opening);year.style.cssText='display:inline-block;font-size:.67em;font-weight:750;color:#12619a;line-height:1.6;margin-inline-start:8px;white-space:normal;vertical-align:baseline';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}main.append(heading);
+  // V041.23.7: Keep the source data untouched; compact Guangzhou cards display
+  // only place names (AR/EN/ZH), verified opening year, compact metro and actions.
+  const suffixText=r.titleSuffixAr?' ('+r.titleSuffixAr+')':'';const arabicTitle=(lang==='ar'&&suffixText&&r.ar.endsWith(suffixText))?r.ar.slice(0,-suffixText.length):name(r);const heading=element('h3','',arabicTitle);if(lang==='ar'&&r.titleSuffixAr){const suffix=element('small','gz-title-suffix',suffixText);suffix.style.cssText='font-size:.64em;font-weight:700;color:#536f80;white-space:nowrap;margin-inline-start:6px;display:inline';heading.append(suffix)}const opening=openingText(r);if(opening){
+    const year=element('small','by2-opening-year','🗓️ '+opening);
+    year.style.cssText='display:inline-flex;align-items:center;gap:4px;vertical-align:middle;max-width:100%;border:1px solid #9ed5fa;border-radius:9px;background:#eff9ff;padding:3px 9px;margin-inline-start:9px;margin-block:3px;color:#075b96;font-size:.7em;font-weight:750;line-height:1.55;white-space:normal';
+    year.setAttribute('aria-label',opening);
+    if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;
+    heading.append(year);
+  }main.append(heading);
   if(r.en&&r.en!==name(r))addP(main,'gz-en',r.en);
   if(r.zh&&r.zh!==name(r))addP(main,'gz-zh',r.zh);
-  if(r.addressZh)addP(main,'gz-info','📍 '+m.address+': '+r.addressZh);
-  if(r.addressEn)addP(main,'gz-info','📍 '+m.addressEn+': '+r.addressEn);
-  if(r.addressAr)addP(main,'gz-info','📍 '+(lang==='en'?'Arabic address':lang==='zh'?'阿拉伯语地址':'العنوان العربي')+': '+r.addressAr);
-  if(r.metro)addP(main,'gz-info','🚇 '+m.metro+': '+r.metro);
-  if(r.note)addP(main,'gz-info','ℹ️ '+m.note+': '+r.note);
-  if(r.contact)addP(main,'gz-info','☎️ '+r.contact);
-  if(r.sourceCaution)addP(main,'gz-info','⚠️ '+r.sourceCaution);
-  if(r.features)addP(main,'gz-info',r.features);
-  if(r.signatureDrink)addP(main,'gz-info gz-special-drink','☕ المشروب المميز: '+r.signatureDrink);
-  if(r.nearby)addP(main,'gz-info',r.nearby);
-  const side=element('div','gz-place-side',sectionIcon(r.section));
-  article.append(actionsWrap,main,side);return window.BY2_FAVORITES.addHeart(article,r,'guangzhou');
+  if(r.metro){const shortMetro=metroCompact(r.metro);if(shortMetro)addP(main,'gz-info gz-metro-compact','🚇 '+m.metro+': '+shortMetro);}
+  article.append(actionsWrap,main);return window.BY2_FAVORITES.addHeart(article,r,'guangzhou');
  }
  function currentListing(){return document.getElementById('gzListing')}
 function buildGuangzhouInformation(box){

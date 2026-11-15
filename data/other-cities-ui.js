@@ -15,6 +15,50 @@
     return (labels[kind]||labels.opened)+shown;
   }
  const currentLang=()=>loc()?.language()||'ar';
+  function metroCompact(raw){
+    const lang=currentLang();
+    const original=String(raw||'').trim();
+    if(!original||/^(?:تحقق|محطتان)/.test(original))return '';
+    // Remove guidance, routes, distances and verification notes from visible text.
+    let value=original.split(/[؛;]/,1)[0].trim();
+    value=value.replace(/\([^()]*?(?:تحقق|راجع|يحتاج|بحسب|قد يلزم|نحو|verify|أقرب|متر|المول)[^()]*\)/gi,'').trim();
+    // Station names may appear in English followed by a Chinese name in parentheses.
+    let station='';
+    const chineseFirst=value.match(/^([\u3400-\u9fff]+站)(?:\s*\(([^)]*)\))?/);
+    if(chineseFirst){
+      station=chineseFirst[1]+(chineseFirst[2]&&!/(?:الخط|المخرج|line|exit)/i.test(chineseFirst[2])?' ('+chineseFirst[2]+')':'');
+    }else{
+      const prefix=value.split(/\s+[–—-]\s+|\s+\b(?:Lines?|Exits?|L\d)\b|\s+الخط(?:ان)?\b|\s+المخرج\b|\s+المخارج\b/i)[0].trim();
+      station=prefix.replace(/\s*\((?:Lines?|Exits?|الخط|المخرج)[^)]*\)/gi,'').trim();
+      // Support bilingual station names separated by an en dash.
+      const bilingual=value.match(/^(.+?)\s+[–—]\s+([\u3400-\u9fff]+站)/);
+      if(bilingual)station=bilingual[1].trim()+' ('+bilingual[2]+')';
+    }
+    station=station.replace(/\s*\([^)]*?(?:الخط|المخرج|Line|Exit)[^)]*\)/gi,'').trim();
+    // Strip incidental descriptive fragments; do not invent an unconfirmed station.
+    if(!station||/(?:تحقق|راجع|المسافة|محطتان|أقرب محطة|مخرج عبر)/.test(station))return '';
+    station=station.replace(/\s*[-–—]\s*$/,'').replace(/\s*\([^)]*$/,'').trim();
+    let line='';
+    const arabic=value.match(/(?:الخط(?:ان)?|خط\s*المترو)\s*([0-9٠-٩]+(?:\s*(?:و|\/|،|,|&|and)\s*[0-9٠-٩]+)*)/i);
+    const english=value.match(/\bLines?\s*([0-9]+(?:\s*(?:\/|,|&|and)\s*[0-9]+)*)/i);
+    const shorthand=value.match(/\bL([0-9]+(?:\/L?[0-9]+)*)/i);
+    const apm=/\bAPM\b/i.test(original);
+    let rawLine=arabic?.[1]||english?.[1]||shorthand?.[1]||'';
+    if(rawLine){
+      const digits=(rawLine.match(/[0-9٠-٩]+/g)||[]).map(x=>x.replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d))).filter(Boolean);
+      const key=Array.from(new Set(digits)).join('/');
+      line=lang==='en'?'Line '+key:lang==='zh'?'地铁'+key+'号线':'الخط '+key;
+    }else if(apm){line='APM';}
+    let exit='';
+    const exitMatch=original.match(/(?:المخرج|المخارج|مخرج|Exits?)\s*([A-Z0-9]+(?:\s*(?:أو|or|\/|,|،)\s*[A-Z0-9]+)*)/i);
+    if(exitMatch){
+      const val=exitMatch[1].replace(/\s*(?:أو|or|،|,)\s*/gi,'/').replace(/\s*\/\s*/g,'/').trim();
+      // A stated but explicitly unconfirmed exit should not be presented as certain.
+      const unconfirmed=/(?:يحتاج تأكيد|غير مؤكد|راجع المخرج|تأكد من المخرج|verify)/i.test(original);
+      if(!unconfirmed)exit=lang==='en'?'Exit '+val:lang==='zh'?val+'号出口':'المخرج '+val;
+    }
+    return [station,line,exit].filter(Boolean).join(' — ');
+  }
  const localizedInfo=(icon,ar,en,zh,value)=>icon+' '+(currentLang()==='en'?en:currentLang()==='zh'?zh:ar)+': '+value;
  const labels={markets:'الأسواق',malls:'المجمعات التجارية',dining:'المطاعم والكافيهات',tourism:'الأماكن السياحية',hotels:'الفنادق',transport:'المواصلات',mosques:'المساجد',information:'معلومات المدينة'};
  const icons={markets:'🏪',malls:'🛍️',dining:'🍽️',tourism:'🏞️',hotels:'🏨',transport:'🚆',mosques:'🕌',information:'ℹ️'};
@@ -66,15 +110,13 @@
  function place(r,citySlug){
   const article=make('article','gz-place by3-place');article.id='place-'+r.id;
   const content=make('div','gz-place-main by3-place-main');
-  const heading=make('h3','gz-place-name',placeName(r));const opening=openingText(r);if(opening){const year=make('small','by2-opening-year','🗓️ '+opening);year.style.cssText='display:inline-flex;align-items:center;gap:3px;font-size:.73em;font-weight:750;color:#12619a;background:#eff9ff;border:1px solid #b5ddf5;border-radius:7px;padding:2px 7px;line-height:1.6;margin-inline-start:8px;margin-block:3px;white-space:normal;vertical-align:baseline;max-width:100%';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}content.append(heading);
+  const heading=make('h3','gz-place-name',placeName(r));const opening=openingText(r);if(opening){const year=make('small','by2-opening-year','🗓️ '+opening);year.style.cssText='display:inline-flex;align-items:center;gap:4px;vertical-align:middle;max-width:100%;border:1px solid #9ed5fa;border-radius:9px;background:#eff9ff;padding:3px 9px;margin-inline-start:9px;margin-block:3px;color:#075b96;font-size:.7em;font-weight:750;line-height:1.55;white-space:normal';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}content.append(heading);
   if(available(r.ar)&&currentLang()!=='ar')content.append(make('p','gz-info by2-original-arabic',r.ar));
   if(available(r.en)&&r.en!==placeName(r))content.append(make('p','gz-en',r.en));
-  if(available(r.zh))content.append(make('p','gz-zh',r.zh));
-  if(available(r.sourceCategory))content.append(make('span','gz-tag',tr(r.sourceCategory)));
-  if(available(r.addressZh))content.append(make('p','gz-info','📍 '+tr('العنوان الصيني')+': '+r.addressZh));
-  if(available(r.addressEn))content.append(make('p','gz-info','📍 '+tr('العنوان الإنجليزي')+': '+r.addressEn));
-  if(available(r.metro))content.append(make('p','gz-info','🚇 '+tr('المترو')+': '+r.metro));
-  if(available(r.note)){const note=make('p','gz-info','ℹ️ '+r.note);if(currentLang()!=='ar')note.lang='ar';content.append(note);}
+  if(available(r.zh)&&r.zh!==placeName(r))content.append(make('p','gz-zh',r.zh));
+  if(available(r.sourceCategory))content.prepend(make('span','gz-tag',tr(r.sourceCategory)));
+  if(available(r.metro)){const shortMetro=metroCompact(r.metro);if(shortMetro)content.append(make('p','gz-info gz-metro-compact','🚇 '+tr('المترو')+': '+shortMetro));}
+  // Keep original addresses and notes in the records for copy, maps, and search.
   const actions=make('div','gz-place-actions by3-place-actions');
   function action(label,symbol,value,cls){
    if(!available(value))return;
@@ -152,7 +194,7 @@
   const opening=openingText(r);
   if(opening){
     const year=make('small','by2-opening-year','🗓️ '+opening);
-    year.style.cssText='display:inline-flex;align-items:center;gap:3px;font-size:.73em;font-weight:750;color:#12619a;background:#eff9ff;border:1px solid #b5ddf5;border-radius:7px;padding:2px 7px;line-height:1.6;margin-inline-start:8px;margin-block:3px;white-space:normal;vertical-align:baseline;max-width:100%';
+    year.style.cssText='display:inline-flex;align-items:center;gap:4px;vertical-align:middle;max-width:100%;border:1px solid #9ed5fa;border-radius:9px;background:#eff9ff;padding:3px 9px;margin-inline-start:9px;margin-block:3px;color:#075b96;font-size:.7em;font-weight:750;line-height:1.55;white-space:normal';
     year.setAttribute('aria-label',opening);
     if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;
     placeHeading.append(year);
@@ -161,13 +203,10 @@
   if(available(r.ar)&&currentLang()!=='ar')main.append(make('p','gz-info by2-original-arabic',r.ar));
   if(available(r.en)&&r.en!==placeName(r))main.append(make('p','gz-en',r.en));
   if(available(r.zh)&&r.zh!==placeName(r))main.append(make('p','gz-zh',r.zh));
-  if(available(r.addressZh))main.append(make('p','gz-info',scopedChineseOnly&&!fullChineseAddress?'📍 '+tr('المنطقة / وصف الموقع (عنوان غير تفصيلي)')+': '+r.addressZh:'📍 '+tr('العنوان الصيني')+': '+r.addressZh));
-  if(available(r.addressEn))main.append(make('p','gz-info','📍 '+tr('العنوان الإنجليزي')+': '+r.addressEn));
-  if(available(r.metro))main.append(make('p','gz-info','🚇 '+tr('المترو')+': '+r.metro));
-  if(cityCode==='上海'&&r.section==='markets'&&Array.isArray(r.undergroundGoods)&&r.undergroundGoods.length)main.append(make('p','gz-info','🛍️ '+tr('البضائع')+': '+r.undergroundGoods.join(' · ')));
-  if(available(r.note)){const note=make('p','gz-info','ℹ️ '+(currentLang()==='ar'?'':currentLang()==='en'?'Original note (Arabic): ':'原始备注（阿拉伯语）：')+r.note);if(currentLang()!=='ar')note.lang='ar';main.append(note);}
-  if(available(r.region))main.append(make('p','gz-info','🗺️ المنطقة: '+r.region));
-  if(available(r.sourceCaution)&&!(cityCode==='上海'&&r.section==='dining'))main.append(make('p','gz-info','⚠️ '+r.sourceCaution));
+  if(available(r.metro)){const shortMetro=metroCompact(r.metro);if(shortMetro)main.append(make('p','gz-info gz-metro-compact','🚇 '+tr('المترو')+': '+shortMetro));}
+  // V041.23.9: hide verbose location descriptions, notes, and other detail lines
+  // in the visual cards only. Keep complete source records for search, copying,
+  // DiDi and AMAP; never modify stored place data.
   const beijingDiningIcon=cityCode==='北京'&&r.section==='dining' ? (/مخابز|الحلويات التقليدية/.test(String(r.subtype||''))?'🥐':/كافيه/.test(String(r.subtype||''))?'☕':'🍽️') : null;
   // V038: presentation-only icon choice; no record fields or category values are changed.
   const type=String(r.subtype||r.sourceCategory||'');
