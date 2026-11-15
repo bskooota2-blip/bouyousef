@@ -43,7 +43,7 @@
   if(r.addedText)top.append(element('span','gz-tag',r.addedText));
   if(r.cafeTags)r.cafeTags.forEach(tag=>top.append(element('span','gz-tag gz-cafe-badge',({'سياحي':'📸 سياحي','إطلالة':'🌆 ذو إطلالة','تراثي':'🏛️ تراثي','طبيعة':'🌿 وسط الطبيعة','مبتكر':'🧪 مشروبات مبتكرة','تقديم مميز':'🎨 تقديم مميز'})[tag]||tag)));
   main.append(top);
-  main.append(element('h3','',name(r)));
+  const heading=element('h3','',name(r));if(lang==='ar'&&r.titleSuffixAr){const suffix=element('small','gz-title-suffix',' '+r.titleSuffixAr);suffix.style.cssText='font-size:.64em;font-weight:700;color:#536f80;white-space:nowrap;margin-inline-start:7px';heading.append(suffix)}main.append(heading);
   if(r.en&&r.en!==name(r))addP(main,'gz-en',r.en);
   if(r.zh&&r.zh!==name(r))addP(main,'gz-zh',r.zh);
   if(r.addressZh)addP(main,'gz-info','📍 '+m.address+': '+r.addressZh);
