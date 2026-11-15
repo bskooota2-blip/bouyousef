@@ -1,0 +1,10 @@
+/* BouYousef2 V041.23.0 — date labels and compact language switch only */
+.by2-opening-year{display:inline-flex!important;align-items:center;max-width:100%;margin-inline:7px 0!important;padding:2px 8px!important;border:1px solid #a5d9f4!important;border-radius:9px!important;background:#effaff!important;color:#07527d!important;font-size:.67em!important;font-weight:750!important;line-height:1.65!important;vertical-align:middle!important;white-space:normal!important}
+.lang-control{position:relative;display:inline-flex!important;align-items:center!important;gap:0!important;padding:3px!important;direction:ltr!important;border:1px solid #9bcce8!important;border-radius:12px!important;background:#fff!important;max-width:100%!important}
+.lang-control>span[data-i18n="language"]{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+#languageSelect{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;border:0!important;padding:0!important;overflow:hidden!important}
+.by2-lang-trio{display:flex;align-items:center;justify-content:center;direction:ltr;gap:2px!important}
+.by2-lang-btn{display:inline-flex;align-items:center;justify-content:center;min-width:31px;min-height:33px;padding:4px 7px;border:0!important;border-radius:8px;background:#fff;color:#063e75;cursor:pointer;font-size:15px!important;font-weight:800;line-height:1!important;white-space:nowrap;box-shadow:none!important}
+.by2-lang-btn[aria-pressed="true"]{background:#087ec5!important;color:#fff!important}
+.by2-lang-btn:focus-visible{outline:2px solid #013f75;outline-offset:2px}
+@media(max-width:680px){.lang-control{margin:0!important;flex:0 0 auto!important;min-width:0!important;padding:2px!important}.by2-lang-btn{min-width:29px;min-height:33px;padding:3px 6px!important}.by2-lang-trio{gap:1px!important}}

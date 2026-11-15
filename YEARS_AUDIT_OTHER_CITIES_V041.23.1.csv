@@ -1,0 +1,901 @@
+﻿city,id,section,name_ar,name_en,name_zh,year,kind,source_url,status
+shanghai,sha-0001,markets,سوق تشيبو للملابس,Qipu Road Wholesale Market,七浦路服装批发市场,,,,missing_year
+shanghai,sha-0002,markets,سوق كايشوانتشنغ,Kaixuancheng Clothing Market,凯旋城服装市场,,,,missing_year
+shanghai,sha-0003,markets,سوق شينغوانغ الدولي,Xingwang International Clothing City,兴旺国际服饰城,,,,missing_year
+shanghai,sha-0004,markets,سوق جنوب البوند للأقمشة,South Bund Fabric Market,南外滩轻纺面料市场,,,,missing_year
+shanghai,sha-0005,markets,سوق AP Plaza,AP Plaza,亚太盛汇购物广场,,,,missing_year
+shanghai,sha-0006,markets,سوق يويوان,Yuyuan Bazaar,豫园商城,,,,missing_year
+shanghai,sha-0007,markets,سوق فويو للتحف,Fuyou Antique Market,福佑路古玩市场,,,,missing_year
+shanghai,sha-0008,markets,شارع فوتشو,Fuzhou Road,福州路,,,,missing_year
+shanghai,sha-0009,markets,منطقة شوجياهوي للإلكترونيات,Xujiahui Electronics Area,徐家汇,,,,missing_year
+shanghai,sha-0010,markets,سوق جيوشينغ,Jiuxing Market,九星市场,,,,missing_year
+shanghai,sha-0011,markets,سوق هانغتو لمواد البناء,Hangtou Building Materials Market,航头亿联全球家居建材市场,,,,missing_year
+shanghai,sha-0012,markets,سوق فنغشيان لمواد الأثاث,Fengxian Furniture Materials Market,奉贤国际家具材料市场,,,,missing_year
+shanghai,sha-0013,markets,مدينة شنغهاي للأدوات الصناعية,Shanghai Hardware City,上海五金城,,,,missing_year
+shanghai,sha-0014,markets,مدينة شنغهاي للإضاءة,Shanghai Lighting City,上海灯具城,,,,missing_year
+shanghai,sha-0015,markets,سوق هونغتشياو للزهور,Hongqiao Flower Market,虹桥花卉市场,2001,opened,https://www.jfdaily.com/wx/detail.do?id=82667,has_year
+shanghai,sha-0016,markets,سوق ميشن للزهور,Meichen Flower Market,美陈花卉市场,,,,missing_year
+shanghai,sha-0017,markets,سوق جيانغيانغ الزراعي,Jiangyang Agricultural Market,江杨农产品批发市场,,,,missing_year
+shanghai,sha-0018,markets,مدينة يونتشو للتحف,Yunzhou Curio Town,云洲古玩城,,,,missing_year
+shanghai,sha-0019,markets,مدينة لونغليان لمستلزمات السيارات,Longlian Auto Supplies City,龙联汽车用品城,,,,missing_year
+shanghai,sha-0020,malls,آي إف سي,Shanghai IFC Mall,上海国金中心商场,2010,opened,https://www.shkp.com/sites/assets/files/2019-01/E_IR_2011_12_TextOnly.pdf,has_year
+shanghai,sha-0021,malls,سوبر براند,Super Brand Mall,正大广场,2002,opened,https://superbrandmall.com/en/about-us,has_year
+shanghai,sha-0022,malls,برج شنغهاي التجاري,Shanghai Tower Mall,上海中心大厦商业区,,,,missing_year
+shanghai,sha-0023,malls,66 بلازا,Plaza 66,恒隆广场,2001,opened,https://www.hanglung.com/en-us/properties/mainland-properties/shanghai/plaza-66,has_year
+shanghai,sha-0024,malls,تايكو هوي,HKRI Taikoo Hui,兴业太古汇,2017,opened,https://www.swireproperties.com/en/media/press-releases/2017/20171106/,has_year
+shanghai,sha-0025,malls,11 كي,Shanghai K11 Art Mall,上海K11购物艺术中心,,,,missing_year
+shanghai,sha-0026,malls,آي إيه بي إم,IAPM Mall,环贸iapm商场,,,,missing_year
+shanghai,sha-0027,malls,غلوبال هاربور,Global Harbor,环球港,,,,missing_year
+shanghai,sha-0028,malls,شنغهاي فيليج,Shanghai Village,上海奕欧来奥特莱斯,,,,missing_year
+shanghai,sha-0029,malls,بيستر فيليج,Bicester Village Shanghai,上海比斯特购物村,,,,missing_year
+shanghai,sha-0030,malls,فلورنتيا فيليج,Florentia Village,佛罗伦萨小镇,,,,missing_year
+shanghai,sha-0031,malls,رافلز سيتي,Raffles City People's Square,来福士广场,,,,missing_year
+shanghai,sha-0032,malls,نيو وورلد دايمارو,Shanghai New World Daimaru,上海新世界大丸百货,,,,missing_year
+shanghai,sha-0033,malls,شينتياندي ستايل,Xintiandi Style,新天地时尚,,,,missing_year
+shanghai,sha-0034,malls,تشيانتان تايكو لي,Qiantan Taikoo Li,前滩太古里,2021,opened,https://www.swirepacific.com/en/investor-relations/updates-to-our-shareholders/press-releases/swire-properties-and-lujiazui-group-celebrate-official-opening-of-taikoo-li-qiantan,has_year
+shanghai,sha-0035,malls,سوهيوان ميكس سي,Suhewan MixC World,苏河湾万象天地,,,,missing_year
+shanghai,sha-0036,malls,تيان آن ألف شجرة,Tian An 1000 Trees,天安千树,,,,missing_year
+shanghai,sha-0037,malls,بانلونغ تياندي,Panlong Tiandi,蟠龙天地,2023,opened,https://service.shanghai.gov.cn/sheninfo/specialdetail.aspx?Id=f6e9fda2-7ac4-4b80-91ea-d9a50a548bde,has_year
+shanghai,sha-0038,tourism,ممشى البوند,The Bund,外滩,,,,missing_year
+shanghai,sha-0039,tourism,برج لؤلؤة الشرق,Oriental Pearl Tower,东方明珠广播电视塔,1994,opened,https://english.shanghai.gov.cn/en-Latest-WhatsNew/20240930/57966196af434811aec2d86ba75fc7a6.html,has_year
+shanghai,sha-0040,tourism,برج شنغهاي,Shanghai Tower,上海中心大厦,2017,opened,https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250829/c3bbe11f97c84eefac249a80b842c865.html,has_year
+shanghai,sha-0041,tourism,المركز المالي العالمي,Shanghai World Financial Center,上海环球金融中心,,,,missing_year
+shanghai,sha-0042,tourism,حديقة يويوان,Yu Garden,豫园,,,,missing_year
+shanghai,sha-0043,tourism,شارع نانجينغ للمشاة,Nanjing Road,南京路步行街,,,,missing_year
+shanghai,sha-0044,tourism,ساحة الشعب,People's Square,人民广场,,,,missing_year
+shanghai,sha-0045,tourism,شينتياندي,Xintiandi,新天地,,,,missing_year
+shanghai,sha-0046,tourism,تيانزيفانغ,Tianzifang,田子坊,,,,missing_year
+shanghai,sha-0047,tourism,ممشى نورث بوند,North Bund,北外滩滨江绿地,,,,missing_year
+shanghai,sha-0048,tourism,متحف شنغهاي,Shanghai Museum,上海博物馆,,,,missing_year
+shanghai,sha-0049,tourism,متحف شنغهاي الشرقي,Shanghai Museum East,上海博物馆东馆,2024,phased,https://english.shanghai.gov.cn/en-ArtExhibitions/20240319/b03b52738f704300ac9e79456893c759.html,has_year
+shanghai,sha-0050,tourism,متحف بودونغ للفنون,Museum of Art Pudong,浦东美术馆,2021,opened,https://english.shanghai.gov.cn/en-Latest-WhatsNew/20251212/2c0960ed76be4330a99f029daf8ba5f6.html,has_year
+shanghai,sha-0051,tourism,للفنون50 مركز إم,M50 Art District,M50创意园,,,,missing_year
+shanghai,sha-0052,tourism,ويست بوند للفنون,West Bund Art Center,西岸艺术中心,,,,missing_year
+shanghai,sha-0053,tourism,حديقة سينشري,Century Park,世纪公园,,,,missing_year
+shanghai,sha-0054,tourism,حديقة شنغهاي النباتية,Shanghai Botanical Garden,上海植物园,,,,missing_year
+shanghai,sha-0055,tourism,حديقة حيوان شنغهاي,Shanghai Zoo,上海动物园,,,,missing_year
+shanghai,sha-0056,tourism,شارع ووكانغ,Wukang Road,武康路,,,,missing_year
+shanghai,sha-0057,tourism,مبنى ووكانغ,Wukang Mansion,武康大楼,,,,missing_year
+shanghai,sha-0058,tourism,شارع آنفو,Anfu Road,安福路,,,,missing_year
+shanghai,sha-0059,tourism,شارع فوشينغ الغربي,Fuxing West Road,复兴西路,,,,missing_year
+shanghai,sha-0060,tourism,شارع هوايهاي الأوسط,Huaihai Middle Road,淮海中路,,,,missing_year
+shanghai,sha-0061,tourism,شارع هونان,Hunan Road,湖南路,,,,missing_year
+shanghai,sha-0062,tourism,شارع هنغشان,Hengshan Road,衡山路,,,,missing_year
+shanghai,sha-0063,tourism,شارع سينان,Sinan Road,思南路,,,,missing_year
+shanghai,sha-0064,tourism,سينان مانشنز,Sinan Mansions,思南公馆,,,,missing_year
+shanghai,sha-0065,tourism,شارع يونغكانغ,Yongkang Road,永康路,,,,missing_year
+shanghai,sha-0066,tourism,شارع شينخوا,Xinhua Road,新华路,,,,missing_year
+shanghai,sha-0067,tourism,كولومبيا سيركل,Columbia Circle,上生•新所,,,,missing_year
+shanghai,sha-0068,tourism,تشوجياجياو,Zhujiajiao,朱家角古镇,,,,missing_year
+shanghai,sha-0069,tourism,تشيباو,Qibao,七宝古镇,,,,missing_year
+shanghai,sha-0070,tourism,نانشيانغ,Nanxiang,南翔古镇,,,,missing_year
+shanghai,sha-0071,tourism,فنغجينغ,Fengjing,枫泾古镇,,,,missing_year
+shanghai,sha-0072,tourism,شينتشانغ,Xinchang,新场古镇,,,,missing_year
+shanghai,sha-0073,tourism,بانلونغ,Panlong,蟠龙古镇片区,,,,missing_year
+shanghai,sha-0074,tourism,تشوانشا,Chuansha,川沙古镇,,,,missing_year
+shanghai,sha-0075,tourism,غاوتشياو,Gaoqiao,高桥老街,,,,missing_year
+shanghai,sha-0076,tourism,لوديان,Luodian,罗店古镇,,,,missing_year
+shanghai,sha-0077,tourism,ليانتانغ,Liantang,练塘古镇,,,,missing_year
+shanghai,sha-0078,tourism,سيتشينغ,Sijing,泗泾古镇,,,,missing_year
+shanghai,sha-0079,tourism,أنتينغ,Anting,安亭老街,,,,missing_year
+shanghai,sha-0080,tourism,ديزني لاند شنغهاي,Shanghai Disneyland,上海迪士尼乐园,2016,opened,https://thewaltdisneycompany.com/news/shanghai-disney-resort-opens-in-mainland-china/,has_year
+shanghai,sha-0081,tourism,ديزني تاون,Disneytown,迪士尼小镇,,,,missing_year
+shanghai,sha-0082,tourism,ليغولاند شنغهاي,LEGOLAND Shanghai Resort,上海乐高乐园度假区,2025,opened,https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250707/2d867b704a814c1f8f162a5599eeb7c0.html,has_year
+shanghai,sha-0083,tourism,هابي فالي,Happy Valley Shanghai,上海欢乐谷,2009,opened,https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250702/51ba8a5c767045c4ae89a1035f724fcb.html,has_year
+shanghai,sha-0084,tourism,هايتشانغ البحري,Shanghai Haichang Ocean Park,上海海昌海洋公园,2018,opened,https://english.shanghai.gov.cn/en-Parks/20240618/91679073e79a4376a90edb76414836d4.html,has_year
+shanghai,sha-0085,tourism,حديقة الحيوانات البرية,Shanghai Wild Animal Park,上海野生动物园,,,,missing_year
+shanghai,sha-0086,tourism,متحف الفلك,Shanghai Astronomy Museum,上海天文馆,2021,opened,https://en.sstm.org.cn/news/3723037/81,has_year
+shanghai,sha-0087,tourism,منتجع التزلج الداخلي,L+Snow,耀雪冰雪世界,,,,missing_year
+shanghai,sha-0088,tourism,شاطئ جينشان,Jinshan City Beach,金山城市沙滩,,,,missing_year
+shanghai,sha-0089,tourism,حديقة تشنشان النباتية,Chenshan Botanical Garden,辰山植物园,,,,missing_year
+shanghai,sha-0090,tourism,موقع غوانغفولين التراثي,Guangfulin Cultural Relics,广富林文化遗址,,,,missing_year
+shanghai,sha-0091,dining,تشينغميجو,Qingmeiju,清梅居,,,,missing_year
+shanghai,sha-0092,dining,مطاعم نودلز لانتشو,Lanzhou Beef Noodles,兰州牛肉面,,,,missing_year
+shanghai,sha-0093,dining,مطاعم شينجيانغ,Xinjiang Halal Restaurants,新疆清真餐厅,,,,missing_year
+shanghai,sha-0094,dining,مطاعم قومية هوي,Hui Muslim Restaurants,回族清真餐厅,,,,missing_year
+shanghai,sha-0095,dining,مطاعم شيآن الإسلامية,Xi'an Halal Food,西安清真美食,,,,missing_year
+shanghai,sha-0096,dining,ستاربكس,Starbucks,星巴克,,,,missing_year
+shanghai,sha-0097,dining,لاكين كوفي,Luckin Coffee,瑞幸咖啡,,,,missing_year
+shanghai,sha-0098,dining,مانر كوفي,Manner Coffee,MANNER咖啡,,,,missing_year
+shanghai,sha-0099,dining,سي سو,Seesaw Coffee,Seesaw咖啡,,,,missing_year
+shanghai,sha-0100,dining,أرابيكا,% Arabica,% Arabica,,,,missing_year
+shanghai,sha-0101,dining,بيكر آند سبايس,Baker & Spice,Baker & Spice,,,,missing_year
+shanghai,sha-0102,dining,باريس باغيت,Paris Baguette,巴黎贝甜,,,,missing_year
+shanghai,sha-0103,dining,هوليلاند,Holiland,好利来,,,,missing_year
+shanghai,sha-0104,dining,هي تي,HEYTEA,喜茶,,,,missing_year
+shanghai,sha-0105,dining,نايوكي,Nayuki,奈雪的茶,,,,missing_year
+shanghai,sha-0106,dining,تشاجي,Chagee,霸王茶姬,,,,missing_year
+shanghai,sha-0107,hotels,ذا بينينسولا,The Peninsula Shanghai,上海半岛酒店,,,,missing_year
+shanghai,sha-0108,hotels,والدورف أستوريا,Waldorf Astoria on the Bund,上海外滩华尔道夫酒店,,,,missing_year
+shanghai,sha-0109,hotels,فيرمونت بيس,Fairmont Peace Hotel,上海和平饭店,,,,missing_year
+shanghai,sha-0110,hotels,شنغهاي إديشن,The Shanghai EDITION,上海艾迪逊酒店,,,,missing_year
+shanghai,sha-0111,hotels,بودونغ شانغريلا,Pudong Shangri-La,上海浦东香格里拉酒店,,,,missing_year
+shanghai,sha-0112,hotels,ماندارين أورينتال,Mandarin Oriental Pudong,上海浦东文华东方酒店,,,,missing_year
+shanghai,sha-0113,hotels,بارك حياة,Park Hyatt Shanghai,上海柏悦酒店,,,,missing_year
+shanghai,sha-0114,hotels,غراند حياة,Grand Hyatt Shanghai,上海金茂君悦大酒店,,,,missing_year
+shanghai,sha-0115,hotels,ريتز كارلتون,Ritz-Carlton Pudong,上海浦东丽思卡尔顿酒店,,,,missing_year
+shanghai,sha-0116,hotels,جي دبليو ماريوت,JW Marriott Tomorrow Square,上海明天广场JW万豪酒店,,,,missing_year
+shanghai,sha-0117,hotels,ماريوت سيتي سنتر,Shanghai Marriott City Centre,上海雅居乐万豪侯爵酒店,,,,missing_year
+shanghai,sha-0118,hotels,ذا لانغهام,The Langham Xintiandi,上海新天地朗廷酒店,,,,missing_year
+shanghai,sha-0119,hotels,كابيلا جيان يي لي,Capella Jian Ye Li,上海建业里嘉佩乐酒店,,,,missing_year
+shanghai,sha-0120,hotels,بيلاجيو,Bellagio by MGM Shanghai,上海苏宁宝丽嘉酒店,,,,missing_year
+shanghai,sha-0121,hotels,فندق ديزني,Shanghai Disneyland Hotel,上海迪士尼乐园酒店,2016,opened,https://www.pudong.gov.cn/019011006002003/20220102/409926/bf80f495237b4448ad1743bf4b74f58b.pdf,has_year
+shanghai,sha-0122,hotels,هوليدي إن نانجينغ رود,Holiday Inn Shanghai Nanjing Road,上海南京路假日酒店,,,,missing_year
+shanghai,sha-0123,hotels,سنترال هوتيل,Central Hotel Shanghai,上海王宝和大酒店,,,,missing_year
+shanghai,sha-0124,hotels,غراند سنترال,Grand Central Hotel Shanghai,上海大酒店,,,,missing_year
+shanghai,sha-0125,hotels,راديسون بلو نيو وورلد,Radisson Blu New World,上海新世界丽笙大酒店,,,,missing_year
+shanghai,sha-0126,hotels,نوفوتيل أتلانتس,Novotel Shanghai Atlantis,上海海神诺富特大酒店,,,,missing_year
+shanghai,sha-0127,hotels,كورتيارد ماريوت سنترال,Courtyard Shanghai Central,上海浦西万怡酒店,,,,missing_year
+shanghai,sha-0128,hotels,هوليدي إن إكسبرس,Holiday Inn Express,智选假日酒店,,,,missing_year
+shanghai,sha-0129,hotels,جي آي هوتيل,JI Hotel,全季酒店,,,,missing_year
+shanghai,sha-0130,hotels,هانتينغ,Hanting Hotel,汉庭酒店,,,,missing_year
+shanghai,sha-0131,hotels,هوم إن,Home Inn,如家酒店,,,,missing_year
+shanghai,sha-0132,hotels,إيبيس,Ibis,宜必思酒店,,,,missing_year
+shanghai,sha-0133,hotels,جينجيانغ إن,Jinjiang Inn,锦江之星,,,,missing_year
+shanghai,sha-0134,transport,مطار بودونغ الدولي,Shanghai Pudong International Airport (PVG),上海浦东国际机场,,,,missing_year
+shanghai,sha-0135,transport,مطار هونغتشياو الدولي,Shanghai Hongqiao International Airport (SHA),上海虹桥国际机场,,,,missing_year
+shanghai,sha-0136,transport,محطة هونغتشياو,Shanghai Hongqiao Railway Station,上海虹桥站,2010,opened,https://www.shanghai.gov.cn/english2019/pdf/2018-ShanghaiBasicFacts.pdf,has_year
+shanghai,sha-0137,transport,محطة شنغهاي,Shanghai Railway Station,上海站,,,,missing_year
+shanghai,sha-0138,transport,محطة شنغهاي الجنوبية,Shanghai South Railway Station,上海南站,,,,missing_year
+shanghai,sha-0139,transport,محطة شنغهاي الغربية,Shanghai West Railway Station,上海西站,,,,missing_year
+shanghai,sha-0140,transport,محطة سونغجيانغ,Shanghai Songjiang Railway Station,上海松江站,,,,missing_year
+shanghai,sha-0141,transport,محطة جينشان,Jinshan Railway Station,金山站,,,,missing_year
+shanghai,sha-0142,mosques,مسجد شياوتاويوان,Xiaotaoyuan Mosque,小桃园清真寺,,,,missing_year
+shanghai,sha-0143,mosques,مسجد هوشي,Huxi Mosque,沪西清真寺,,,,missing_year
+shanghai,sha-0144,mosques,مسجد سونغجيانغ,Songjiang Mosque,松江清真寺,,,,missing_year
+shanghai,sha-0145,mosques,مسجد فويو,Fuyou Road Mosque,福佑路清真寺,,,,missing_year
+shanghai,sha-0146,mosques,مسجد بودونغ,Pudong Mosque,浦东清真寺,,,,missing_year
+shanghai,sha-0147,mosques,مسجد جيادينغ,Jiading Mosque,嘉定清真寺,,,,missing_year
+shanghai,sha-0148,markets,سوق يويوان القديم,,豫园老街,,,,missing_year
+shanghai,sha-0149,dining,مطاعم عربية في شنغهاي,,上海阿拉伯餐厅,,,,missing_year
+shanghai,sha-0150,dining,مطاعم تركية في شنغهاي,,上海土耳其餐厅,,,,missing_year
+shanghai,sha-0151,dining,مطاعم إيرانية في شنغهاي,,上海伊朗餐厅,,,,missing_year
+shanghai,sha-0152,dining,مطاعم هندية حلال في شنغهاي,,上海清真印度餐厅,,,,missing_year
+shanghai,sha-0153,dining,مطاعم صينية حلال في شنغهاي,,上海清真餐厅,,,,missing_year
+shanghai,sha-0154,dining,مطاعم أوروبية حلال في شنغهاي,,上海清真西餐厅,,,,missing_year
+shanghai,sha-0155,dining,كافيهات شارع آنفو,,安福路咖啡馆,,,,missing_year
+shanghai,sha-0156,dining,كافيهات شارع ووكانغ,,武康路咖啡馆,,,,missing_year
+shanghai,sha-0157,dining,كافيهات شارع ووجيانغ,,吴江路咖啡馆,,,,missing_year
+shanghai,sha-0158,dining,نودايك شنغهاي – هاوس ناوْهير,NUDAKE (HAUS NOWHERE Shanghai),NUDAKE(HAUS NOWHERE店),,,,missing_year
+shanghai,sha-0159,dining,ألف ليلة وليلة,1001 Nights Arabian Restaurant,一仟一夜阿拉伯餐厅,,,,missing_year
+shanghai,sha-0160,dining,إيلي فلافل – جيوجيانغ,Eli Falafel (Jiujiang Road),,,,,missing_year
+shanghai,sha-0161,dining,إيلي فلافل – فوتشنغ,Eli Falafel (Fucheng Road),ELI FALAFEL黎巴嫩餐厅(富城路店),,,,missing_year
+shanghai,sha-0162,dining,مطعم تاجين المغربي,Tajine Moroccan,,,,,missing_year
+shanghai,sha-0163,dining,إيفيس التركي – جينغآن,Efes Turkish Restaurant (Jing’an),,,,,missing_year
+shanghai,sha-0164,dining,إيفيس التركي – لوجياتسوي,Efes Turkish Restaurant (Lujiazui),Efes Restaurant艾菲斯餐厅(陆家嘴店),,,,missing_year
+shanghai,sha-0165,dining,كلاي – مطعم هندي,KLAY Shanghai,KLAY现代印度餐厅,,,,missing_year
+shanghai,sha-0166,dining,فيداس – مطعم هندي,Vedas Indian Restaurant,,,,,missing_year
+shanghai,sha-0167,dining,ميركاتو – البوند,Mercato by Jean-Georges,,,,,missing_year
+shanghai,sha-0168,dining,إل جياردينو – لافينيو,IL GIARDINO (L’Avenue),,,,,missing_year
+shanghai,sha-0169,dining,جيه ستون فاين بيسترو,Jstone Fine Bistro,,,,,missing_year
+shanghai,sha-0170,dining,ماماميا – هونغتشياو,Mammamia (Hongqiao Road),,,,,missing_year
+shanghai,sha-0171,dining,هوم سلايس بيتزا – شانكانغ لي,Homeslice Pizza (Shankang Li),斯莱仕披萨,,,,missing_year
+shanghai,sha-0172,dining,هوم سلايس بيتزا – فاونْد 158,Homeslice Pizza (Found 158),,,,,missing_year
+shanghai,sha-0173,dining,بيلا نابولي – نانهوي,Bella Napoli (Nanhui Road),,,,,missing_year
+shanghai,sha-0174,dining,أرابيكا – ووكانغ,% Arabica (Wukang Road),％ Arabica 武康路店,,,,missing_year
+shanghai,sha-0175,dining,أرابيكا – روكبوند,% Arabica (Rockbund Roastery),,,,,missing_year
+shanghai,sha-0176,dining,أرابيكا – آي إف سي,% Arabica (Shanghai IFC),,,,,missing_year
+shanghai,sha-0177,dining,ستاربكس ريزيرف روستري – شنغهاي,Starbucks Reserve Roastery Shanghai,星巴克臻选上海烘焙工坊,,,,missing_year
+shanghai,sha-0178,dining,هي تي بيور – غلوبال هاربور,HEYTEA Pure (Global Harbor),喜茶,,,,missing_year
+shanghai,sha-0179,dining,مانر كوفي – مول ميكس سي,Manner Coffee (Shanghai MixC),Manner Coffee(万象城购物中心店),,,,missing_year
+shanghai,sha-0180,dining,سي سو كوفي – المركز المالي العالمي,Seesaw Coffee (Shanghai World Financial Center),Seesaw咖啡(环球金融中心店),,,,missing_year
+shanghai,sha-0181,dining,هوليلاند – مول سكاي,Holiland (Sky Mall),好利来(仲盛世界商城店),,,,missing_year
+shanghai,sha-0182,markets,سوق ديمي تحت الأرض,Dimei Shopping Centre,迪美购物中心,,,,missing_year
+shanghai,sha-0183,markets,شارع هواشنغ التجاري تحت الأرض,Huasheng Underground Shopping Street,华盛街,,,,missing_year
+shanghai,sha-0184,dining,مطعم ماسالا آرت,Masala Art (Dagu Road),香料艺术印度餐厅,,,,missing_year
+shanghai,sha-0185,dining,مطعم إنديان كيتشن – فرع هونغمي,Indian Kitchen (Hongmei Road),印度小厨(虹梅路店),,,,missing_year
+shanghai,sha-0186,dining,مطعم كباب أون ذا غريل – ساحة الشعب,Kebabs on the Grille (People’s Square),克比叔叔印度餐厅,,,,missing_year
+shanghai,sha-0187,dining,مطعم بوليوود – جينتشياو,Bollywood Indian Restaurant (Hongfeng Road),宝莱坞印度餐厅(碧云店),,,,missing_year
+shanghai,sha-0188,dining,مطعم ناماستي – ميهوا,Namaste Indian Restaurant (Meihua Road),NAMASTE印度料理(梅花路店),,,,missing_year
+shanghai,sha-0189,dining,مطعم فيداس – فرع هونغتشياو,Vedas Indian Restaurant (Hongqiao),VEDAS印度餐厅(虹桥店),,,,missing_year
+shanghai,sha-0190,dining,مطعم نيبالي كيتشن – جولو,Nepali Kitchen (Julu Road),Nepali Kitchen(巨鹿路店),,,,missing_year
+shanghai,sha-0191,dining,مطعم الفيل الهندي – إن إليفانت,IN ELEPHANT Impression Indian Restaurant,IN ELEPHANT印象·印度餐厅,,,,missing_year
+shanghai,sha-0192,dining,مطعم باشا التركي,Pasha Turkish Restaurant,帕夏土耳其餐厅,,,,missing_year
+shanghai,sha-0193,dining,مطعم غارليك التركي,Garlic Turkish Restaurant,大蒜土耳其餐厅,,,,missing_year
+shanghai,sha-0194,dining,مطعم توك التركي – هوايهاي,TUK Turkish Restaurant (Huaihai Road),TUK土耳其餐厅(淮海中路店),,,,missing_year
+shanghai,sha-0195,dining,مطعم بيرا التركي – جولو,PERA Turkish Restaurant (Julu Road),PERA土耳其餐厅,,,,missing_year
+shanghai,sha-0196,dining,أمام لندن بيكري تاون – ووجيانغ,AMAM LONBAKERY TOWN (Wujiang Road),AMAM LONBAKERY TOWN伦敦烘焙小镇(上海旗舰店),,,,missing_year
+shanghai,sha-0197,dining,باترفول آند كريمورس – ووجيانغ,BUTTERFUL & CREAMOROUS (Wujiang Road),BUTTERFUL&CREAMOROUS(上海旗舰店),,,,missing_year
+shanghai,sha-0198,dining,فاشينو بيكري – آي إف سي,FASCINO BAKERY (Shanghai IFC),FASCINO BAKERY(上海国金中心商场店),,,,missing_year
+shanghai,sha-0199,dining,بريان بيكري – نانجينغ الغربية,Briant Bakery (West Nanjing Road),Briant(南京西路店),,,,missing_year
+shanghai,sha-0200,dining,بارك هوتيل ديلي – هوانغخه,Park Hotel Deli (Huanghe Road),国际饭店帆声饼屋(黄河路店),,,,missing_year
+shanghai,sha-0201,dining,باين شو – جيوغوانغ,PAIN CHAUD (Jing’an Jiuguang),PAIN CHAUD百丘(静安久光店),,,,missing_year
+shanghai,sha-0202,dining,لونيرز – روكبوند,Luneurs (Rockbund),LUNEURS(洛克外滩源店),,,,missing_year
+shanghai,sha-0203,dining,باترفول آند كريمورس – جيوغوانغ,BUTTERFUL & CREAMOROUS (Jiuguang Center),BUTTERFUL&CREAMOROUS(上海久光中心店),,,,missing_year
+shanghai,sha-0204,dining,فاشينو بيكري – آي إيه بي إم,FASCINO BAKERY (IAPM),FASCINO BAKERY(环贸IAPM店),,,,missing_year
+shanghai,sha-0205,dining,مطعم سلطان التركي – جينغآن,SULTAN Turkish Restaurant (Jing’an PAC Branch),SULTAN·苏坦土耳其餐厅（静安店）,,,,missing_year
+shanghai,sha-0206,dining,مطعم مكان الإماراتي – شيويهوي,MAKAN Dubai Culture Restaurant (Xujiahui),MAKAN迪拜文化餐厅,,,,missing_year
+shanghai,sha-0207,dining,مطعم إيلي فلافل – يانبينغ,Eli Falafel (Yanping Road),ELI FALAFEL黎巴嫩美食(延平路店),,,,missing_year
+shanghai,sha-0208,dining,مطعم إيلي فلافل – نانجينغ الغربية,Eli Falafel (Shanghai Centre),ELI FALAFEL黎巴嫩美食(上海商城店),,,,missing_year
+shanghai,sha-0209,dining,مطعم هونغ تشانغ شينغ – قوانغشي,Hong Chang Xing (Guangxi North Road),洪长兴(广西北路店),,,,missing_year
+shanghai,sha-0210,dining,مطعم ييرشاري شينجيانغ – شيماو,Yershari Xinjiang Restaurant (Shimao Plaza),耶里夏丽.新疆菜.景观餐厅(人民广场世茂店),,,,missing_year
+beijing,bei-0001,markets,سوق الحرير شيوشوي,Silk Street,秀水街,,,,missing_year
+beijing,bei-0002,markets,سوق اللؤلؤ هونغتشياو,Hongqiao Pearl Market,红桥市场,,,,missing_year
+beijing,bei-0003,markets,سوق بانجيايوان للتحف,Panjiayuan Market,潘家园旧货市场,,,,missing_year
+beijing,bei-0004,markets,مركز بايرونغ التجاري,Bairong World Trade Center,百荣世贸商城,,,,missing_year
+beijing,bei-0005,markets,شارع ماليانداو للشاي,Maliandao Tea Street,马连道茶叶街,,,,missing_year
+beijing,bei-0006,markets,شارع ليوليتشانغ الثقافي,Liulichang Cultural Street,琉璃厂文化街,,,,missing_year
+beijing,bei-0007,markets,مدينة بكين للتحف,Beijing Curio City,北京古玩城,,,,missing_year
+beijing,bei-0008,markets,سوق سانيوانلي للمواد الغذائية,Sanyuanli Market,三源里菜市场,,,,missing_year
+beijing,bei-0009,markets,سوق تيان يي التاريخي,Tianyi Market (historical),天意小商品批发市场,,,,missing_year
+beijing,bei-0010,markets,منطقة تشونغقوانتسون للإلكترونيات,Zhongguancun Electronics Area,中关村电子商圈,,,,missing_year
+beijing,bei-0011,markets,البحث عن محلات الإلكترونيات,Electronics specialist search,电子产品市场,,,,missing_year
+beijing,bei-0012,markets,المنطقة التجارية شيدان,Xidan Commercial Area,西单商圈,,,,missing_year
+beijing,bei-0013,markets,منطقة شيهونغمن للأثاث,Xihongmen Furniture Area,西红门家具商圈,,,,missing_year
+beijing,bei-0014,markets,أسواق مواد البناء والديكور,Building Materials Search,建材家居市场,,,,missing_year
+beijing,bei-0015,markets,أسواق الزهور والنباتات,Flower market search,花卉市场,,,,missing_year
+beijing,bei-0016,markets,أسواق المعدات الطبية,Medical equipment search,医疗器械市场,,,,missing_year
+beijing,bei-0017,markets,أسواق الدراجات النارية,Motorcycle market search,摩托车市场,,,,missing_year
+beijing,bei-0018,markets,أسواق الساعات,Watches search,钟表市场,,,,missing_year
+beijing,bei-0019,markets,أسواق الألعاب بالجملة,Toy wholesale search,玩具批发市场,,,,missing_year
+beijing,bei-0020,markets,أسواق الأواني والأدوات المنزلية,Housewares search,家居用品市场,,,,missing_year
+beijing,bei-0021,markets,شارع وانغفوجينغ,Wangfujing Street,王府井步行街,,,,missing_year
+beijing,bei-0022,markets,شارع تشيانمن,Qianmen Street,前门大街,,,,missing_year
+beijing,bei-0023,markets,شارع داشيلان,Dashilan,大栅栏,,,,missing_year
+beijing,bei-0024,malls,مول تايكو لي سانليتون,Taikoo Li Sanlitun,三里屯太古里,2008,opened,https://www.swireproperties.com/en/about-us/50th-anniversary/place/16-taikoo-li-sanlitun/,has_year
+beijing,bei-0025,malls,تشاينا وورلد مول,China World Mall,国贸商城,,,,missing_year
+beijing,bei-0026,malls,تشاينا سنترال بليس,China Central Place,华贸中心,,,,missing_year
+beijing,bei-0027,malls,تايكو بليس بكين (إنديغو سابقًا),Taikoo Place Beijing (formerly INDIGO),北京太古坊,,,,missing_year
+beijing,bei-0028,malls,مول سولانا,SOLANA,蓝色港湾,,,,missing_year
+beijing,bei-0029,malls,باركفيو غرين,Parkview Green,侨福芳草地,,,,missing_year
+beijing,bei-0030,malls,ذا بليس,The Place,世贸天阶,,,,missing_year
+beijing,bei-0031,malls,شيدان جوي سيتي,Xidan Joy City,西单大悦城,,,,missing_year
+beijing,bei-0032,malls,تشاويانغ جوي سيتي,Chaoyang Joy City,朝阳大悦城,,,,missing_year
+beijing,bei-0033,malls,سيزونز بليس,Seasons Place,金融街购物中心,,,,missing_year
+beijing,bei-0034,malls,مول APM وانغفوجينغ,APM Wangfujing,北京apm,,,,missing_year
+beijing,bei-0035,malls,مول SKP بكين,Beijing SKP,北京SKP,,,,missing_year
+beijing,bei-0036,malls,هوبسون وان,Hopson One,合生汇,,,,missing_year
+beijing,bei-0037,malls,واندا بلازا,Wanda Plaza,万达广场,,,,missing_year
+beijing,bei-0038,malls,شارع غولو الشرقي,Gulou East Street,鼓楼东大街,,,,missing_year
+beijing,bei-0039,malls,نانلوغوشيانغ,Nanluoguxiang,南锣鼓巷,,,,missing_year
+beijing,bei-0040,tourism,المدينة المحرمة,Forbidden City / Palace Museum,故宫博物院,1925,founded,https://english.beijing.gov.cn/beijinginfo/culture/culturaltreasures/cityofmuseums/list/202401/t20240116_3536805.html,has_year
+beijing,bei-0041,tourism,ساحة تيانانمن,Tiananmen Square,天安门广场,,,,missing_year
+beijing,bei-0042,tourism,حديقة جينغشان,Jingshan Park,景山公园,,,,missing_year
+beijing,bei-0043,tourism,معبد السماء,Temple of Heaven,天坛公园,,,,missing_year
+beijing,bei-0044,tourism,القصر الصيفي,Summer Palace,颐和园,,,,missing_year
+beijing,bei-0045,tourism,القصر الصيفي القديم,Old Summer Palace,圆明园,,,,missing_year
+beijing,bei-0046,tourism,معبد لاما,Yonghe Temple,雍和宫,,,,missing_year
+beijing,bei-0047,tourism,معبد كونفوشيوس,Confucius Temple,孔庙,,,,missing_year
+beijing,bei-0048,tourism,حديقة بيهاي,Beihai Park,北海公园,,,,missing_year
+beijing,bei-0049,tourism,منطقة شيتشاهاي,Shichahai,什刹海,,,,missing_year
+beijing,bei-0050,tourism,بحيرة هوهاي,Houhai Lake,后海,,,,missing_year
+beijing,bei-0051,tourism,برج الطبل,Drum Tower,鼓楼,,,,missing_year
+beijing,bei-0052,tourism,برج الجرس,Bell Tower,钟楼,,,,missing_year
+beijing,bei-0053,tourism,متحف الصين الوطني,National Museum of China,中国国家博物馆,,,,missing_year
+beijing,bei-0054,tourism,متحف العاصمة,Capital Museum,首都博物馆,,,,missing_year
+beijing,bei-0055,tourism,الحديقة الأولمبية,Olympic Park,奥林匹克公园,,,,missing_year
+beijing,bei-0056,tourism,ملعب عش الطائر,Bird’s Nest,国家体育场,,,,missing_year
+beijing,bei-0057,tourism,المكعب المائي,Water Cube,国家游泳中心,,,,missing_year
+beijing,bei-0058,tourism,حي 798 الفني,798 Art District,艺术区,,,,missing_year
+beijing,bei-0059,tourism,حديقة تشاويانغ,Chaoyang Park,朝阳公园,,,,missing_year
+beijing,bei-0060,tourism,الحديقة النباتية الوطنية,National Botanical Garden,国家植物园,2022,opened,https://english.beijing.gov.cn/travellinginbeijing/citytours/202204/t20220420_2683341.html,has_year
+beijing,bei-0061,tourism,الجبال العطرية,Fragrant Hills,香山公园,,,,missing_year
+beijing,bei-0062,tourism,حديقة حيوان بكين,Beijing Zoo,北京动物园,,,,missing_year
+beijing,bei-0063,tourism,متحف العلوم والتكنولوجيا الصيني,China Science and Technology Museum,中国科学技术馆,,,,missing_year
+beijing,bei-0064,tourism,منتجع يونيفرسال بكين,Universal Beijing Resort,北京环球度假区,2021,opened,https://www.universalbeijingresort.com/en/news/351.html,has_year
+beijing,bei-0065,tourism,مدينة غوباي المائية,Gubei Water Town,古北水镇,,,,missing_year
+beijing,bei-0066,tourism,بلدة تشوانديشيا القديمة,Cuandixia Village,爨底下村,,,,missing_year
+beijing,bei-0067,tourism,منطقة ليوليتشانغ,Liulichang,琉璃厂,,,,missing_year
+beijing,bei-0068,tourism,سور بادالينغ العظيم,Badaling Great Wall,八达岭长城,,,,missing_year
+beijing,bei-0069,tourism,سور موتيانيو العظيم,Mutianyu Great Wall,慕田峪长城,,,,missing_year
+beijing,bei-0070,tourism,سور جويونغقوان العظيم,Juyongguan Great Wall,居庸关长城,,,,missing_year
+beijing,bei-0071,tourism,سور سيماتاي العظيم,Simatai Great Wall,司马台长城,,,,missing_year
+beijing,bei-0072,tourism,سور جينشانلينغ العظيم,Jinshanling Great Wall,金山岭长城,,,,missing_year
+beijing,bei-0073,tourism,سور هوانغهوا المائي,Huanghuacheng Lakeside Great Wall,黄花城水长城,,,,missing_year
+beijing,bei-0074,dining,مطعم دونغلايشون,Dong Lai Shun,东来顺,,,,missing_year
+beijing,bei-0075,dining,مطعم هونغبينلو,Hongbinlou,鸿宾楼,,,,missing_year
+beijing,bei-0076,dining,مطعم زيغوانغيوان,Ziguangyuan,紫光园,,,,missing_year
+beijing,bei-0077,dining,مطاعم شارع نيوجيه الحلال,Niujie Halal Dining,牛街清真餐饮,,,,missing_year
+beijing,bei-0078,dining,مطعم جوباويان,Jubaoyuan,聚宝源,,,,missing_year
+beijing,bei-0079,dining,مطاعم نودلز لانتشو,Lanzhou Beef Noodles,兰州牛肉面,,,,missing_year
+beijing,bei-0080,dining,مطاعم شينجيانغ,Xinjiang Restaurants,新疆清真餐厅,,,,missing_year
+beijing,bei-0081,dining,مطاعم عربية,Arabic Restaurants,阿拉伯餐厅,,,,missing_year
+beijing,bei-0082,dining,مطاعم تركية,Turkish Restaurants,土耳其餐厅,,,,missing_year
+beijing,bei-0083,dining,مطاعم هندية,Indian Restaurants,印度餐厅,,,,missing_year
+beijing,bei-0084,dining,ستاربكس,Starbucks,星巴克,,,,missing_year
+beijing,bei-0085,dining,لاكين كوفي,Luckin Coffee,瑞幸咖啡,,,,missing_year
+beijing,bei-0086,dining,مانر كوفي,Manner Coffee,MANNER咖啡,,,,missing_year
+beijing,bei-0087,dining,هي تي,HEYTEA,喜茶,,,,missing_year
+beijing,bei-0088,dining,نايوكي,Nayuki,奈雪的茶,,,,missing_year
+beijing,bei-0089,dining,هوليلاند,Holiland,好利来,,,,missing_year
+beijing,bei-0090,dining,باريس باغيت,Paris Baguette,巴黎贝甜,,,,missing_year
+beijing,bei-0091,dining,كوستا كوفي,Costa Coffee,咖世家,,,,missing_year
+beijing,bei-0092,dining,تشاجي,Chagee,霸王茶姬,,,,missing_year
+beijing,bei-0093,dining,كافيهات الهوتونغ,Hutong Cafes,胡同咖啡馆,,,,missing_year
+beijing,bei-0094,hotels,فندق بينينسولا بكين,The Peninsula Beijing,北京王府半岛酒店,,,,missing_year
+beijing,bei-0095,hotels,فندق والدورف أستوريا بكين,Waldorf Astoria Beijing,北京华尔道夫酒店,,,,missing_year
+beijing,bei-0096,hotels,فندق فور سيزونز بكين,Four Seasons Beijing,北京四季酒店,,,,missing_year
+beijing,bei-0097,hotels,فندق روزوود بكين,Rosewood Beijing,北京瑰丽酒店,,,,missing_year
+beijing,bei-0098,hotels,فندق كونراد بكين,Conrad Beijing,北京康莱德酒店,,,,missing_year
+beijing,bei-0099,hotels,فندق غراند حياة بكين,Grand Hyatt Beijing,北京东方君悦大酒店,,,,missing_year
+beijing,bei-0100,hotels,فندق بارك حياة بكين,Park Hyatt Beijing,北京柏悦酒店,,,,missing_year
+beijing,bei-0101,hotels,فندق ريتز كارلتون بكين,The Ritz-Carlton Beijing,北京丽思卡尔顿酒店,,,,missing_year
+beijing,bei-0102,hotels,فندق شانغريلا بكين,Shangri-La Beijing,北京香格里拉饭店,,,,missing_year
+beijing,bei-0103,hotels,فندق ماندارين أورينتال وانغفوجينغ,Mandarin Oriental Wangfujing,北京王府井文华东方酒店,,,,missing_year
+beijing,bei-0104,hotels,فنادق هوليداي إن بكين,Holiday Inn Beijing,北京假日酒店,,,,missing_year
+beijing,bei-0105,hotels,فنادق نوفوتيل بكين,Novotel Beijing,北京诺富特酒店,,,,missing_year
+beijing,bei-0106,hotels,فنادق هامبتون باي هيلتون,Hampton by Hilton,希尔顿欢朋酒店,,,,missing_year
+beijing,bei-0107,hotels,فنادق أتور,Atour Hotel,亚朵酒店,,,,missing_year
+beijing,bei-0108,hotels,فنادق جي آي,Jl Hotel,全季酒店,,,,missing_year
+beijing,bei-0109,hotels,فنادق هانتينغ,Hanting,汉庭酒店,,,,missing_year
+beijing,bei-0110,hotels,فنادق إيبيس,Ibis,宜必思酒店,,,,missing_year
+beijing,bei-0111,hotels,فنادق هوم إن,Home Inn,如家酒店,,,,missing_year
+beijing,bei-0112,hotels,فنادق جينجيانغ إن,Jinjiang Inn,锦江之星,,,,missing_year
+beijing,bei-0113,transport,مطار بكين العاصمة الدولي,Beijing Capital Airport (PEK),北京首都国际机场,,,,missing_year
+beijing,bei-0114,transport,مطار بكين داشينغ الدولي,Beijing Daxing Airport (PKX),北京大兴国际机场,2019,opened,https://english.www.gov.cn/news/topnews/201909/26/content_WS5d8c03bdc6d0bcf8c4c140f9.html,has_year
+beijing,bei-0115,transport,محطة قطار بكين,Beijing Railway Station,北京站,,,,missing_year
+beijing,bei-0116,transport,محطة بكين الجنوبية,Beijing South,北京南站,,,,missing_year
+beijing,bei-0117,transport,محطة بكين الغربية,Beijing West,北京西站,,,,missing_year
+beijing,bei-0118,transport,محطة بكين الشمالية,Beijing North,北京北站,,,,missing_year
+beijing,bei-0119,transport,محطة بكين فنغتاي,Beijing Fengtai,北京丰台站,,,,missing_year
+beijing,bei-0120,transport,محطة بكين تشاويانغ,Beijing Chaoyang,北京朝阳站,,,,missing_year
+beijing,bei-0121,transport,محطة تشينغخه,Qinghe Railway Station,清河站,,,,missing_year
+beijing,bei-0122,transport,محطة بكين تونغتشو,Beijing Tongzhou,北京通州站,,,,missing_year
+beijing,bei-0123,mosques,مسجد نيوجيه,Niujie Mosque,牛街礼拜寺,,,,missing_year
+beijing,bei-0124,mosques,مسجد دونغسي,Dongsi Mosque,东四清真寺,,,,missing_year
+beijing,bei-0125,mosques,مسجد هواشي,Huashi Mosque,花市清真寺,,,,missing_year
+beijing,bei-0126,mosques,مسجد ناندويا,Nandouya Mosque,南豆芽清真寺,,,,missing_year
+beijing,bei-0127,mosques,مسجد هايديان,Haidian Mosque,海淀清真寺,,,,missing_year
+beijing,bei-0128,mosques,مسجد ما ديان,Madian Mosque,马甸清真寺,,,,missing_year
+beijing,bei-0129,mosques,منطقة نيوجيه الإسلامية,Niujie Muslim Quarter,牛街,,,,missing_year
+beijing,bei-v031-0006,malls,مول وانلي وانغفوجينغ ويلتاون,Wanli Wangfujing WellTown,万里·王府井WellTown,,,,missing_year
+beijing,bei-v031-0019,dining,مخبز فوهواژاي للمعجنات التقليدية,Fuhuazhai Pastry Shop,富华斋饽饽铺,,,,missing_year
+beijing,bei-v031-0020,dining,جيـاشيلي للحلويات والهدايا,Jiashili AIECHIRE,嘉士利黄油手信,,,,missing_year
+beijing,bei-v031-0021,dining,باتشا كوفي – تشاينا وورلد مول,Bacha Coffee – China World Mall,夿萐咖啡,,,,missing_year
+beijing,bei-v031-0029,tourism,متحف سور الصين العظيم,China Great Wall Museum,中国长城博物馆,,,,missing_year
+beijing,bei-v031-0030,tourism,متحف قناة بكين الكبرى,Grand Canal Museum of Beijing,北京大运河博物馆,2023,opened,https://english.beijing.gov.cn/latest/news/202312/t20231226_3510530.html,has_year
+beijing,bei-v031-0032,tourism,معبد مياوينغ والبرج الأبيض,Miaoying Temple (White Stupa Temple),妙应寺白塔,,,,missing_year
+beijing,bei-v0313-001,dining,ألف ليلة وليلة – سانليتون,One Thousand & One Nights (Sanlitun),一千零一夜餐厅（三里屯店）,,,,missing_year
+beijing,bei-v0313-002,dining,ألف ليلة وليلة – ملعب العمال,One Thousand & One Nights (Workers Stadium),一千零一夜餐厅（工人体育场店）,,,,missing_year
+beijing,bei-v0313-003,dining,السفير – مطعم عربي,Al Safir Arabic Restaurant,萨菲尔阿拉伯餐厅,,,,missing_year
+beijing,bei-v0313-004,dining,سوماك – مطعم لبناني,Sumac Restaurant & Lounge,苏麦克餐厅酒廊,,,,missing_year
+beijing,bei-v0313-005,dining,تركيش فيست – شينيوانلي,Turkish Feast (Xinyuanli),西庭·秀色Turkish Feast(新源里店),,,,missing_year
+beijing,bei-v0313-006,dining,تركيش فيست – هوا ماو,Turkish Feast (Huamao),西庭·秀色Turkish Feast(华贸中心店),,,,missing_year
+beijing,bei-v0313-007,dining,تركيش فيست – وانغفوجينغ,Turkish Feast (Wangfu Central),西庭·秀色Turkish Feast(王府中环东座店),,,,missing_year
+beijing,bei-v0313-008,dining,غانجيس الهندي – ذا بليس,Ganges Indian Restaurant (The Place),恒河印度餐厅(世贸天阶店),,,,missing_year
+beijing,bei-v0313-009,dining,شين رونغ جي – ينتاي,Xin Rong Ji (Beijing Yintai),新荣记(北京建国门外大街店),,,,missing_year
+beijing,bei-v0313-010,dining,شين رونغ جي – شينيوان الجنوبي,Xin Rong Ji (Xinyuan South Road),新荣记(新源南路店),,,,missing_year
+beijing,bei-v0313-011,dining,فودينغ كافيه,Fuding Coffee,福顶咖啡,,,,missing_year
+beijing,bei-v0313-012,dining,تانغفانغ – نانلوغوشيانغ,Tangfang Coffee (Nanluoguxiang),糖房咖啡（南锣鼓巷店）,,,,missing_year
+beijing,bei-v0313-013,dining,فوياج كوفي – سانليخه,VOYAGE COFFEE (Sanlihe Park),VOYAGE COFFEE（三里河公园店）,,,,missing_year
+beijing,bei-v0313-014,dining,هاف كوفي – معبد هونغ إن,HALF Coffee (Hong’en Temple),HALF COFFEE 观space,,,,missing_year
+beijing,bei-v0313-015,dining,1901 كافيه,1901 Café,1901cafe,,,,missing_year
+beijing,bei-v0313-016,dining,تانغفانغ – شيتشاهاي,Tangfang Coffee (Shichahai),糖房咖啡（什刹海店）,,,,missing_year
+beijing,bei-v0313-017,dining,روشيانغ كافيه,Ruxiang Coffee,入巷咖啡,,,,missing_year
+beijing,bei-v0313-018,dining,جي إم كافيه وبيكري – البرج الأبيض,JM Cafe & Bakery (White Pagoda),JM Cafe·Bakery（白塔寺店）,,,,missing_year
+beijing,bei-v0313-019,dining,داوشيانغتسون – متحف الكنوز,Daoxiangcun No. 0 Treasure Hunt Museum,北京稻香村（零号寻宝馆）,,,,missing_year
+beijing,bei-v0313-020,dining,داوشيانغتسون – فرع صفر,Daoxiangcun No. 0 Store,北京稻香村（零号店）,,,,missing_year
+beijing,bei-v0313-021,hotels,فندق جيانغو بكين,Jianguo Hotel Beijing,北京建国饭店,,,,missing_year
+beijing,bei-v0313-022,hotels,فندق يوانشان بكين,Yuanshan Hotel Beijing,北京圆山大酒店,,,,missing_year
+beijing,bei-v0313-023,hotels,فندق شوآن وومن للأعمال,Xuanwumen Business Hotel Beijing,北京宣武门商务酒店,,,,missing_year
+beijing,bei-v0313-024,hotels,فندق أورينتال بكين التاريخي,Beijing Dongfang Hotel,北京东方饭店,,,,missing_year
+shenzhen,she-0001,markets,هوا تشيانغ بي,,华强北商业街,,,,missing_year
+shenzhen,she-0002,markets,عالم هوا تشيانغ لإللكترونيات,,华强电子世界 ·,,,,missing_year
+shenzhen,she-0003,markets,سيغ لإللكترونيات,,赛格电子市场,,,,missing_year
+shenzhen,she-0004,markets,يوان وانغ الرقمي,,远望数码商城,,,,missing_year
+shenzhen,she-0005,markets,مينغ تونغ الرقمي,,明通数码城,,,,missing_year
+shenzhen,she-0006,markets,تونغ تيان دي لالتصاالت,,通天地通讯市场,,,,missing_year
+shenzhen,she-0007,markets,مانها الرقمي,,曼哈数码广场,,,,missing_year
+shenzhen,she-0008,markets,قاو كه ده لإللكترونيات,,高科德电子市场,,,,missing_year
+shenzhen,she-0009,markets,ساندا لالتصاالت,,桑达电子通讯市场 ·,,,,missing_year
+shenzhen,she-0010,markets,آسيا الجديدة لإللكترونيات,,新亚洲电子商城,,,,missing_year
+shenzhen,she-0011,markets,دوهوي لإللكترونيات,,都会电子城 ·,,,,missing_year
+shenzhen,she-0012,markets,مدينة اإللكترونيات الدولية,,国际电子城,,,,missing_year
+shenzhen,she-0013,markets,نان يو للمالبس,,南油服装批发市场,,,,missing_year
+shenzhen,she-0014,markets,تايرونغ للمالبس,,泰荣服装城,,,,missing_year
+shenzhen,she-0015,markets,باوهوا بايما,,宝华白马服装批发城,,,,missing_year
+shenzhen,she-0016,markets,نانيانغ الدولي للمالبس,,南洋国际服装批发城 ·,,,,missing_year
+shenzhen,she-0017,markets,تاويوان لمالبس التصدير,,桃园外贸服装城 · Bao,,,,missing_year
+shenzhen,she-0018,markets,شارع دونغمن القديم,,东门老街,,,,missing_year
+shenzhen,she-0019,markets,سوق أحذية دونغمن,,东门鞋业批发市场 ·,,,,missing_year
+shenzhen,she-0020,markets,مدينة لوهو التجارية,,罗湖商业城,,,,missing_year
+shenzhen,she-0021,markets,بوچي ييوو للسلع الصغيرة,,布吉义乌小商品城 ·,,,,missing_year
+shenzhen,she-0022,markets,شينزن ييوو للسلع الصغيرة,,深圳义乌小商品批发城 · Yong,,,,missing_year
+shenzhen,she-0023,markets,مدينة جنوب الصين التجارية,,华南城 ·,,,,missing_year
+shenzhen,she-0024,markets,جنوب الصين للجلود,,华南国际皮革皮具原辅料交易中心 · Pinghu,,,,missing_year
+shenzhen,she-0025,markets,شوي بي للمجوهرات,,水贝国际珠宝交易中心 ·,,,,missing_year
+shenzhen,she-0026,markets,شوي بيIBC,,水贝IBC环球商务中心 ·,,,,missing_year
+shenzhen,she-0027,markets,وانشان للمجوهرات,,水贝万山 ·,,,,missing_year
+shenzhen,she-0028,markets,تيلوس جي موند للذهب,,特力吉盟黄金珠宝产业园,,,,missing_year
+shenzhen,she-0029,markets,هنغ قانغ للنظارات,,横岗眼镜城,,,,missing_year
+shenzhen,she-0030,markets,قرية دافن للوحات,,大芬油画村,,,,missing_year
+shenzhen,she-0031,markets,مدينة شينزن للتحف,,深圳古玩城 ·,,,,missing_year
+shenzhen,she-0032,markets,منطقة سونغانغ المنزلية,,笋岗家居建材商圈,,,,missing_year
+shenzhen,she-0033,markets,منطقة باوآن الشمالية,,宝安北路商圈,,,,missing_year
+shenzhen,she-0034,markets,منطقة هوا نان تشنغ,,华南城,,,,missing_year
+shenzhen,she-0035,markets,بلدة هولندا للزهور,,荷兰花卉小镇,,,,missing_year
+shenzhen,she-0036,malls,ميكس سي وورلد,,万象天地,,,,missing_year
+shenzhen,she-0037,malls,ميكس سي لوهو,,深圳万象城,,,,missing_year
+shenzhen,she-0038,malls,ميكس سي خليج شينزن,,深圳湾万象城,,,,missing_year
+shenzhen,she-0039,malls,كوكو بارك,COCO Park,福田星河COCO Park,,,,missing_year
+shenzhen,she-0040,malls,أبر هيلز,,深业上城,,,,missing_year
+shenzhen,she-0041,malls,ون أفنيو,,卓悦中心,,,,missing_year
+shenzhen,she-0042,malls,لينك سنتر,,领展中心城,,,,missing_year
+shenzhen,she-0043,malls,يي تيان هوليداي بالزا,,益田假日广场,,,,missing_year
+shenzhen,she-0044,malls,كوستال سيتي,,海岸城,,,,missing_year
+shenzhen,she-0045,malls,OCT Harbour,,欢乐海岸购物中心,,,,missing_year
+shenzhen,she-0046,malls,UniWalk,,壹方城,,,,missing_year
+shenzhen,she-0047,malls,تشيانهاي وان شيانغ,,前海壹方汇,,,,missing_year
+shenzhen,she-0048,malls,ون أفنيو لونغهوا,,壹方天地,,,,missing_year
+shenzhen,she-0049,malls,KK Mall,,京基百纳空间,,,,missing_year
+shenzhen,she-0050,malls,كينغ غلوري بالزا,,金光华广场,,,,missing_year
+shenzhen,she-0051,malls,هاي يا ميغا مول,,海雅缤纷城,,,,missing_year
+shenzhen,she-0052,tourism,نافذة عىل العالم,,世界之窗,1994,opened,https://wtl.sz.gov.cn/lyfw/lyxw/content/post_11377909.html,has_year
+shenzhen,she-0053,tourism,الصين المصغرة,,锦绣中华民俗村 ·,,,,missing_year
+shenzhen,she-0054,tourism,هابي فالي,,深圳欢乐谷 ·,1998,opened,https://www.szns.gov.cn/mlns/whns/lyjq/content/post_12590146.html,has_year
+shenzhen,she-0055,tourism,شاطئ داميشا,,大梅沙海滨公园,,,,missing_year
+shenzhen,she-0056,tourism,شاطئ شياوميشا,,小梅沙海滨旅游区,,,,missing_year
+shenzhen,she-0057,tourism,حديقة ليان هوا شان,,莲花山公园 ·,,,,missing_year
+shenzhen,she-0058,tourism,برج بينغ آن,,平安金融中心,,,,missing_year
+shenzhen,she-0059,tourism,حديقة المواهب,,深圳人才公园,,,,missing_year
+shenzhen,she-0060,tourism,حديقة خليج شينزن,,深圳湾公园,,,,missing_year
+shenzhen,she-0061,tourism,جبل ووتونغ,,梧桐山风景区,,,,missing_year
+shenzhen,she-0062,tourism,جبل يانغتاي,,阳台山森林公园,,,,missing_year
+shenzhen,she-0063,tourism,حديقة سفاري شينزن,,深圳野生动物园,,,,missing_year
+shenzhen,she-0064,tourism,عالم محيط شياوميشا,,小梅沙海洋世界,,,,missing_year
+shenzhen,she-0065,tourism,حديقة النباتات,,仙湖植物园,,,,missing_year
+shenzhen,she-0066,tourism,قرية دافن الفنية,,大芬油画村,,,,missing_year
+shenzhen,she-0067,tourism,متحف شينزن,,深圳博物馆,,,,missing_year
+shenzhen,she-0068,tourism,متحف الفنون والتخطيط,,深圳市当代艺术与城市规划馆,,,,missing_year
+shenzhen,she-0069,tourism,متحف نانشان,,南山博物馆,,,,missing_year
+shenzhen,she-0070,tourism,منتجع ميشن هيلز,,观澜湖旅游度假区,,,,missing_year
+shenzhen,she-0071,tourism,حديقة إكسبو,,深圳国际园林花卉博览园,,,,missing_year
+shenzhen,she-0072,tourism,شارع دونغمن,,东门老街,,,,missing_year
+shenzhen,she-0073,tourism,مدينة نانتو القديمة,,南头古城,,,,missing_year
+shenzhen,she-0074,tourism,بلدة غانكنغ القديمة,,甘坑古镇,,,,missing_year
+shenzhen,she-0075,tourism,سي وورلد,,海上世界,,,,missing_year
+shenzhen,she-0076,tourism,أو سي تي لوفت,,华侨城创意文化园,,,,missing_year
+shenzhen,she-0077,tourism,أو سي تي هاربر,,欢乐海岸,,,,missing_year
+shenzhen,she-0078,tourism,شارع شيكو القديم,,蛇口老街,,,,missing_year
+shenzhen,she-0079,tourism,دابنغ القديمة,,大鹏所城,,,,missing_year
+shenzhen,she-0080,tourism,غوانالن القديمة,,观澜古墟,,,,missing_year
+shenzhen,she-0081,tourism,ممشى هوا تشيانغ بي,,华强北步行街,,,,missing_year
+shenzhen,she-0082,tourism,ممشى خليج شينزن,,深圳湾滨海休闲带,,,,missing_year
+shenzhen,she-0083,tourism,ساحة المواطنين,,市民广场,,,,missing_year
+shenzhen,she-0084,tourism,اإلبداعيةOCT منطقة,,华侨城片区,,,,missing_year
+shenzhen,she-0085,tourism,المركز المدني – إضاءات,,福田市民中心,,,,missing_year
+shenzhen,she-0086,tourism,– عروضOCT Harbour,,欢乐海岸,,,,missing_year
+shenzhen,she-0087,tourism,– فعالياتSea World,,海上世界,,,,missing_year
+shenzhen,she-0088,tourism,خليج شينزن – فعاليات,,深圳湾,,,,missing_year
+shenzhen,she-0089,tourism,حديقة المواهب – تجمعات,,人才公园,,,,missing_year
+shenzhen,she-0090,tourism,هابي فالي – عروض,,欢乐谷,,,,missing_year
+shenzhen,she-0091,tourism,نافذة عىل العالم – عروض,,世界之窗,1994,opened,https://wtl.sz.gov.cn/lyfw/lyxw/content/post_11377909.html,has_year
+shenzhen,she-0092,dining,عروس دمشق · عروس دمشق,,餐厅,,,,missing_year
+shenzhen,she-0093,dining,ألف ليلة وليلة,,一千零一夜餐厅 ·,,,,missing_year
+shenzhen,she-0094,dining,هورس العربي,,荷鲁斯阿拉伯餐厅,,,,missing_year
+shenzhen,she-0095,dining,المطعم العربي لوهو,,阿拉伯餐厅 ·,,,,missing_year
+shenzhen,she-0096,dining,هوت ستون المتوسطي,,地中海餐厅 ·,,,,missing_year
+shenzhen,she-0097,dining,ميفالنا التركي,,梅夫拉纳土耳其餐厅 ·,,,,missing_year
+shenzhen,she-0098,dining,إسطنبول التركي,,伊斯坦布尔土耳其清真餐厅 ·,,,,missing_year
+shenzhen,she-0099,dining,باموكالي التركي,,帕慕卡莱土耳其餐厅 ·,,,,missing_year
+shenzhen,she-0100,dining,ميزوبوتاميا التركي,,美索不达米亚土耳其清真餐厅,,,,missing_year
+shenzhen,she-0101,dining,مطعم فندق المسلمين,,深圳穆斯林宾馆清真餐厅 ·,,,,missing_year
+shenzhen,she-0102,dining,تشونغ فا يوان,,中发源清真餐厅 ·,,,,missing_year
+shenzhen,she-0103,dining,شين يويه تاريم,,新粤塔里木河清真餐厅 ·,,,,missing_year
+shenzhen,she-0104,dining,بايي الويه,,巴依老爷新疆美食,,,,missing_year
+shenzhen,she-0105,dining,شيبي لينغ تو يانغ,,西北领头羊清真餐厅 ·,,,,missing_year
+shenzhen,she-0106,dining,ناوا شينجيانغ,,纳瓦新疆音乐餐厅 ·,,,,missing_year
+shenzhen,she-0107,dining,دونغ فانغ قونغ للنودلز,,东方宫·中国兰州牛肉拉面,,,,missing_year
+shenzhen,she-0108,dining,ديوان النجو,,德元兰州纯汤牛肉面 ·,,,,missing_year
+shenzhen,she-0109,dining,شينجيانغ هونغ ليو هوا,,新疆红柳花餐厅,,,,missing_year
+shenzhen,she-0110,dining,India Inn,,,,,,missing_year
+shenzhen,she-0111,dining,Indus Kitchen,,,,,,missing_year
+shenzhen,she-0112,dining,Bollywood Café,,,,,,missing_year
+shenzhen,she-0113,dining,Taj Indian Restaurant,,,,,,missing_year
+shenzhen,she-0114,dining,Dewan E-Khass,,,,,,missing_year
+shenzhen,she-0115,dining,Bombay Restaurant,,,,,,missing_year
+shenzhen,she-0116,dining,HeyTea,,喜茶,,,,missing_year
+shenzhen,she-0117,dining,Nayuki,,奈雪的茶,,,,missing_year
+shenzhen,she-0118,dining,Manner Coffee · MANNER,,咖啡,,,,missing_year
+shenzhen,she-0119,dining,Luckin Coffee,,瑞幸咖啡,,,,missing_year
+shenzhen,she-0120,dining,Starbucks,,星巴克,,,,missing_year
+shenzhen,she-0121,dining,Pacific Coffee,,太平洋咖啡,,,,missing_year
+shenzhen,she-0122,dining,Holiland,,好利来,,,,missing_year
+shenzhen,she-0123,dining,BreadTalk,,面包新语,,,,missing_year
+shenzhen,she-0124,dining,Guming,,古茗,,,,missing_year
+shenzhen,she-0125,dining,Chagee,,霸王茶姬,,,,missing_year
+shenzhen,she-0126,dining,Auntea Jenny,,沪上阿姨,,,,missing_year
+shenzhen,she-0127,dining,Dian Dian 1,,一点点,,,,missing_year
+shenzhen,she-0128,hotels,The St. Regis Shenzhen,,瑞吉酒店,,,,missing_year
+shenzhen,she-0129,hotels,The Ritz-Carlton Shenzhen,,丽思卡尔顿酒店,,,,missing_year
+shenzhen,she-0130,hotels,Four Seasons Hotel Shenzhen,,四季酒店,,,,missing_year
+shenzhen,she-0131,hotels,Futian Shangri-La,,福田香格里拉大酒店,,,,missing_year
+shenzhen,she-0132,hotels,The Langham Shenzhen,,东海朗廷酒店,,,,missing_year
+shenzhen,she-0133,hotels,Mandarin Oriental Shenzhen,,深圳文华东方酒店,,,,missing_year
+shenzhen,she-0134,hotels,Park Hyatt Shenzhen,,深圳柏悦酒店,,,,missing_year
+shenzhen,she-0135,hotels,Grand Hyatt Shenzhen,,深圳君悦酒店,,,,missing_year
+shenzhen,she-0136,hotels,The Westin Shenzhen Nanshan,,深圳益田威斯汀酒店,,,,missing_year
+shenzhen,she-0137,hotels,Shenzhen Marriott Hotel Nanshan,,深圳中洲万豪酒店,,,,missing_year
+shenzhen,she-0138,hotels,Hilton Shenzhen Shekou Nanhai,,深圳蛇口希尔顿南海酒店,,,,missing_year
+shenzhen,she-0139,hotels,InterContinental Shenzhen,,深圳华侨城洲际大酒店,,,,missing_year
+shenzhen,she-0140,hotels,JW Marriott Hotel Shenzhen,,深圳金茂JW万豪酒店,,,,missing_year
+shenzhen,she-0141,hotels,Sheraton Shenzhen Futian,,深圳大中华喜来登酒店,,,,missing_year
+shenzhen,she-0142,hotels,Novotel Shenzhen Watergate,,深圳万德诺富特酒店,,,,missing_year
+shenzhen,she-0143,hotels,Holiday Inn Shenzhen Donghua,,深圳东华假日酒店,,,,missing_year
+shenzhen,she-0144,hotels,Holiday Inn Express Shenzhen North Station,,深圳北站智选假日酒店,,,,missing_year
+shenzhen,she-0145,hotels,Hilton Garden Inn Shenzhen Bao’an,,深圳宝安希尔顿花园酒店,,,,missing_year
+shenzhen,she-0146,hotels,Courtyard by Marriott Shenzhen Bao’an,,深圳宝安万怡酒店,,,,missing_year
+shenzhen,she-0147,hotels,Shenzhen Lido Hotel,,深圳丽都酒店,,,,missing_year
+shenzhen,she-0148,hotels,Vienna Hotel,,维也纳酒店,,,,missing_year
+shenzhen,she-0149,hotels,Hanting Hotel,,汉庭酒店,,,,missing_year
+shenzhen,she-0150,hotels,Jinjiang Inn,,锦江之星,,,,missing_year
+shenzhen,she-0151,hotels,Home Inn,,如家酒店,,,,missing_year
+shenzhen,she-0152,hotels,City Comfort Inn,,城市便捷酒店,,,,missing_year
+shenzhen,she-0153,hotels,GreenTree Inn,,格林豪泰酒店,,,,missing_year
+shenzhen,she-0154,transport,مطار شينزن باوآن الدولي,,深圳宝安国际机场 · SZX,,,,missing_year
+shenzhen,she-0155,transport,محطة شينزن الشمالية,,深圳北站,,,,missing_year
+shenzhen,she-0156,transport,محطة شينزن,,深圳站,,,,missing_year
+shenzhen,she-0157,transport,محطة فوتيان,,福田站,,,,missing_year
+shenzhen,she-0158,transport,محطة شينزن الشرقية,,深圳东站,,,,missing_year
+shenzhen,she-0159,transport,محطة شينزن الغربية,,深圳西站,,,,missing_year
+shenzhen,she-0160,transport,محطة بينغشان,,深圳坪山站,,,,missing_year
+shenzhen,she-0161,transport,محطة غوانغمينغ,,光明城站,,,,missing_year
+shenzhen,she-0162,transport,محطة المطار,,深圳机场站,,,,missing_year
+shenzhen,she-0163,transport,محطة شمال المطار,,深圳机场北站,,,,missing_year
+shenzhen,she-0164,mosques,مسجد شينزن الرئيسي,,深圳市清真寺,,,,missing_year
+shenzhen,she-0165,mosques,مرافق صالة لدى بعض المطاعم الحالل,,祈祷设施,,,,missing_year
+foshan,fos-0001,markets,لوفر الدولي للأثاث,,佛山市顺德区乐从镇罗浮宫国际家居博览中心,,,,missing_year
+foshan,fos-0002,markets,سوق شونليان للأثاث - القسم الجنوبي,,佛山市顺德区乐从镇顺联家具城南区,,,,missing_year
+foshan,fos-0003,markets,سوق شونليان للأثاث - القسم الشمالي,,佛山市顺德区乐从镇顺联家具城北区,,,,missing_year
+foshan,fos-0004,markets,سوق هوانغتشاو للأثاث,,佛山市顺德区乐从镇皇朝家私城,,,,missing_year
+foshan,fos-0005,markets,ريد ستار ماكالين للأثاث,,佛山市顺德区乐从镇325国道水藤路段红星美凯龙,,,,missing_year
+foshan,fos-0006,markets,سوق الأثاث في لونغجيانغ,,佛山市顺德区龙江镇家具市场,,,,missing_year
+foshan,fos-0007,markets,سوق شونليان للإنارة والخزائن,,佛山市顺德区振华路顺联橱柜灯饰城,,,,missing_year
+foshan,fos-0008,markets,سوق فيبنغ للإنارة والخزائن,,广东省佛山市顺德区兴乐路153号飞鹏橱柜灯饰城,,,,missing_year
+foshan,fos-0009,markets,سوق شونله للإضاءة,,佛山市顺德区顺乐灯饰市场,,,,missing_year
+foshan,fos-0010,markets,أوت لت فوشان - البحث عن الفروع,,佛山奥特莱斯,,,,missing_year
+foshan,fos-0011,dining,مطعم سويتاي العربي الحلال,,广东省佛山市顺德区乐从镇乐从大道东A37号索威泰阿拉伯餐厅,,,,missing_year
+foshan,fos-0012,dining,مطعم تركي - فرع دونغي,,佛山市顺德区乐从大道东A82号土耳其餐厅,,,,missing_year
+foshan,fos-0013,dining,مطعم شاورما العربي,,佛山市顺德区乐从镇皇朝家私城B座3楼101室莎瓦玛,,,,missing_year
+foshan,fos-0014,dining,مطعم ألتاي للمأكولات الحلال,,佛山市顺德区容桂富华路8号阿勒泰新疆羊排手抓饭,,,,missing_year
+foshan,fos-0015,tourism,معبد الأجداد زومياو,,佛山市禅城区祖庙,,,,missing_year
+foshan,fos-0016,tourism,جبل شيشياو,,佛山市南海区西樵山风景名胜区,,,,missing_year
+foshan,fos-0017,tourism,حديقة تشينغهوي,,佛山市顺德区大良清晖园,,,,missing_year
+foshan,fos-0018,tourism,منطقة لينغنان تياندي,,佛山市禅城区岭南天地,,,,missing_year
+foshan,fos-0019,tourism,منطقة نانفنغ للأفران القديمة,,佛山市禅城区南风古灶,,,,missing_year
+foshan,fos-0020,malls,واندا بلازا نانهاي,,佛山市南海区万达广场,,,,missing_year
+foshan,fos-0021,malls,إيون مول فوشان,,佛山永旺梦乐城,,,,missing_year
+foshan,fos-0022,malls,مول شونده هابي كوست,,佛山市顺德区欢乐海岸PLUS,,,,missing_year
+foshan,fos-0023,hotels,فندق سوفيتيل فوشان,Sofitel Foshan,佛山罗浮宫索菲特酒店,,,,missing_year
+foshan,fos-0024,hotels,فندق ماريوت فوشان,Foshan Marriott Hotel,佛山万豪酒店,,,,missing_year
+foshan,fos-0025,hotels,فندق هيلتون فوشان,Hilton Foshan,佛山希尔顿酒店,,,,missing_year
+foshan,fos-0026,hotels,فندق كراون بلازا فوشان,Crowne Plaza Foshan,佛山皇冠假日酒店,,,,missing_year
+foshan,fos-0027,hotels,فندق كورديس فوشان لينغنان تياندي,Cordis Foshan Lingnan Tiandi,佛山岭南天地康得思酒店,,,,missing_year
+foshan,fos-0028,hotels,فندق سويس أوتيل فوشان,Swissotel Foshan,佛山恒安瑞士大酒店,,,,missing_year
+yiwu,yiw-0001,markets,سوق إيوو التجاري الدولي – المنطقة 1,Yiwu International Trade City District 1,义乌国际商贸城一区,2002,opened,https://www.ezhejiang.gov.cn/eyiwu/2020-02/26/c_332487.htm,has_year
+yiwu,yiw-0002,markets,سوق إيوو التجاري الدولي – المنطقة 2,Yiwu International Trade City District 2,义乌国际商贸城二区,2004,opened,https://static.cninfo.com.cn/finalpage/2024-05-14/1220039762.PDF,has_year
+yiwu,yiw-0003,markets,سوق إيوو التجاري الدولي – المنطقة 3,Yiwu International Trade City District 3,义乌国际商贸城三区,2005,opened,https://static.cninfo.com.cn/finalpage/2024-05-14/1220039762.PDF,has_year
+yiwu,yiw-0004,markets,سوق إيوو التجاري الدولي – المنطقة 4,Yiwu International Trade City District 4,义乌国际商贸城四区,2008,opened,https://www.yw.gov.cn/art/2008/12/29/art_1229142437_50763529.html,has_year
+yiwu,yiw-0005,markets,سوق إيوو التجاري الدولي – المنطقة 5,Yiwu International Trade City District 5,义乌国际商贸城五区,2011,opened,https://www.ezhejiang.gov.cn/eyiwu/2020-01/15/c_332509.htm,has_year
+yiwu,yiw-0006,markets,سوق بينوانغ,Yiwu Binwang Market,宾王市场,,,,missing_year
+yiwu,yiw-0007,markets,سوق فوتيان – مدينة إيوو للتجارة الدولية,Yiwu International Trade City (Futian Market),义乌国际商贸城,,,,missing_year
+yiwu,yiw-0008,markets,سوق سانتينغ الليلي (بينوانغ),Santing Road Night Market (Binwang),三挺路夜市,,,,missing_year
+yiwu,yiw-0009,markets,سوق هوانغيوان للملابس,Huangyuan Clothing Market,义乌篁园服装市场,,,,missing_year
+yiwu,yiw-0010,malls,مول واندا إيوو,Yiwu Wanda Plaza,义乌万达广场,,,,missing_year
+yiwu,yiw-0011,malls,مول شينغوانغ هوي,Yiwu Xingguanghui,义乌星光汇,,,,missing_year
+yiwu,yiw-0012,malls,مجمع يينتاي التجاري – فرع إيوو,Intime Department Store (Yiwu),银泰百货(义乌店),,,,missing_year
+yiwu,yiw-0013,transport,محطة قطار إيوو,Yiwu Railway Station,义乌站,,,,missing_year
+yiwu,yiw-0014,transport,مطار إيوو,Yiwu Airport,义乌机场,,,,missing_year
+yiwu,yiw-0015,mosques,مساجد إيوو,Yiwu Mosques,义乌清真寺,,,,missing_year
+yiwu,yiw-0016,dining,مطعم بيتي,Beyti Restaurant,,,,,missing_year
+yiwu,yiw-0017,dining,مطعم السلطان,Sultan Restaurant,,,,,missing_year
+yiwu,yiw-0018,dining,مطعم المائدة,Maedah Restaurant,,,,,missing_year
+yiwu,yiw-0019,dining,مطعم المالكي,Almalki,,,,,missing_year
+yiwu,yiw-0020,dining,مطعم سبأ,Shaba / Saba Restaurant,,,,,missing_year
+yiwu,yiw-0021,dining,مطعم المراسيم,Al Maraseem Restaurant,,,,,missing_year
+yiwu,yiw-0022,dining,مطعم قيصر اليمن,Alqees Yemen,,,,,missing_year
+yiwu,yiw-0023,dining,مطعم البوسفور,Bosphorus Turkish Restaurant,,,,,missing_year
+yiwu,yiw-0024,dining,مطعم علي بابا التركي,Ali Baba Turkish Restaurant,,,,,missing_year
+yiwu,yiw-0025,dining,مطعم جوري,Joori Restaurant,,,,,missing_year
+yiwu,yiw-0026,dining,مطعم موغال دوربار,Mughal Durbar,,,,,missing_year
+yiwu,yiw-0027,dining,مطعم ليتل إنديا النباتي,Little India Pure Vegetarian,,,,,missing_year
+yiwu,yiw-0028,dining,مطعم فتان الهندي,Vatan Indian Restaurant,,,,,missing_year
+yiwu,yiw-0029,dining,مطعم داتا,Daata Restaurant,,,,,missing_year
+yiwu,yiw-0030,dining,كافيه ومطعم لوتس,Lotus Cafe & Restaurant,,,,,missing_year
+yiwu,yiw-0031,dining,مقهى البوسفور,Bosphorus Cafe Corner,,,,,missing_year
+yiwu,yiw-0032,dining,مقهى السلطان,Sultan Cafe & Desserts,,,,,missing_year
+yiwu,yiw-0033,dining,لايف ستايل كافيه,Life Style Cafe,,,,,missing_year
+yiwu,yiw-0034,dining,بيتس كوفي قرب شيوهو,Peet's Coffee - Xiuhu Park Area,,,,,missing_year
+yiwu,yiw-0035,dining,ستاربكس شارع غونغرين,Starbucks Coffee - Gongren Rd,,,,,missing_year
+yiwu,yiw-0036,dining,ستاربكس يينتاي مول,Starbucks - Intime Department Store,,,,,missing_year
+yiwu,yiw-0037,dining,لاكين كوفي سوق فوتيان,Luckin Coffee - International Trade City,义乌国际商贸城 瑞幸咖啡,,,,missing_year
+yiwu,yiw-0038,tourism,حديقة شيوهو,Xiuhu Park,绣湖公园,,,,missing_year
+yiwu,yiw-0039,tourism,حديقة الأراضي الرطبة لنهر إيوو,Yiwu River Wetland Park,义乌江滨公园,,,,missing_year
+yiwu,yiw-0040,tourism,جبل دوان ومنطقته الطبيعية,Dawanshan Scenic Area,大湾山风景区,,,,missing_year
+yiwu,yiw-0041,tourism,متحف إيوو,Yiwu Museum,义乌博物馆,,,,missing_year
+yiwu,yiw-0042,tourism,بلدة فوتانغ القديمة,Fotang Ancient Town,佛堂古镇,,,,missing_year
+yiwu,yiw-0043,hotels,فندق كاسيون إنترناشونال,Kasion International Hotel Yiwu,,,,,missing_year
+yiwu,yiw-0044,hotels,فندق ذا بوري,The Pury Hotel Yiwu,,,,,missing_year
+yiwu,yiw-0045,hotels,فندق ساندينغ نيو سينشري غراند,Sanding New Century Grand Hotel Yiwu,,,,,missing_year
+yiwu,yiw-0046,hotels,فندق هوم تو سويتس باي هيلتون,Home2 Suites by Hilton Yiwu World Trade Center,,,,,missing_year
+yiwu,yiw-0047,tourism,مركز إيوو الدولي للمؤتمرات,Yiwu International Conference Center,义乌国际会议中心,,,,missing_year
+yiwu,yiw-0048,hotels,فندق فيرفيلد باي ماريوت,Fairfield By Marriott Yiwu,,,,,missing_year
+yiwu,yiw-0049,hotels,فندق أتور سوق التجارة الدولي,Atour Hotel International Trade City Yiwu,,,,,missing_year
+yiwu,yiw-0050,hotels,فندق بايلاند ستار,Byland Star Hotel,,,,,missing_year
+yiwu,yiw-0051,hotels,فندق كراون بلازا إيوو إكسبو,Crowne Plaza Yiwu Expo,,,,,missing_year
+yiwu,yiw-0052,hotels,فندق إيوو شانغ تشينغ,Yiwu ShangCheng Hotel,,,,,missing_year
+yiwu,yiw-0053,hotels,فندق هامبتون باي هيلتون,Hampton by Hilton Yiwu International Trade Market,,,,,missing_year
+yiwu,yiw-0054,hotels,فندق غرين تري شيل,GreenTree Shell Hotel,,,,,missing_year
+yiwu,yiw-0055,hotels,فندق تيدي ستايل,Teddy Style Hotel Yiwu,,,,,missing_year
+guilin,gui-0001,tourism,نهر لي,Li River,漓江,,,,missing_year
+guilin,gui-0002,tourism,تلة خرطوم الفيل,Elephant Trunk Hill,象鼻山景区,,,,missing_year
+guilin,gui-0003,tourism,كهف الفلوت القصبي,Reed Flute Cave,芦笛岩,,,,missing_year
+guilin,gui-0004,tourism,النهران والبحيرات الأربع,Two Rivers and Four Lakes,两江四湖景区,,,,missing_year
+guilin,gui-0005,tourism,باغودا الشمس والقمر,Sun and Moon Pagodas,日月双塔,,,,missing_year
+guilin,gui-0006,markets,شارع تشنغيانغ للمشاة,Zhengyang Pedestrian Street,正阳步行街,,,,missing_year
+guilin,gui-0007,markets,سوق قويلين الليلي,Guilin Night Market,桂林夜市,,,,missing_year
+guilin,gui-0008,mosques,مسجد تشونغشان,Chongshan Mosque,桂林崇善清真寺,,,,missing_year
+guilin,gui-0009,mosques,مسجد شيشيانغ,Xixiang Mosque,桂林西乡清真寺,,,,missing_year
+guilin,gui-0010,dining,كالي ميرش الهندي,Kali Mirch Indian Cuisine,桂林 Kali Mirch 印度餐厅,,,,missing_year
+guilin,gui-0011,hotels,أروما تي هاوس,Aroma Tea House,桂林榕湖静观茗楼度假酒店,,,,missing_year
+guilin,gui-0012,hotels,هوليداي إن إكسبرس وسط قويلين,Holiday Inn Express Guilin City Center,桂林中心智选假日酒店,,,,missing_year
+guilin,gui-0013,hotels,شانغريلا قويلين,Shangri-La Guilin,桂林香格里拉酒店,,,,missing_year
+guilin,gui-0014,hotels,شيراتون قويلين,Sheraton Guilin Hotel,桂林喜来登饭店,,,,missing_year
+guilin,gui-0015,malls,مجمع ميكسي سي قويلين,Guilin MixC,桂林万象城,,,,missing_year
+guilin,gui-0016,malls,مجمع مينغقوي,Minggui Shopping Mall,桂林微笑堂商厦,,,,missing_year
+guilin,gui-0017,markets,شارع دونغشي التاريخي,East West Alley,东西巷,,,,missing_year
+guilin,gui-0018,tourism,جبل فوبو,Fubo Hill,伏波山,,,,missing_year
+guilin,gui-0019,tourism,جبل ديتساي,Diecai Hill,叠彩山,,,,missing_year
+guilin,gui-0020,tourism,حديقة النجوم السبع,Seven Star Park,七星公园,,,,missing_year
+guilin,gui-0021,tourism,قصر الأمير جينغجيانغ,Jingjiang Princes City,靖江王府,,,,missing_year
+guilin,gui-0022,tourism,كهف التاج,Crown Cave,冠岩,,,,missing_year
+guilin,gui-0023,dining,مطعم كالي ميرش الهندي,Kali Mirch Indian Cuisine,Kali Mirch 印度餐厅,,,,missing_year
+guilin,gui-0024,dining,مقاهي شارع دونغشي,East West Alley Cafes,东西巷咖啡馆,,,,missing_year
+guilin,gui-0025,hotels,فندق ليجيانغ ووترفول,Lijiang Waterfall Hotel,桂林漓江大瀑布饭店,,,,missing_year
+guilin,gui-0026,transport,مطار قويلين ليانغجيانغ,Guilin Liangjiang International Airport,桂林两江国际机场,,,,missing_year
+guilin,gui-0027,transport,محطة قويلين الشمالية,Guilin North Railway Station,桂林北站,,,,missing_year
+guilin,gui-0028,transport,محطة قويلين,Guilin Railway Station,桂林站,,,,missing_year
+guilin,gui-0029,transport,محطة قويلين الغربية,Guilin West Railway Station,桂林西站,,,,missing_year
+yangshuo,yan-0001,tourism,شارع ويست السياحي,West Street,西街,,,,missing_year
+yangshuo,yan-0002,tourism,بلدة شينغبينغ القديمة,Xingping Ancient Town,兴坪古镇,,,,missing_year
+yangshuo,yan-0003,tourism,بلدة فولي القديمة,Fuli Ancient Town,福利古镇,,,,missing_year
+yangshuo,yan-0004,markets,سوق بايشا المحلي,Baisha Local Market,白沙市场,,,,missing_year
+yangshuo,yan-0005,markets,شارع ديتسوي,Diecui Road,叠翠路,,,,missing_year
+yangshuo,yan-0006,tourism,نهر يولونغ,Yulong River,遇龙河,,,,missing_year
+yangshuo,yan-0007,tourism,نهر لي,Li River,漓江,,,,missing_year
+yangshuo,yan-0008,tourism,جبل شيانغقونغ,Xianggong Mountain,相公山,,,,missing_year
+yangshuo,yan-0009,tourism,جبل القمر,Moon Hill,月亮山,,,,missing_year
+yangshuo,yan-0010,tourism,قمة رويي,Ruyi Peak,如意峰,,,,missing_year
+yangshuo,yan-0011,tourism,جسر يولونغ,Yulong Bridge,遇龙桥,,,,missing_year
+yangshuo,yan-0012,tourism,جسر فولي القديم,Fuli Bridge,富里桥,,,,missing_year
+yangshuo,yan-0013,tourism,ممر المناظر العشرة,Ten Mile Gallery,十里画廊,,,,missing_year
+yangshuo,yan-0014,tourism,موقع ورقة العشرين يوان,Yellow Cloth Shoal,黄布倒影,,,,missing_year
+yangshuo,yan-0015,tourism,كهف الفضة,Silver Cave,银子岩,,,,missing_year
+yangshuo,yan-0016,tourism,كهف الفراشة,Butterfly Spring,蝴蝶泉,,,,missing_year
+yangshuo,yan-0017,tourism,شجرة البانيان الكبيرة,Big Banyan Tree,大榕树,,,,missing_year
+yangshuo,yan-0018,tourism,قرية جيوشيان القديمة,Jiuxian Ancient Village,旧县村,,,,missing_year
+yangshuo,yan-0019,tourism,منتزه شانشوي الثقافي,Yangshuo Shanshui Garden,阳朔山水园,,,,missing_year
+yangshuo,yan-0020,tourism,منتزه شانغريلا,Shangri-La Scenic Area,世外桃源,,,,missing_year
+yangshuo,yan-0021,tourism,قمة اللوتس الأخضر,Green Lotus Peak,碧莲峰,,,,missing_year
+yangshuo,yan-0022,tourism,عرض انطباعات ليو سانجيه,Impression Liu Sanjie,印象刘三姐,2004,opened,https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1212/2025121200055.pdf,has_year
+yangshuo,yan-0023,tourism,رحلة القوارب الخيزرانية,Yulong River Bamboo Rafting,遇龙河竹筏漂流,,,,missing_year
+yangshuo,yan-0024,tourism,رحلة نهر لي السياحية,Li River Cruise,漓江游船,,,,missing_year
+yangshuo,yan-0025,tourism,تلفريك قمة رويي,Ruyi Peak Cableway,如意峰索道,,,,missing_year
+yangshuo,yan-0026,tourism,جولة الدراجات في ممر المناظر,Ten Mile Gallery Cycling,十里画廊骑行,,,,missing_year
+yangshuo,yan-0027,dining,مطعم نامو غانغا الهندي,NAMO Ganga Indian Restaurant,恒河印象印度餐厅,,,,missing_year
+yangshuo,yan-0028,dining,مطعم نودلز لانزو,Lanzhou Genuine Noodles,兰州拉面,,,,missing_year
+yangshuo,yan-0029,dining,مطعم بيرسنت,Percent Restaurant,璞食·桂北融合菜,,,,missing_year
+yangshuo,yan-0030,dining,مطعم هوم كوكينغ,Home Cooking Place,闲来私房菜,,,,missing_year
+yangshuo,yan-0031,dining,مطعم إيميز أون ذا لي – 🍕 بيتزا,Amy’s on the Li,,,,,missing_year
+yangshuo,yan-0032,dining,مطعم لونا كافيه – 🍕 بيتزا,Luna Café,听月楼美食坊,,,,missing_year
+yangshuo,yan-0033,dining,بيتزا هت – 🍕 بيتزا,Pizza Hut,必胜客,,,,missing_year
+yangshuo,yan-0034,dining,مطعم ذا غاردن – 🍕 بيتزا,The Garden – Bamboo Leaf Hotel,,,,,missing_year
+yangshuo,yan-0035,dining,مطعم ذا بيتزا بليس – 🍕 بيتزا,The Pizza Place,,,,,missing_year
+yangshuo,yan-0036,dining,مطعم تشي لي – 🍕 بيتزا,ZheiLi Restaurant,这里餐厅,,,,missing_year
+yangshuo,yan-0037,hotels,فندق إل إس – ليانغسو,LS Hotel (Guilin Liangsu),良宿·奢网红旅拍酒店,,,,missing_year
+yangshuo,yan-0038,hotels,منتجع بانيان تري يانغشوو,Banyan Tree Yangshuo,阳朔悦榕庄,,,,missing_year
+yangshuo,yan-0039,hotels,فندق يانغشوو شوغر هاوس,Yangshuo Sugar House,阳朔糖舍,,,,missing_year
+yangshuo,yan-0040,hotels,فندق جورا يانغشوو,Yangshuo Jora Hotel,桂林阳朔九壤度假酒店,,,,missing_year
+yangshuo,yan-0041,hotels,منتجع يانغشوو ماونتن ريتريت,Yangshuo Mountain Retreat,阳朔胜地酒店,,,,missing_year
+yangshuo,yan-0042,hotels,فندق بيرسنت يانغشوو,Percent Hotel Yangshuo,,,,,missing_year
+yangshuo,yan-0043,hotels,فندق بامبو ليف,Yangshuo Bamboo Leaf Hotel,边城漓谷度假山庄,,,,missing_year
+yangshuo,yan-0044,hotels,فندق أماري يانغشوو,Amari Yangshuo,,,,,missing_year
+yangshuo,yan-0045,hotels,هيدن دراغون فيلا,Hidden Dragon Villa,,,,,missing_year
+yangshuo,yan-0046,transport,محطة قطار يانغشوو,Yangshuo Railway Station,阳朔站,,,,missing_year
+yangshuo,yan-0047,transport,محطة حافلات يانغشوو,Yangshuo Bus Station,阳朔汽车站,,,,missing_year
+yangshuo,yan-0048,transport,رصيف الرحلات النهرية في شينغبينغ,Xingping Wharf,兴坪码头,,,,missing_year
+yangshuo,yan-0049,transport,رصيف قوارب نهر يولونغ,Yulong River Raft Pier,遇龙河竹筏码头,,,,missing_year
+yangshuo,yan-0050,mosques,المساجد القريبة في قويلين,Mosques in Guilin,,,,,missing_year
+yangshuo,yan-0051,tourism,شارع ويست يانغشوو,West Street,阳朔西街,,,,missing_year
+yangshuo,yan-0052,hotels,بانيان تري يانغشوو,Banyan Tree Yangshuo,阳朔悦榕庄,,,,missing_year
+yangshuo,yan-0053,hotels,يانغشوو أنشنت باث,Yangshuo Ancient Path Resort,阳朔古道度假酒店,,,,missing_year
+yangshuo,yan-0054,hotels,ليانغسو,LIANGSU Hotel,阳朔良宿酒店,,,,missing_year
+yangshuo,yan-0055,hotels,يانغشوو ريزورت,Yangshuo Resort,阳朔度假酒店,,,,missing_year
+yangshuo,yan-0056,hotels,يانغشوو أنشنت غاردن,Yangshuo Ancient Garden,阳朔古园酒店,,,,missing_year
+yangshuo,yan-0057,hotels,لي ريفر ريزورت,Li River Resort,阳朔漓江度假酒店,,,,missing_year
+yangshuo,yan-0058,markets,شارع ويست التجاري,West Street,西街,,,,missing_year
+yangshuo,yan-0059,markets,شارع إيتشيانغ للمشاة,Yitian West Street,益田西街,,,,missing_year
+yangshuo,yan-0060,markets,منطقة تسوق ويست ستريت,West Street Shopping Area,阳朔西街商业区,,,,missing_year
+yangshuo,yan-0061,tourism,تلة شيانغقونغ,Xianggong Hill,相公山,,,,missing_year
+yangshuo,yan-0062,tourism,نقطة ورقة العشرين يوان,20 Yuan Banknote View,黄布倒影,,,,missing_year
+yangshuo,yan-0063,tourism,شجرة البانيان الكبيرة,Big Banyan Tree,大榕树景区,,,,missing_year
+yangshuo,yan-0064,tourism,ممشى شيلي,Ten Mile Gallery,十里画廊,,,,missing_year
+yangshuo,yan-0065,dining,مطاعم شينجيانغ الحلال في يانغشوو,Xinjiang Halal Restaurants,阳朔新疆清真餐厅,,,,missing_year
+yangshuo,yan-0066,dining,مقاهي شارع ويست,West Street Cafes,阳朔西街咖啡馆,,,,missing_year
+yangshuo,yan-0067,hotels,يانغشوو ماونتن ريتريت,Yangshuo Mountain Retreat,阳朔山水田园酒店,,,,missing_year
+yangshuo,yan-0068,hotels,فندق يانغشوو ريفرسايد,Yangshuo Riverside Resort,阳朔河畔度假酒店,,,,missing_year
+yangshuo,yan-0069,transport,محطة يانغشوو للقطارات,Yangshuo Railway Station,阳朔站,,,,missing_year
+zhangjiajie,zha-0001,malls,مركز بوبوفو التجاري,BBG Plaza,步步高广场,,,,missing_year
+zhangjiajie,zha-0002,malls,ساحة تشونغتيان,Zhongtian Plaza,中天广场,,,,missing_year
+zhangjiajie,zha-0003,malls,مبنى جانغجياجيه التجاري,Zhangjiajie Commercial Building,张家界商业大楼,,,,missing_year
+zhangjiajie,zha-0004,markets,مبنى وولينغ التجاري,Wulingyuan Commercial Street,武陵源商业街,,,,missing_year
+zhangjiajie,zha-0005,malls,مركز ميني,Meini Shopping Center,梅尼购物中心,,,,missing_year
+zhangjiajie,zha-0006,markets,شارع الصليب التجاري,Cross Street,十字街,,,,missing_year
+zhangjiajie,zha-0007,markets,شارع شيبو القديم,Xibu Street,溪布街,,,,missing_year
+zhangjiajie,zha-0008,tourism,مدينة دايونغ القديمة,Dayong Ancient City,大庸古城,,,,missing_year
+zhangjiajie,zha-0009,tourism,مجمع 72 مبنى,72 Wonder Towers,七十二奇楼,,,,missing_year
+zhangjiajie,zha-0010,markets,شارع نانمنكو للمأكولات,Nanmenkou Food Street,南门口美食街,,,,missing_year
+zhangjiajie,zha-0011,tourism,ساحة الشعب,People’s Square,人民广场,,,,missing_year
+zhangjiajie,zha-0012,tourism,حي دايونغ فوشنغ,Dayong Fucheng,大庸府城,,,,missing_year
+zhangjiajie,zha-0013,tourism,منتزه جانغجياجيه الوطني,Zhangjiajie National Forest Park,张家界国家森林公园,,,,missing_year
+zhangjiajie,zha-0014,tourism,جبل تيانمن,Tianmen Mountain,天门山国家森林公园,,,,missing_year
+zhangjiajie,zha-0015,tourism,كهف تيانمن / بوابة السماء,Tianmen Cave / Heaven’s Gate,天门洞,,,,missing_year
+zhangjiajie,zha-0016,tourism,الجسر الزجاجي,Grand Canyon Glass Bridge,张家界大峡谷玻璃桥,2016,trial,https://whhlyt.hunan.gov.cn/whhlyt/news/sxxw/201909/t20190910_5474729.html,has_year
+zhangjiajie,zha-0017,tourism,الوادي الكبير,Zhangjiajie Grand Canyon,张家界大峡谷,,,,missing_year
+zhangjiajie,zha-0018,tourism,منطقة يوانجياجيه,Yuanjiajie,袁家界,,,,missing_year
+zhangjiajie,zha-0019,tourism,جبل تيانزي,Tianzi Mountain,天子山,,,,missing_year
+zhangjiajie,zha-0020,tourism,مصعد بايلونغ,Bailong Elevator,百龙天梯,2002,trial,https://whhlyt.hunan.gov.cn/whhlyt/english/Tourism/Recommendations/202211/t20221121_29132887.html,has_year
+zhangjiajie,zha-0021,tourism,جدول السوط الذهبي,Golden Whip Stream,金鞭溪,,,,missing_year
+zhangjiajie,zha-0022,tourism,هوانغشيتشاي,Huangshi Village,黄石寨,,,,missing_year
+zhangjiajie,zha-0023,tourism,يانغجياجيه,Yangjiajie,杨家界,,,,missing_year
+zhangjiajie,zha-0024,tourism,معرض العشرة أميال,Ten-Mile Gallery,十里画廊,,,,missing_year
+zhangjiajie,zha-0025,tourism,بحيرة باوفنغ,Baofeng Lake,宝峰湖,,,,missing_year
+zhangjiajie,zha-0026,tourism,كهف التنين الأصفر,Yellow Dragon Cave,黄龙洞,,,,missing_year
+zhangjiajie,zha-0027,tourism,كهف لونغوانغ,Dragon King Cave,龙王洞,,,,missing_year
+zhangjiajie,zha-0028,tourism,منتجع وولينغيوان,Wulingyuan Scenic Area,武陵源风景名胜区,,,,missing_year
+zhangjiajie,zha-0029,tourism,منتزه توجيا الشعبي,Tujia Folk Customs Park,土家风情园,,,,missing_year
+zhangjiajie,zha-0030,tourism,منزل جانغجياجيه القديم,Zhangjiajie Old Courtyard,张家界老院子,,,,missing_year
+zhangjiajie,zha-0031,tourism,متحف جانغجياجيه,Zhangjiajie Museum,张家界博物馆,,,,missing_year
+zhangjiajie,zha-0032,tourism,معرض الرسم الرملي جونغشينغ,Junsheng Sandstone Painting Gallery,军声砂石画院,,,,missing_year
+zhangjiajie,zha-0033,tourism,متحف الجيولوجيا,Zhangjiajie Geological Museum,张家界地质博物馆,,,,missing_year
+zhangjiajie,zha-0034,tourism,حديقة هيلونغ,He Long Park,贺龙公园,,,,missing_year
+zhangjiajie,zha-0035,tourism,متحف هيلونغ,He Long Memorial Hall,贺龙纪念馆,,,,missing_year
+zhangjiajie,zha-0036,tourism,72 مبنى العجيب,72 Wonder Towers,七十二奇楼,,,,missing_year
+zhangjiajie,zha-0037,tourism,عرض سحر شيانغشي,Charming Xiangxi Show,魅力湘西,,,,missing_year
+zhangjiajie,zha-0038,tourism,عرض رومانسية جانغجياجيه,Romance of Zhangjiajie,张家界千古情,,,,missing_year
+zhangjiajie,zha-0039,tourism,عرض ثعلب تيانمن,Tianmen Fox Fairy,天门狐仙,,,,missing_year
+zhangjiajie,zha-0040,tourism,ممشى شيبو,Xibu Street,溪布街,,,,missing_year
+zhangjiajie,zha-0041,tourism,ميدان الشعب,People’s Square,人民广场,,,,missing_year
+zhangjiajie,zha-0042,tourism,دايونغ القديمة,Dayong Ancient City,大庸古城,,,,missing_year
+zhangjiajie,zha-0043,dining,البحث عن مطاعم نودلز لانتشو الحلال,Lanzhou Halal Noodles Search,兰州拉面 清真 张家界,,,,missing_year
+zhangjiajie,zha-0044,dining,البحث عن مطاعم المسلمين,Halal Restaurants Search,清真餐厅 张家界,,,,missing_year
+zhangjiajie,zha-0045,dining,نكهات تشينغهاي,Qinghai Cuisine Search,青海风味,,,,missing_year
+zhangjiajie,zha-0046,dining,البحث عن نودلز شينجيانغ,Xinjiang Noodles Search,新疆拌面 张家界,,,,missing_year
+zhangjiajie,zha-0047,dining,قهوة وشاي شارع شيبو,Xibu Street Cafes,溪布街 咖啡 茶,,,,missing_year
+zhangjiajie,zha-0048,dining,مقاهي دايونغ القديمة,Dayong Ancient City Cafes,大庸古城 咖啡,,,,missing_year
+zhangjiajie,zha-0049,dining,البحث عن مخابز,Bakery Search,面包店 张家界,,,,missing_year
+zhangjiajie,zha-0050,hotels,بولمان جانغجياجيه,Pullman Zhangjiajie,张家界京武铂尔曼酒店,,,,missing_year
+zhangjiajie,zha-0051,hotels,هيلتون غاردن إن وولينغيوان,Hilton Garden Inn Zhangjiajie Wulingyuan,张家界武陵源希尔顿花园酒店,,,,missing_year
+zhangjiajie,zha-0052,hotels,هوانتيان,Zhangjiajie Huatian Hotel,张家界华天大酒店,,,,missing_year
+zhangjiajie,zha-0053,hotels,ويندهام غاردن تيانمن,Wyndham Garden Zhangjiajie Tianmen Mountain,张家界天门山温德姆花园酒店,,,,missing_year
+zhangjiajie,zha-0054,hotels,تشينغخه جينجيانغ,Qinghe Jinjiang International Hotel,张家界青和锦江国际酒店,,,,missing_year
+zhangjiajie,zha-0055,hotels,هامبتون هيلتون تيانمن,Hampton by Hilton Tianmen Mountain,张家界天门山希尔顿欢朋酒店,,,,missing_year
+zhangjiajie,zha-0056,hotels,هامبتون هيلتون المنتزه,Hampton by Hilton Forest Park,张家界国家森林公园希尔顿欢朋酒店,,,,missing_year
+zhangjiajie,zha-0057,hotels,وولينغيوان هوتيل,Wulingyuan Hotel,武陵源宾馆,,,,missing_year
+zhangjiajie,zha-0058,hotels,فنادق ثلاث نجوم قرب تيانمن,Tianmen 3-Star Hotel Search,天门山 三星级酒店,,,,missing_year
+zhangjiajie,zha-0059,transport,مطار جانغجياجيه خهوا الدولي,Zhangjiajie Hehua International Airport,张家界荷花国际机场,,,,missing_year
+zhangjiajie,zha-0060,transport,محطة جانغجياجيه الغربية,Zhangjiajie West Railway Station,张家界西站,,,,missing_year
+zhangjiajie,zha-0061,transport,محطة جانغجياجيه,Zhangjiajie Railway Station,张家界站,,,,missing_year
+zhangjiajie,zha-0062,transport,محطة سانغتشي الغربية,Sangzhi West Railway Station,桑植西站,,,,missing_year
+zhangjiajie,zha-0063,mosques,البحث عن أقرب مسجد,Mosque Search Zhangjiajie,清真寺 张家界,,,,missing_year
+chongqing,cho-0001,markets,سوق جيفانغبي التجاري,Jiefangbei Shopping District,解放碑步行街,,,,missing_year
+chongqing,cho-0002,markets,سوق تشاوتيانمن للملابس والجملة,Chaotianmen Wholesale Market,朝天门批发市场,,,,missing_year
+chongqing,cho-0003,markets,شارع قوانيينتشياو التجاري,Guanyinqiao Pedestrian Street,观音桥步行街,,,,missing_year
+chongqing,cho-0004,tourism,بلدة تسيكيكو وأسواقها,Ciqikou Ancient Town,磁器口古镇,,,,missing_year
+chongqing,cho-0005,tourism,شارع شيباتي التراثي,Shibati Traditional Area,十八梯传统风貌区,,,,missing_year
+chongqing,cho-0006,markets,شارع نانبين التجاري,Nanbin Road,南滨路,,,,missing_year
+chongqing,cho-0007,malls,رافلز سيتي تشونغتشينغ,Raffles City Chongqing,重庆来福士广场,2019,opened,https://links.sgx.com/FileOpen/CL_RCCQmallopening_090919.ashx?AnncID=5LAPX5UXF8JKKK7K&App=ArchiveAnnouncement&FileID=577796,has_year
+chongqing,cho-0008,malls,لونغفور نورث بارادايس ووك,Longfor North Paradise Walk,龙湖北城天街,,,,missing_year
+chongqing,cho-0009,malls,تشونغتشينغ آي إف إس,Chongqing IFS,重庆国金中心,,,,missing_year
+chongqing,cho-0010,malls,مول ذا رينغ,The Ring Shopping Park,光环购物公园,,,,missing_year
+chongqing,cho-0011,malls,لونغفور تايمز بارادايس ووك,Longfor Times Paradise Walk,龙湖时代天街,,,,missing_year
+chongqing,cho-0012,malls,مركز ينغلي التجاري,Yingli International Financial Center,英利国际金融中心,,,,missing_year
+chongqing,cho-0013,dining,مطاعم عربية – البحث المحلي (التوفر غير مؤكد),Arabic restaurants search,阿拉伯餐厅,,,,missing_year
+chongqing,cho-0014,dining,كايا التركي,Kaya Turkish Restaurant,卡亚土耳其餐厅,,,,missing_year
+chongqing,cho-0015,dining,توركباب – رافلز سيتي,TurKebab at Raffles City,土耳卡巴·土耳其菜,,,,missing_year
+chongqing,cho-0016,dining,مطاعم هندية – البحث المحلي (التوفر والحلال غير مؤكدين),Indian restaurants search,印度餐厅,,,,missing_year
+chongqing,cho-0017,dining,مطاعم إيرانية – البحث المحلي (التوفر غير مؤكد),Iranian restaurants search,伊朗餐厅,,,,missing_year
+chongqing,cho-0018,dining,مطعم ما دويتشانغ للهوت بوت الحلال,Ma Duizhang Halal Hotpot,马队长重庆清真火锅,,,,missing_year
+chongqing,cho-0019,dining,مطعم تشن ييشون الحلال,Zhen Yishun Halal Hotpot,真伊顺重庆火锅,,,,missing_year
+chongqing,cho-0020,dining,مطعم تشينغجوتشاي الحلال,Qingjuzhai Halal Restaurant,庆聚斋清真餐厅,,,,missing_year
+chongqing,cho-0021,dining,مطعم يو شياو مو للنودلز الحلال,Yu Xiao Mu Halal Noodles,渝小穆重庆清真小面,,,,missing_year
+chongqing,cho-0022,dining,مطعم دييوان نودلز لانتشو,Deyuan Lanzhou Beef Noodles,清真·德元兰州纯汤牛肉面,,,,missing_year
+chongqing,cho-0023,dining,مطعم يي إر غو باي الحلال,Yi Er Gu Bai Halal Hotpot,伊尔古拜清真重庆火锅,,,,missing_year
+chongqing,cho-0024,dining,مطاعم البيتزا – البحث عن الفروع,Pizza restaurants search,披萨店,,,,missing_year
+chongqing,cho-0025,dining,بيتزا هت – البحث عن فروع تشونغتشينغ,Pizza Hut Chongqing search,必胜客 重庆,,,,missing_year
+chongqing,cho-0026,tourism,رافلز سيتي – منصة الكريستال,The Crystal at Raffles City,重庆来福士探索舱,,,,missing_year
+chongqing,cho-0027,tourism,برج كويشينغ – ساحة الدور 22,Kuixinglou Tower,魁星楼,,,,missing_year
+chongqing,cho-0028,tourism,محطة ليزيبا – القطار داخل المبنى,Liziba Monorail Station,李子坝站,,,,missing_year
+chongqing,cho-0029,tourism,هونغيا دونغ,Hongyadong,洪崖洞,,,,missing_year
+chongqing,cho-0030,tourism,تلفريك نهر اليانغتسي,Yangtze River Cableway,长江索道,,,,missing_year
+chongqing,cho-0031,tourism,ميدان تشاوتيانمن,Chaotianmen Square,朝天门广场,,,,missing_year
+chongqing,cho-0032,tourism,بلدة تسيكيكو القديمة,Ciqikou Ancient Town,磁器口古镇,,,,missing_year
+chongqing,cho-0033,tourism,متحف المضائق الثلاثة,Three Gorges Museum,重庆中国三峡博物馆,,,,missing_year
+chongqing,cho-0034,tourism,قاعة الشعب الكبرى,Great Hall of the People,重庆人民大礼堂,,,,missing_year
+chongqing,cho-0035,tourism,منتزه إيلينغ,Eling Park,鹅岭公园,,,,missing_year
+chongqing,cho-0036,tourism,منحوتات دازو الصخرية,Dazu Rock Carvings,大足石刻,,,,missing_year
+chongqing,cho-0037,tourism,منطقة وولونغ الكارستية,Wulong Karst,武隆喀斯特旅游区,,,,missing_year
+chongqing,cho-0038,hotels,إنتركونتيننتال رافلز سيتي,InterContinental Chongqing Raffles City,重庆来福士洲际酒店,,,,missing_year
+chongqing,cho-0039,hotels,ويستن ميدان التحرير,The Westin Chongqing Liberation Square,重庆解放碑威斯汀酒店,,,,missing_year
+chongqing,cho-0040,hotels,جي دبليو ماريوت تشونغتشينغ,JW Marriott Hotel Chongqing,重庆JW万豪酒店,,,,missing_year
+chongqing,cho-0041,hotels,نيكولو تشونغتشينغ,Niccolo Chongqing,重庆尼依格罗酒店,,,,missing_year
+chongqing,cho-0042,hotels,ريجنت تشونغتشينغ,Regent Chongqing,重庆丽晶酒店,,,,missing_year
+chongqing,cho-0043,hotels,هيلتون تشونغتشينغ,Hilton Chongqing,重庆希尔顿酒店,,,,missing_year
+chongqing,cho-0044,hotels,كونراد تشونغتشينغ,Conrad Chongqing,重庆康莱德酒店,,,,missing_year
+chongqing,cho-0045,transport,مطار تشونغتشينغ جيانغبي الدولي,Chongqing Jiangbei International Airport,重庆江北国际机场,,,,missing_year
+chongqing,cho-0046,transport,محطة تشونغتشينغ الشمالية,Chongqing North Railway Station,重庆北站,,,,missing_year
+chongqing,cho-0047,transport,محطة تشونغتشينغ الغربية,Chongqing West Railway Station,重庆西站,,,,missing_year
+chongqing,cho-0048,transport,محطة شابينغبا للقطارات,Shapingba Railway Station,沙坪坝站,,,,missing_year
+chongqing,cho-0049,transport,محطة ليزيبا – الخط 2,Liziba Station Line 2,李子坝站,,,,missing_year
+chongqing,cho-0050,transport,محطة جياتشانغكو – الخطان 1 و2,Jiaochangkou Metro Station,较场口站,,,,missing_year
+chongqing,cho-0051,mosques,مسجد تشونغتشينغ الرئيسي – موقع إرلانغ,Chongqing Mosque Erlang,重庆清真寺,,,,missing_year
+chongqing,cho-0052,mosques,مبنى المسلمين – موقع تاريخي يرجى التحقق,Muslim Building Jiaochangkou,穆斯林大厦,,,,missing_year
+hainan,hai-0001,markets,سوق سانيا الأول الليلي,Sanya First Market,三亚第一市场,,,,missing_year
+hainan,hai-0002,markets,سوق ييهِنغ الليلي,Yiheng Night Market,亿恒夜市,,,,missing_year
+hainan,hai-0003,markets,سوق غانغهوا الليلي,Ganghua Night Market,港华夜市,,,,missing_year
+hainan,hai-0004,markets,سوق لينوانغ الليلي,Linwang Night Market,林旺夜市,,,,missing_year
+hainan,hai-0005,markets,سوق دونغمِن,Haikou Dongmen Market,海口东门市场,,,,missing_year
+hainan,hai-0006,markets,سوق هايكو للشحنات الزراعية والفواكه شمال–جنوب,Haikou North-South Fruit Wholesale Market,海口南北水果批发市场,,,,missing_year
+hainan,hai-0007,markets,شارع ديشنغشا للملابس بالجملة,Deshengsha Clothing Wholesale Street,得胜沙服装批发街,,,,missing_year
+hainan,hai-0008,markets,سوق بانشياو للمأكولات البحرية,Banqiao Seafood Square,板桥海鲜广场,,,,missing_year
+hainan,hai-0009,markets,سوق شيمِن,Haikou Ximen Market,海口西门市场,,,,missing_year
+hainan,hai-0010,markets,شارع بواي التجاري,Haikou Boai Road Market Street,博爱路,,,,missing_year
+hainan,hai-0011,malls,مركز سانيا الدولي للتسوق المعفى من الرسوم,CDF Sanya International Duty Free City,三亚国际免税城,2014,opened,https://en.hainan.gov.cn/englishsite/Want/list_65.shtml,has_year
+hainan,hai-0012,malls,مركز هاينان السياحي للتسوق HTDF,Sanya HTDF Duty Free,三亚海旅免税城,,,,missing_year
+hainan,hai-0013,malls,مركز دادونغهاي الدولي للتسوق,Dadonghai International Shopping Mall,大东海国际购物中心,,,,missing_year
+hainan,hai-0014,malls,مركز لانهاي للتسوق,Lanhai Shopping Plaza,蓝海购物广场,,,,missing_year
+hainan,hai-0015,malls,مدينة هايكو الدولية للتسوق المعفى من الرسوم,Haikou International Duty-Free City,海口国际免税城,2022,opened,https://www.ehainan.gov.cn/2022-10/28/c_825551.htm,has_year
+hainan,hai-0016,malls,مول فريند ساني سيتي,Friend Sunny City,友谊阳光城,,,,missing_year
+hainan,hai-0017,malls,ذا فورم مول,The Form Shopping Mall,,,,,missing_year
+hainan,hai-0018,tourism,خليج يالونغ,Yalong Bay,亚龙湾,,,,missing_year
+hainan,hai-0019,tourism,خليج سانيا,Sanya Bay,三亚湾,,,,missing_year
+hainan,hai-0020,tourism,شاطئ دادونغهاي,Dadonghai,大东海,,,,missing_year
+hainan,hai-0021,tourism,خليج هايتانغ,Haitang Bay,海棠湾,,,,missing_year
+hainan,hai-0022,tourism,جزيرة ووتشيتشو,Wuzhizhou Island,蜈支洲岛,,,,missing_year
+hainan,hai-0023,tourism,جزيرة ويست آيلاند,West Island,西岛,,,,missing_year
+hainan,hai-0024,tourism,منطقة نانشان الثقافية,Nanshan Cultural Tourism Zone,南山文化旅游区,,,,missing_year
+hainan,hai-0025,tourism,تيانيا هايجياو,Tianya Haijiao,天涯海角,,,,missing_year
+hainan,hai-0026,tourism,منتزه لوهويتو,Luhuitou Scenic Area,鹿回头风景区,,,,missing_year
+hainan,hai-0027,tourism,حديقة غابة خليج يالونغ الاستوائية,Yalong Bay Tropical Paradise Forest Park,亚龙湾热带天堂森林公园,,,,missing_year
+hainan,hai-0028,tourism,متنزه دونغتيان,Sanya Dongtian Park,大小洞天旅游区,,,,missing_year
+hainan,hai-0029,tourism,منتزه سانيا سونغتشنغ للعروض,Sanya Romance Park,三亚千古情景区,,,,missing_year
+hainan,hai-0030,tourism,قرية هوهاي وخليج ركوب الأمواج,Houhai Bay,后海湾,,,,missing_year
+hainan,hai-0031,tourism,الشارع التاريخي تشيلو,Qilou Old Street,骑楼老街,,,,missing_year
+hainan,hai-0032,tourism,معبد المسؤولين الخمسة,Temple of the Five Lords,五公祠,,,,missing_year
+hainan,hai-0033,tourism,متحف هاينان,Hainan Museum,海南省博物馆,,,,missing_year
+hainan,hai-0034,tourism,الساحل الغربي لهايكو,Haikou West Coast,海口西海岸,,,,missing_year
+hainan,hai-0035,tourism,خليج رييويه,Riyue Bay,日月湾,,,,missing_year
+hainan,hai-0036,tourism,خليج شيمي,Shimei Bay,石梅湾,,,,missing_year
+hainan,hai-0037,tourism,شبه جزيرة شنجو,Shenzhou Peninsula,神州半岛,,,,missing_year
+hainan,hai-0038,tourism,حديقة شينغلونغ النباتية الاستوائية,Xinglong Tropical Botanical Garden,兴隆热带植物园,,,,missing_year
+hainan,hai-0039,tourism,جزيرة باوندري,Boundary Island,分界洲岛,,,,missing_year
+hainan,hai-0040,tourism,جزيرة القرد نانوان,Nanwan Monkey Island,南湾猴岛,,,,missing_year
+hainan,hai-0041,tourism,خليج تشينغشوي,Qingshui Bay,清水湾,,,,missing_year
+hainan,hai-0042,tourism,متحف بحر الصين الجنوبي,South China Sea Museum of China,中国（海南）南海博物馆,,,,missing_year
+hainan,hai-0043,tourism,منطقة بوآو,Boao Water City,博鳌水城,,,,missing_year
+hainan,hai-0044,tourism,منطقة بايشي لينغ,Baishiling Scenic Area,白石岭风景区,,,,missing_year
+hainan,hai-0045,tourism,غابة يانودا المطيرة,Yanoda Rainforest Cultural Tourism Zone,呀诺达雨林文化旅游区,,,,missing_year
+hainan,hai-0046,tourism,وادي بينلانغ الثقافي,Binglanggu Li & Miao Cultural Heritage Park,槟榔谷黎苗文化旅游区,,,,missing_year
+hainan,hai-0047,tourism,بستان نخيل جوز الهند دونغجياو,Dongjiao Coconut Plantation,东郊椰林,,,,missing_year
+hainan,hai-0048,dining,مطعم تي غاردن – بارك حياة,Park Hyatt Sanya Tea Garden,柏悦酒店茶苑,,,,missing_year
+hainan,hai-0049,dining,مطعم فريش سي في ذا إديشن,The Sanya Edition Fresh Sea Restaurant,三亚艾迪逊酒店鲜海餐厅,,,,missing_year
+hainan,hai-0050,dining,نودلز يا هوا غانغمِن,Yahua Gangmen Fried Rice Noodles,港门亚花炒粉,,,,missing_year
+hainan,hai-0051,dining,مطعم جياشيا غانغمِن نودلز,Jiaxia Gangmen Rice Noodles,家霞港门粉,,,,missing_year
+hainan,hai-0052,dining,متجر آجو للمشروبات الباردة,Aju Cold Drinks Shop,阿菊冷饮店,,,,missing_year
+hainan,hai-0053,hotels,فندق تيانيو غراند,Tienyow Grand Hotel,,,,,missing_year
+hainan,hai-0054,hotels,منتجع ميشن هيلز هايكو,Mission Hills Resort Haikou,,,,,missing_year
+hainan,hai-0055,hotels,فندق مينغوانغ شينغي,Haikou Mingguang Shengyi Hotel,,,,,missing_year
+hainan,hai-0056,hotels,فندق هاينان جونهو هايي,Hainan Junhua Haiyi Hotel,,,,,missing_year
+hainan,hai-0057,hotels,منتجع كلوب ميد سانيا,Club Med Sanya,,,,,missing_year
+hainan,hai-0058,hotels,منتجع إنتايم سانيا,Resort Intime Sanya,,,,,missing_year
+hainan,hai-0059,hotels,منتجع شانهايتين أوتوغراف كوليكشن,The Shanhaitian Resort Sanya Autograph Collection,,,,,missing_year
+hainan,hai-0060,hotels,منتجع هوارد جونسون خليج سانيا,Howard Johnson Resort Sanya Bay,,,,,missing_year
+hainan,hai-0061,hotels,فندق ماريوت هايكو,Haikou Marriott Hotel,,,,,missing_year
+hainan,hai-0062,transport,مطار سانيا فينيكس الدولي,Sanya Phoenix International Airport,三亚凤凰国际机场,,,,missing_year
+hainan,hai-0063,transport,مطار هايكو ميلان الدولي,Haikou Meilan International Airport,海口美兰国际机场,,,,missing_year
+hainan,hai-0064,transport,مطار تشيونغهاي بوآو,Qionghai Boao Airport,琼海博鳌机场,,,,missing_year
+hainan,hai-0065,transport,محطة قطارات سانيا,Sanya Railway Station,三亚站,,,,missing_year
+hainan,hai-0066,transport,محطة قطارات هايكو الشرقية,Haikou East Railway Station,海口东站,,,,missing_year
+hainan,hai-0067,transport,محطة قطارات ميلان,Meilan Railway Station,美兰站,,,,missing_year
+hainan,hai-0068,transport,محطة قطارات واننينغ,Wanning Railway Station,万宁站,,,,missing_year
+hainan,hai-0069,transport,محطة قطارات لينغشوي,Lingshui Railway Station,陵水站,,,,missing_year

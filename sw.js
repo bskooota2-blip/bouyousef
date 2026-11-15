@@ -1,5 +1,5 @@
 /* BouYousef 2 optional, user-triggered public static offline cache v041.20.0 */
-const OFFLINE_CACHE='by2-public-offline-v04122';
+const OFFLINE_CACHE='by2-public-offline-v041231';
 const SCOPE=new URL(self.registration.scope);
 self.addEventListener('install',()=>self.skipWaiting());
 self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));

@@ -10,8 +10,8 @@
     if(!Number.isInteger(year)||year<1000||year>new Date().getFullYear())return '';
     const language=currentLang(),kind=r.openingKind||'opened';
     const shown=language==='ar'?String(year).replace(/[0-9]/g,c=>'٠١٢٣٤٥٦٧٨٩'[Number(c)]):String(year);
-    if(language==='zh')return kind==='phased'?shown+'年起分阶段开放':kind==='trial'?shown+'年试运营':kind==='founded'?shown+'年创立':kind==='renovated'?shown+'年翻新':shown+'年开业';
-    const labels=language==='en'?{opened:'Opened in ',phased:'Opened in phases from ',trial:'Trial opening in ',founded:'Founded in ',renovated:'Renovated in '}:{opened:'افتُتح عام ',phased:'بدأ افتتاحه عام ',trial:'بدأ التشغيل عام ',founded:'تأسس عام ',renovated:'جُدّد عام '};
+    if(language==='zh')return kind==='phased'?shown+'年起分阶段开放':kind==='trial'?shown+'年试运营':kind==='founded'?shown+'年成立':kind==='reopened'?shown+'年重新开业':kind==='renovated'?shown+'年翻新':shown+'年开业';
+    const labels=language==='en'?{opened:'Opened in ',phased:'Opened in phases from ',trial:'Trial opening in ',founded:'Established in ',reopened:'Reopened in ',renovated:'Renovated in '}:{opened:'افتُتح عام ',phased:'بدأ افتتاحه عام ',trial:'بدأ التشغيل عام ',founded:'تأسس عام ',reopened:'أُعيد افتتاحه عام ',renovated:'جُدّد عام '};
     return (labels[kind]||labels.opened)+shown;
   }
  const currentLang=()=>loc()?.language()||'ar';
@@ -66,7 +66,7 @@
  function place(r,citySlug){
   const article=make('article','gz-place by3-place');article.id='place-'+r.id;
   const content=make('div','gz-place-main by3-place-main');
-  const heading=make('h3','gz-place-name',placeName(r));const opening=openingText(r);if(opening){const year=make('small','by2-opening-year',opening);year.style.cssText='display:inline-block;font-size:.67em;font-weight:750;color:#12619a;line-height:1.6;margin-inline-start:8px;white-space:normal;vertical-align:baseline';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}content.append(heading);
+  const heading=make('h3','gz-place-name',placeName(r));const opening=openingText(r);if(opening){const year=make('small','by2-opening-year','🗓️ '+opening);year.style.cssText='display:inline-flex;align-items:center;gap:3px;font-size:.73em;font-weight:750;color:#12619a;background:#eff9ff;border:1px solid #b5ddf5;border-radius:7px;padding:2px 7px;line-height:1.6;margin-inline-start:8px;margin-block:3px;white-space:normal;vertical-align:baseline;max-width:100%';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}content.append(heading);
   if(available(r.ar)&&currentLang()!=='ar')content.append(make('p','gz-info by2-original-arabic',r.ar));
   if(available(r.en)&&r.en!==placeName(r))content.append(make('p','gz-en',r.en));
   if(available(r.zh))content.append(make('p','gz-zh',r.zh));
