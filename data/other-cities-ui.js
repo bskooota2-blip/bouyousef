@@ -4,6 +4,16 @@
  const loc=()=>window.BY2_L10N;
  const tr=v=>loc()?.term(v)||v;
  const placeName=r=>loc()?.place(r)||r.ar||r.en||r.zh;
+  // V041 – Verified opening dates for other cities, localized in three languages.
+  function openingText(r){
+    const year=Number(r.openingYear);
+    if(!Number.isInteger(year)||year<1000||year>new Date().getFullYear())return '';
+    const language=currentLang(),kind=r.openingKind||'opened';
+    const shown=language==='ar'?String(year).replace(/[0-9]/g,c=>'٠١٢٣٤٥٦٧٨٩'[Number(c)]):String(year);
+    if(language==='zh')return kind==='phased'?shown+'年起分阶段开放':kind==='trial'?shown+'年试运营':kind==='founded'?shown+'年创立':kind==='renovated'?shown+'年翻新':shown+'年开业';
+    const labels=language==='en'?{opened:'Opened in ',phased:'Opened in phases from ',trial:'Trial opening in ',founded:'Founded in ',renovated:'Renovated in '}:{opened:'افتُتح عام ',phased:'بدأ افتتاحه عام ',trial:'بدأ التشغيل عام ',founded:'تأسس عام ',renovated:'جُدّد عام '};
+    return (labels[kind]||labels.opened)+shown;
+  }
  const currentLang=()=>loc()?.language()||'ar';
  const localizedInfo=(icon,ar,en,zh,value)=>icon+' '+(currentLang()==='en'?en:currentLang()==='zh'?zh:ar)+': '+value;
  const labels={markets:'الأسواق',malls:'المجمعات التجارية',dining:'المطاعم والكافيهات',tourism:'الأماكن السياحية',hotels:'الفنادق',transport:'المواصلات',mosques:'المساجد',information:'معلومات المدينة'};
@@ -56,7 +66,7 @@
  function place(r,citySlug){
   const article=make('article','gz-place by3-place');article.id='place-'+r.id;
   const content=make('div','gz-place-main by3-place-main');
-  content.append(make('h3','gz-place-name',placeName(r)));
+  const heading=make('h3','gz-place-name',placeName(r));const opening=openingText(r);if(opening){const year=make('small','by2-opening-year',opening);year.style.cssText='display:inline-block;font-size:.67em;font-weight:750;color:#12619a;line-height:1.6;margin-inline-start:8px;white-space:normal;vertical-align:baseline';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}content.append(heading);
   if(available(r.ar)&&currentLang()!=='ar')content.append(make('p','gz-info by2-original-arabic',r.ar));
   if(available(r.en)&&r.en!==placeName(r))content.append(make('p','gz-en',r.en));
   if(available(r.zh))content.append(make('p','gz-zh',r.zh));
