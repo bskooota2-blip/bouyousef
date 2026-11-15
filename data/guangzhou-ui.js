@@ -13,6 +13,16 @@
  zh:{all:'全部',search:'搜索本栏目...',found:'地点数量',copyName:'复制中文名称',copyAddress:'复制中文地址',copyDidi:'复制目的地用于滴滴',amap:'高德地图搜索',metro:'地铁',address:'中文地址',addressEn:'英文地址',note:'备注',more:'查看更多',copied:'已复制',unavailable:'无法自动复制',missing:'原始资料未提供',info:'广州介绍',searchMatches:'广州匹配地点',newLabel:'✨ 新增',noResult:'没有匹配结果'}
  };
  function name(r){return lang==='en'?(r.en||r.ar):lang==='zh'?(r.zh||r.ar):r.ar}
+  // V041 – Opening-year label, only for verified record-level dates.
+  function openingText(r){
+    const year=Number(r.openingYear);
+    if(!Number.isInteger(year)||year<1000||year>new Date().getFullYear())return '';
+    const kind=r.openingKind||'opened';
+    const shown=lang==='ar'?String(year).replace(/[0-9]/g,c=>'٠١٢٣٤٥٦٧٨٩'[Number(c)]):String(year);
+    if(lang==='zh')return kind==='phased'?shown+'年起分阶段开放':kind==='trial'?shown+'年试运营':kind==='founded'?shown+'年创立':kind==='renovated'?shown+'年翻新':shown+'年开业';
+    const labels=lang==='en'?{opened:'Opened in ',phased:'Opened in phases from ',trial:'Trial opening in ',founded:'Founded in ',renovated:'Renovated in '}:{opened:'افتُتح عام ',phased:'بدأ افتتاحه عام ',trial:'بدأ التشغيل عام ',founded:'تأسس عام ',renovated:'جُدّد عام '};
+    return (labels[kind]||labels.opened)+shown;
+  }
  function element(tag,cls,text){const x=document.createElement(tag);if(cls)x.className=cls;if(text!==undefined&&text!==null)x.textContent=text;return x}
  function clean(text){return String(text||'').normalize('NFKC').toLowerCase().replace(/[ً-ٰٟ]/g,'').replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/\s+/g,' ').trim()}
  function copyValue(value){const msg=ui[lang];if(!value)return;function notify(ok){const t=element('div','gz-copynote',ok?msg.copied:msg.unavailable);const root=document.querySelector('#gzListing .gz-controls')||document.body;root.append(t);setTimeout(()=>t.remove(),2200)}
@@ -43,7 +53,7 @@
   if(r.addedText)top.append(element('span','gz-tag',r.addedText));
   if(r.cafeTags)r.cafeTags.forEach(tag=>top.append(element('span','gz-tag gz-cafe-badge',({'سياحي':'📸 سياحي','إطلالة':'🌆 ذو إطلالة','تراثي':'🏛️ تراثي','طبيعة':'🌿 وسط الطبيعة','مبتكر':'🧪 مشروبات مبتكرة','تقديم مميز':'🎨 تقديم مميز'})[tag]||tag)));
   main.append(top);
-  const suffixText=r.titleSuffixAr?' ('+r.titleSuffixAr+')':'';const arabicTitle=(lang==='ar'&&suffixText&&r.ar.endsWith(suffixText))?r.ar.slice(0,-suffixText.length):name(r);const heading=element('h3','',arabicTitle);if(lang==='ar'&&r.titleSuffixAr){const suffix=element('small','gz-title-suffix',suffixText);suffix.style.cssText='font-size:.64em;font-weight:700;color:#536f80;white-space:nowrap;margin-inline-start:6px;display:inline';heading.append(suffix)}main.append(heading);
+  const suffixText=r.titleSuffixAr?' ('+r.titleSuffixAr+')':'';const arabicTitle=(lang==='ar'&&suffixText&&r.ar.endsWith(suffixText))?r.ar.slice(0,-suffixText.length):name(r);const heading=element('h3','',arabicTitle);if(lang==='ar'&&r.titleSuffixAr){const suffix=element('small','gz-title-suffix',suffixText);suffix.style.cssText='font-size:.64em;font-weight:700;color:#536f80;white-space:nowrap;margin-inline-start:6px;display:inline';heading.append(suffix)}const opening=openingText(r);if(opening){const year=element('small','by2-opening-year',opening);year.style.cssText='display:inline-block;font-size:.67em;font-weight:750;color:#12619a;line-height:1.6;margin-inline-start:8px;white-space:normal;vertical-align:baseline';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}main.append(heading);
   if(r.en&&r.en!==name(r))addP(main,'gz-en',r.en);
   if(r.zh&&r.zh!==name(r))addP(main,'gz-zh',r.zh);
   if(r.addressZh)addP(main,'gz-info','📍 '+m.address+': '+r.addressZh);
