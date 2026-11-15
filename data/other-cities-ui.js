@@ -148,7 +148,16 @@
   actionsWrap.append(actions);
   const main=make('div','gz-place-main by3-place-main'),top=make('div','gz-place-top');
   if(available(r.subtype)&&!(shanghaiDining&&r.subtype==='المخابز'))top.append(make('span','gz-tag',tr(r.subtype)));else if(available(r.sourceCategory))top.append(make('span','gz-tag',tr(r.sourceCategory)));else top.append(make('span','gz-tag',labels[r.section]||r.section));main.append(top);
-  main.append(make('h3','',placeName(r)));
+  const placeHeading=make('h3','gz-place-name',placeName(r));
+  const opening=openingText(r);
+  if(opening){
+    const year=make('small','by2-opening-year','🗓️ '+opening);
+    year.style.cssText='display:inline-flex;align-items:center;gap:3px;font-size:.73em;font-weight:750;color:#12619a;background:#eff9ff;border:1px solid #b5ddf5;border-radius:7px;padding:2px 7px;line-height:1.6;margin-inline-start:8px;margin-block:3px;white-space:normal;vertical-align:baseline;max-width:100%';
+    year.setAttribute('aria-label',opening);
+    if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;
+    placeHeading.append(year);
+  }
+  main.append(placeHeading);
   if(available(r.ar)&&currentLang()!=='ar')main.append(make('p','gz-info by2-original-arabic',r.ar));
   if(available(r.en)&&r.en!==placeName(r))main.append(make('p','gz-en',r.en));
   if(available(r.zh)&&r.zh!==placeName(r))main.append(make('p','gz-zh',r.zh));
