@@ -1174,8 +1174,44 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla strong{line-height:1.1}
 <link rel="icon" href="favicon.ico?v=ah20261116" sizes="any"/><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=ah20261116"/><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=ah20261116"/><link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png?v=ah20261116"/><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=ah20261116"/>
 <meta name="apple-mobile-web-app-title" content="الصبر"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta property="og:site_name" content="الصبر"/><meta property="og:title" content="بويوسف الصبر – دليلك إلى الصين"/><meta property="og:image" content="https://bskooota2-blip.github.io/bouyousef/assets/ah-splash-original.png"/>
-<style id="ah-splash-v1-style">#ahSplashOverlay{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:linear-gradient(140deg,#e7f5ff,#fff 55%,#e8f2ff);padding:16px;transition:opacity .35s ease,visibility .35s ease}#ahSplashOverlay[hidden]{display:none!important}#ahSplashOverlay.ah-splash-out{opacity:0;visibility:hidden;pointer-events:none}#ahSplashLogo{display:block;max-width:min(76vw,470px);max-height:min(76vh,470px);width:100%;height:auto;object-fit:contain;animation:ah-splash-in 1.6s cubic-bezier(.18,.65,.22,1) both}#ahSplashSkip{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:#fff;border:1px solid #8fbbd7;border-radius:100px;padding:8px 20px;color:#083963;font-weight:800;font:inherit;cursor:pointer}@keyframes ah-splash-in{from{opacity:0;transform:scale(.78)}to{opacity:1;transform:scale(1)}}@media(prefers-reduced-motion:reduce){#ahSplashLogo{animation:none}#ahSplashOverlay{transition:none}}</style>
-</head><body>
+
+<style id="ah-splash-single-v2-style">
+/* Only one browser-level splash; the OS controls the native installed-PWA splash. */
+#ahSplashOverlay{display:none;position:fixed;inset:0;z-index:2147483000;place-items:center;background:linear-gradient(140deg,#e7f5ff 0%,#fff 55%,#e8f2ff 100%);padding:16px;opacity:1;visibility:visible;transition:opacity .30s ease,visibility .30s ease}
+html.ah-splash-active #ahSplashOverlay{display:grid}
+#ahSplashOverlay.ah-splash-out{opacity:0;visibility:hidden;pointer-events:none}
+#ahSplashLogo{display:block;width:100%;max-width:min(76vw,470px);max-height:min(76vh,470px);height:auto;object-fit:contain;animation:ah-zoom-single-v2 1.55s cubic-bezier(.18,.65,.22,1) both}
+#ahSplashSkip{position:absolute;bottom:max(22px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);border:1px solid #8fbbd7;border-radius:100px;background:#fff;padding:8px 20px;color:#083963;font:inherit;font-weight:800;cursor:pointer}
+@keyframes ah-zoom-single-v2{from{opacity:0;transform:scale(.78)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){#ahSplashLogo{animation:none}#ahSplashOverlay{transition:none}}
+</style>
+<script id="ah-splash-single-v2-early">
+/* Gate before rendering body to avoid a flash of the page followed by the logo. */
+(function(){'use strict';
+var standalone=!!(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true;
+var reduced=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+var seen=false;try{seen=window.sessionStorage.getItem('ah_splash_seen_v2')==='1';}catch(e){}
+if(!standalone&&!reduced&&!seen){document.documentElement.classList.add('ah-splash-active');}
+})();
+</script></head><body><div id="ahSplashOverlay" role="group" aria-label="شعار الصبر" aria-live="off">
+<img id="ahSplashLogo" src="assets/ah-splash-original.png" alt="AH – صديقك في الصين" width="470" height="470" fetchpriority="high"/>
+<button id="ahSplashSkip" type="button">تخطي</button></div>
+<script id="ah-splash-single-v2-run">
+(function(){'use strict';
+var overlay=document.getElementById('ahSplashOverlay'),skip=document.getElementById('ahSplashSkip'),doc=document.documentElement;
+if(!overlay||!skip||!doc.classList.contains('ah-splash-active'))return;
+try{window.sessionStorage.setItem('ah_splash_seen_v2','1');}catch(e){}
+var closed=false,autoTimer=null,cleanupTimer=null;
+function close(){if(closed)return;closed=true;
+if(autoTimer!==null)window.clearTimeout(autoTimer);
+overlay.classList.add('ah-splash-out');
+cleanupTimer=window.setTimeout(function(){doc.classList.remove('ah-splash-active');overlay.remove();},310);
+}
+skip.addEventListener('click',close,{once:true});
+window.addEventListener('pagehide',function(){if(cleanupTimer!==null)window.clearTimeout(cleanupTimer);doc.classList.remove('ah-splash-active');},{once:true});
+autoTimer=window.setTimeout(close,2050);
+})();
+</script>
 <div class="shade" id="shade"></div>
 <aside aria-label="الأقسام الأساسية" class="sidebar" id="sideNav"><button aria-label="إغلاق القائمة" class="mobile-close" data-i18n="menuClose" id="mobileClose" type="button">✕ إغلاق</button><details class="by417-city-picker" id="by417CityPicker" dir="rtl"><summary aria-label="فتح قائمة المدن"><span class="by417-city-symbol" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span class="by417-city-title">اختر المدينة</span><span class="by417-city-arrow" aria-hidden="true">▾</span></summary><nav class="by417-city-list" aria-label="مدن الصين"><a href="#city/guangzhou" data-by417-city="guangzhou">غوانزو</a><a href="#city/shanghai" data-by417-city="shanghai">شنغهاي</a><a href="#city/beijing" data-by417-city="beijing">بكين</a><a href="#city/shenzhen" data-by417-city="shenzhen">شينزن</a><a href="#city/foshan" data-by417-city="foshan">فوشان</a><a href="#city/yiwu" data-by417-city="yiwu">إيوو</a><a href="#city/guilin" data-by417-city="guilin">قويلين</a><a href="#city/yangshuo" data-by417-city="yangshuo">يانغشوو</a><a href="#city/zhangjiajie" data-by417-city="zhangjiajie">جانغجياجيه</a><a href="#city/chongqing" data-by417-city="chongqing">تشونغتشينغ</a><a href="#city/hainan" data-by417-city="hainan">جزيرة هاينان</a></nav></details>
 <button class="nav-button" data-section="login" type="button"><span class="nav-emoji"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span><span class="nav-label" id="by33SidebarLoginLabel" data-i18n="nav_login">تسجيل الدخول</span></button>
@@ -1502,6 +1538,5 @@ function update(){
 if(store)new MutationObserver(update).observe(store,{attributes:true,attributeFilter:['hidden']});
 document.addEventListener('by2-language-changed',update);window.addEventListener('hashchange',update);update();
 })();
-</script><div id="ahSplashOverlay" hidden role="dialog" aria-label="شعار الصبر" aria-modal="false"><img id="ahSplashLogo" src="assets/ah-splash-original.png" alt="AH – صديقك في الصين" width="470" height="470"/><button id="ahSplashSkip" type="button">تخطي</button></div>
-<script id="ah-splash-v1-script">(function(){'use strict';var splash=document.getElementById('ahSplashOverlay'),skip=document.getElementById('ahSplashSkip');if(!splash||!skip)return;var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;var shown=false;try{shown=sessionStorage.getItem('ah_splash_seen_v1')==='1';sessionStorage.setItem('ah_splash_seen_v1','1')}catch(e){}if(shown||reduced)return;var closed=false;var remove=function(){if(closed)return;closed=true;splash.classList.add('ah-splash-out');window.setTimeout(function(){splash.remove()},380)};skip.addEventListener('click',remove);splash.hidden=false;window.setTimeout(remove,2100);window.addEventListener('pagehide',remove,{once:true})})();</script>
+</script>
 </body></html>
