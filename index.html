@@ -1162,13 +1162,13 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla strong{line-height:1.1}
 
 <style id="by2-weather-title-inline-refresh-v041254">
 /* Place only the weather heading and its manual refresh icon on one compact line. */
-#by2WeatherHome .by2-w-head{display:flex!important;justify-content:flex-start!important;align-items:center!important;flex-wrap:nowrap!important;gap:9px!important}
+#by2WeatherHome .by2-w-head{display:flex!important;justify-content:space-between!important;align-items:center!important;flex-wrap:nowrap!important;gap:9px!important}
 #by2WeatherHome .by2-w-head > div{flex:0 1 auto;min-width:0}
 #by2WeatherHome #by2WeatherHeading{white-space:nowrap;margin:0!important;line-height:1.4}
-#by2WeatherHome #by2WeatherRefresh{flex:0 0 38px;display:inline-grid;place-items:center;width:38px;height:38px;min-height:38px;padding:0!important;font-size:20px;line-height:1;border-radius:11px}
+#by2WeatherHome #by2WeatherRefresh{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:4px;width:auto;height:38px;min-height:38px;padding:0 13px!important;font-size:14px;white-space:nowrap;line-height:1.3;border-radius:11px;margin-inline-start:auto}
 @media(max-width:680px){
 #by2WeatherHome .by2-w-head{gap:7px!important}
-#by2WeatherHome #by2WeatherRefresh{flex-basis:35px;width:35px;height:35px;min-height:35px;font-size:19px}
+#by2WeatherHome #by2WeatherRefresh{flex-basis:auto;width:auto;height:35px;min-height:35px;font-size:13px;padding:0 10px!important}
 }
 </style>
 </head><body>
@@ -1203,7 +1203,7 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla strong{line-height:1.1}
       <h2 class="by2-w-title" id="by2WeatherHeading">🌤️ حالة الطقس</h2>
       <p class="by2-w-summary" id="by2WeatherStatus" aria-live="polite">تحديث تلقائي — درجات الحرارة الفعلية من مصدر الطقس</p>
     </div>
-    <button class="by2-w-refresh" id="by2WeatherRefresh" type="button" aria-label="تحديث حالة الطقس" title="تحديث الطقس">🔄</button>
+    <button class="by2-w-refresh" id="by2WeatherRefresh" type="button" aria-label="تحديث حالة الطقس" title="تحديث الطقس">🔄 تحديث</button>
   </div>
   <div class="by2-w-controls" aria-label="بطاقات طقس المدن">
     <button class="by2-w-arrow" type="button" id="by2WeatherPrev" aria-label="المدن السابقة">❯</button>
