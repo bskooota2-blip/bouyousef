@@ -1108,7 +1108,8 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer{margin-top:2px!important;
 .by2-store-quick{position:fixed;z-index:22;inset:auto auto 90px 12px;border:1px solid #92cdee;border-radius:999px;background:#087fc5;color:#fff;box-shadow:0 3px 14px #00345a38;padding:10px 14px;font-size:13px;font-weight:800;cursor:pointer;direction:rtl;line-height:1.3}
 .by2-store-quick[hidden]{display:none!important}
 @media(max-width:680px){.by2-store-home-entry{padding:0 10px;margin:14px auto 22px}.by2-store-home-card{gap:10px;flex-wrap:wrap;padding:14px}.by2-store-home-icon{width:51px;height:51px;flex-basis:51px;font-size:27px}.by2-store-home-info h2{font-size:20px}.by2-store-home-info p{font-size:12px}.by2-store-home-open{width:100%;min-height:43px}.by2-store-quick{inset:auto auto 82px 9px;font-size:12px;padding:9px 11px;max-width:130px}}
-<style id="by41-sidebar-logout-style">#sideNav #by38HomeSignout{width:100%;min-width:0;min-height:48px;margin:0;display:flex;align-items:center;justify-content:flex-start;gap:10px;direction:rtl;font:inherit;font-weight:800;color:#08446f;background:#fff;border:1px solid #7abbe7;border-radius:13px;padding:10px 12px;box-shadow:0 3px 12px #15517c20}#sideNav #by38HomeSignout[hidden]{display:none!important}#sideNav #by38HomeSignout .nav-emoji{font-size:22px;line-height:1}#sideNav #by38HomeSignout .nav-label{font-size:14px;white-space:normal}#sideNav #by38HomeSignout:hover{background:#e6f5ff}#sideNav #by38HomeSignout:focus-visible{outline:3px solid #d4a54a;outline-offset:3px}</style></style></head><body>
+<style id="by41-sidebar-logout-style">#sideNav #by38HomeSignout{width:100%;min-width:0;min-height:48px;margin:0;display:flex;align-items:center;justify-content:flex-start;gap:10px;direction:rtl;font:inherit;font-weight:800;color:#08446f;background:#fff;border:1px solid #7abbe7;border-radius:13px;padding:10px 12px;box-shadow:0 3px 12px #15517c20}#sideNav #by38HomeSignout[hidden]{display:none!important}#sideNav #by38HomeSignout .nav-emoji{font-size:22px;line-height:1}#sideNav #by38HomeSignout .nav-label{font-size:14px;white-space:normal}#sideNav #by38HomeSignout:hover{background:#e6f5ff}#sideNav #by38HomeSignout:focus-visible{outline:3px solid #d4a54a;outline-offset:3px}</style></style><link rel="stylesheet" href="assets/weather-home-v04125.css?v=041250">
+</head><body>
 <div class="shade" id="shade"></div>
 <aside aria-label="الأقسام الأساسية" class="sidebar" id="sideNav"><button aria-label="إغلاق القائمة" class="mobile-close" data-i18n="menuClose" id="mobileClose" type="button">✕ إغلاق</button><details class="by417-city-picker" id="by417CityPicker" dir="rtl"><summary aria-label="فتح قائمة المدن"><span class="by417-city-symbol" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span class="by417-city-title">اختر المدينة</span><span class="by417-city-arrow" aria-hidden="true">▾</span></summary><nav class="by417-city-list" aria-label="مدن الصين"><a href="#city/guangzhou" data-by417-city="guangzhou">غوانزو</a><a href="#city/shanghai" data-by417-city="shanghai">شنغهاي</a><a href="#city/beijing" data-by417-city="beijing">بكين</a><a href="#city/shenzhen" data-by417-city="shenzhen">شينزن</a><a href="#city/foshan" data-by417-city="foshan">فوشان</a><a href="#city/yiwu" data-by417-city="yiwu">إيوو</a><a href="#city/guilin" data-by417-city="guilin">قويلين</a><a href="#city/yangshuo" data-by417-city="yangshuo">يانغشوو</a><a href="#city/zhangjiajie" data-by417-city="zhangjiajie">جانغجياجيه</a><a href="#city/chongqing" data-by417-city="chongqing">تشونغتشينغ</a><a href="#city/hainan" data-by417-city="hainan">جزيرة هاينان</a></nav></details>
 <button class="nav-button" data-section="login" type="button"><span class="nav-emoji"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span><span class="nav-label" id="by33SidebarLoginLabel" data-i18n="nav_login">تسجيل الدخول</span></button>
@@ -1134,6 +1135,30 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer{margin-top:2px!important;
 </header>
 <section aria-label="مواقيت الصلاة والقبلة" id="globalPrayer"><div class="prayer"><div class="prayer-title"><span data-i18n="prayerHeading">🕌 مواقيت الصلاة</span><label class="visually-hidden" data-i18n="prayerCitySelect" for="prayerCity">مدينة الحساب</label><select aria-label="اختر مدينة مواقيت الصلاة" id="prayerCity"></select></div>
 <div aria-live="polite" class="prayer-cells" id="prayerCells"></div><div class="qibla"><b data-i18n="qibla">القبلة</b><div aria-label="رسم يوضح زاوية القبلة من الشمال الجغرافي" class="compass"><span class="compass-n">ش</span><span class="compass-e">ق</span><span class="compass-w">غ</span><span class="compass-s">ج</span><span aria-hidden="true" class="compass-needle" id="compassNeedle">➤</span><span class="compass-hub"></span></div><strong id="qiblaValue">—</strong><small data-i18n="qiblaDisclaimer">سهم توضيحي بحسب الشمال الجغرافي، ليس بوصلة حية</small></div></div><p class="prayer-note" data-i18n="prayerNoteDefault" id="prayerNote">الأوقات فلكية تقديرية حسب المدينة وتوقيت الصين (UTC+8). راجع التقويم المحلي للصلاة.</p></section><main id="cityHome">
+<section id="by2WeatherHome" aria-labelledby="by2WeatherHeading" dir="rtl">
+  <div class="by2-w-head">
+    <div>
+      <h2 class="by2-w-title" id="by2WeatherHeading">🌤️ حالة الطقس في مدن الصين</h2>
+      <p class="by2-w-summary" id="by2WeatherStatus" aria-live="polite">تحديث تلقائي — درجات الحرارة الفعلية من مصدر الطقس</p>
+    </div>
+    <button class="by2-w-refresh" id="by2WeatherRefresh" type="button" aria-label="تحديث حالة الطقس">🔄 تحديث</button>
+  </div>
+  <div class="by2-w-controls" aria-label="بطاقات طقس المدن">
+    <button class="by2-w-arrow" type="button" id="by2WeatherPrev" aria-label="المدن السابقة">❯</button>
+    <div class="by2-w-track" id="by2WeatherTrack" role="list" aria-label="اسحب للتنقل بين طقس المدن"></div>
+    <button class="by2-w-arrow" type="button" id="by2WeatherNext" aria-label="المدن التالية">❮</button>
+  </div>
+  <div class="by2-w-footer"><span>↔ اسحب لعرض باقي المدن · اضغط المدينة للتفاصيل وتوقعات ٣ أيام</span><a href="https://wttr.in/" target="_blank" rel="noopener noreferrer">مصدر بيانات الطقس: wttr.in</a></div>
+  <dialog class="by2-w-dialog" id="by2WeatherDialog" aria-labelledby="by2WeatherDialogTitle" aria-modal="true">
+    <button class="by2-w-dialog-close" id="by2WeatherDialogClose" type="button" aria-label="إغلاق تفاصيل الطقس">✕ إغلاق</button>
+    <h3 class="by2-w-dialog-title" id="by2WeatherDialogTitle">تفاصيل الطقس</h3>
+    <div class="by2-w-dialog-current" id="by2WeatherDialogCurrent"></div>
+    <div class="by2-w-dialog-metrics" id="by2WeatherDialogMetrics"></div>
+    <h4>توقعات الأيام الثلاثة القادمة</h4>
+    <div class="by2-w-days" id="by2WeatherDialogDays"></div>
+    <p class="by2-w-disclaimer">البيانات والتوقعات تقديرية وقد تختلف عن حالة الطقس الفعلية في موقعك.</p>
+  </dialog>
+</section>
 <section aria-label="اختيار المدن" class="content"><div class="section-heading"><h2 data-i18n="chooseCity">📍 اختر المدينة</h2></div><div class="cities" id="citiesGrid"><button aria-label="فتح غوانزو" class="city-card" data-city="0" data-city-alt="0" data-city-index="0" type="button"><img alt="معلم من غوانزو" loading="eager" src="assets/guangzhou.jpg"/><span class="city-text"><strong data-city-label="0">غوانزو</strong><small lang="en">Guangzhou</small></span></button>
 <button aria-label="فتح شنغهاي" class="city-card" data-city="1" data-city-alt="1" data-city-index="1" type="button"><img alt="معلم من شنغهاي" loading="eager" src="assets/shanghai.jpg"/><span class="city-text"><strong data-city-label="1">شنغهاي</strong><small lang="en">Shanghai</small></span></button>
 <button aria-label="فتح بكين" class="city-card" data-city="2" data-city-alt="2" data-city-index="2" type="button"><img alt="معلم من بكين" loading="eager" src="assets/beijing.jpg"/><span class="city-text"><strong data-city-label="2">بكين</strong><small lang="en">Beijing</small></span></button>
@@ -1327,6 +1352,7 @@ translate();
 <script src="data/other-cities.js?v=041241"></script>
 <script src="data/other-cities-ui.js?v=041239"></script>
 <script>renderRoute();</script>
+<script defer src="data/weather-home-v04125.js?v=041250"></script>
 <!-- V020: global search works on home, services, all cities and sections. -->
 <button aria-controls="by3GlobalSearchLayer" aria-expanded="false" aria-haspopup="dialog" id="by3GlobalSearchTrigger" type="button"><span aria-hidden="true" class="by3-search-symbol">🔎</span><span>بحث في الموقع</span></button>
 <div hidden="" id="by3GlobalSearchLayer">
