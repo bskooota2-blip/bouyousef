@@ -1,5 +1,5 @@
 /* BouYousef 2 — Homepage city weather, 2026-11-16. Scoped to home widget only. */
-#by2WeatherHome{max-width:1210px;margin:13px auto 18px;padding:14px 16px 12px;direction:rtl;background:linear-gradient(135deg,#e8f8ff 0%,#fff 53%,#ddf1ff 100%);border:2px solid #9bd7f5;border-radius:23px;box-shadow:0 5px 20px #0867a11c;color:#073c6c}
+#by2WeatherHome{max-width:900px;margin:11px auto 14px;padding:10px 16px 9px;direction:rtl;background:linear-gradient(135deg,#e8f8ff 0%,#fff 53%,#ddf1ff 100%);border:2px solid #9bd7f5;border-radius:23px;box-shadow:0 5px 20px #0867a11c;color:#073c6c}
 #by2WeatherHome *{box-sizing:border-box}
 #by2WeatherHome .by2-w-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:0 0 12px}
 #by2WeatherHome .by2-w-title{margin:0;color:#063c72;font-weight:900;font-size:clamp(18px,2vw,25px);line-height:1.45}
@@ -8,14 +8,14 @@
 #by2WeatherHome .by2-w-refresh:hover{background:#0877b9}
 #by2WeatherHome .by2-w-controls{display:flex;align-items:stretch;gap:7px}
 #by2WeatherHome .by2-w-arrow{align-self:center;flex:0 0 33px;width:33px;height:43px;border-radius:13px;background:#0870b4;border:1px solid #a2d5f4;color:#fff;font-size:26px;cursor:pointer}
-#by2WeatherHome .by2-w-track{min-width:0;display:flex;gap:10px;flex:1;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#8cbed9 transparent;padding:4px 1px 9px}
-#by2WeatherHome .by2-w-card{scroll-snap-align:start;flex:0 0 calc((100% - 30px)/4);min-width:0;min-height:123px;border:1px solid #96cbe8;border-radius:18px;background:linear-gradient(150deg,#fff,#e0f4ff);color:#0a3760;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:11px 6px;box-shadow:0 2px 8px #003d6215;cursor:pointer;font:inherit}
+#by2WeatherHome .by2-w-track{min-width:0;display:flex;gap:10px;flex:1;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#8cbed9 transparent;padding:2px 1px 6px}
+#by2WeatherHome .by2-w-card{scroll-snap-align:start;flex:0 0 calc((100% - 30px)/4);min-width:0;min-height:110px;border:1px solid #96cbe8;border-radius:18px;background:linear-gradient(150deg,#fff,#e0f4ff);color:#0a3760;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:7px 6px;box-shadow:0 2px 8px #003d6215;cursor:pointer;font:inherit}
 #by2WeatherHome .by2-w-card:hover{border-color:#2b95cc;background:#f4fbff}
 #by2WeatherHome .by2-w-card:focus-visible,#by2WeatherHome .by2-w-arrow:focus-visible,#by2WeatherHome button:focus-visible{outline:3px solid #e0a738;outline-offset:2px}
 #by2WeatherHome .by2-w-city{font-size:16px;line-height:1.4;font-weight:900}
-#by2WeatherHome .by2-w-icon{font-size:29px;line-height:1.3;min-height:38px}
+#by2WeatherHome .by2-w-icon{font-size:27px;line-height:1.12;min-height:30px}
 #by2WeatherHome .by2-w-temp{font-size:24px;line-height:1.1;font-weight:900;direction:ltr}
-#by2WeatherHome .by2-w-desc{font-size:11px;color:#587d93;line-height:1.5;min-height:17px;text-align:center}
+#by2WeatherHome .by2-w-desc{font-size:11px;color:#587d93;line-height:1.35;min-height:15px;text-align:center}
 #by2WeatherHome .by2-w-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:5px 12px;padding:4px 5px 0;color:#416a86;font-size:11px}
 #by2WeatherHome .by2-w-footer a{color:#116da3;font-weight:700;text-decoration:underline}
 #by2WeatherHome .by2-w-dialog{border:2px solid #8dc7eb;border-radius:22px;background:linear-gradient(145deg,#fff,#eaf8ff);box-shadow:0 15px 60px #001c4e55;color:#073e69;padding:20px;max-width:min(95vw,530px);width:100%;max-height:85vh;overflow:auto;direction:rtl}
@@ -32,6 +32,9 @@
 #by2WeatherHome .by2-w-day strong{font-size:12px}#by2WeatherHome .by2-w-day i{font-style:normal;font-size:24px}
 #by2WeatherHome .by2-w-day small{font-size:12px;font-weight:700}
 #by2WeatherHome .by2-w-disclaimer{font-size:11px;color:#5b7990;margin:12px 0 0}
-@media(max-width:700px){#by2WeatherHome{margin:10px 9px 15px;padding:11px 9px;border-radius:18px}#by2WeatherHome .by2-w-title{font-size:18px}#by2WeatherHome .by2-w-card{flex-basis:calc((100% - 10px)/2);min-height:120px}#by2WeatherHome .by2-w-arrow{flex-basis:27px;width:27px;height:42px;font-size:21px}#by2WeatherHome .by2-w-controls{gap:4px}#by2WeatherHome .by2-w-track{gap:10px}#by2WeatherHome .by2-w-city{font-size:14px}#by2WeatherHome .by2-w-dialog{padding:13px}#by2WeatherHome .by2-w-days{gap:5px}}
+@media(max-width:700px){#by2WeatherHome{margin:9px 9px 12px;padding:9px 9px;border-radius:18px}#by2WeatherHome .by2-w-title{font-size:18px}#by2WeatherHome .by2-w-card{flex-basis:calc((100% - 10px)/2);min-height:108px}#by2WeatherHome .by2-w-arrow{flex-basis:27px;width:27px;height:42px;font-size:21px}#by2WeatherHome .by2-w-controls{gap:4px}#by2WeatherHome .by2-w-track{gap:10px}#by2WeatherHome .by2-w-city{font-size:14px}#by2WeatherHome .by2-w-dialog{padding:13px}#by2WeatherHome .by2-w-days{gap:5px}}
 @media(max-width:360px){#by2WeatherHome .by2-w-card{flex-basis:calc((100% - 8px)/2)}#by2WeatherHome .by2-w-footer{font-size:10px}}
 @media(prefers-reduced-motion:reduce){#by2WeatherHome .by2-w-track{scroll-behavior:auto}}
+
+/* Compact weather strip: centered and no wasted horizontal card width on desktop. */
+@media(min-width:701px){#by2WeatherHome{width:calc(100% - 16px);max-width:900px}#by2WeatherHome .by2-w-card{padding-inline:4px}#by2WeatherHome .by2-w-track{gap:8px}#by2WeatherHome .by2-w-card{flex-basis:calc((100% - 24px)/4)}}
