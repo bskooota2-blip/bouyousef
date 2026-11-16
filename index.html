@@ -1159,6 +1159,18 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla strong{line-height:1.1}
   body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla .compass{width:64px!important;height:64px!important}
 }
 </style>
+
+<style id="by2-weather-title-inline-refresh-v041254">
+/* Place only the weather heading and its manual refresh icon on one compact line. */
+#by2WeatherHome .by2-w-head{display:flex!important;justify-content:flex-start!important;align-items:center!important;flex-wrap:nowrap!important;gap:9px!important}
+#by2WeatherHome .by2-w-head > div{flex:0 1 auto;min-width:0}
+#by2WeatherHome #by2WeatherHeading{white-space:nowrap;margin:0!important;line-height:1.4}
+#by2WeatherHome #by2WeatherRefresh{flex:0 0 38px;display:inline-grid;place-items:center;width:38px;height:38px;min-height:38px;padding:0!important;font-size:20px;line-height:1;border-radius:11px}
+@media(max-width:680px){
+#by2WeatherHome .by2-w-head{gap:7px!important}
+#by2WeatherHome #by2WeatherRefresh{flex-basis:35px;width:35px;height:35px;min-height:35px;font-size:19px}
+}
+</style>
 </head><body>
 <div class="shade" id="shade"></div>
 <aside aria-label="الأقسام الأساسية" class="sidebar" id="sideNav"><button aria-label="إغلاق القائمة" class="mobile-close" data-i18n="menuClose" id="mobileClose" type="button">✕ إغلاق</button><details class="by417-city-picker" id="by417CityPicker" dir="rtl"><summary aria-label="فتح قائمة المدن"><span class="by417-city-symbol" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span class="by417-city-title">اختر المدينة</span><span class="by417-city-arrow" aria-hidden="true">▾</span></summary><nav class="by417-city-list" aria-label="مدن الصين"><a href="#city/guangzhou" data-by417-city="guangzhou">غوانزو</a><a href="#city/shanghai" data-by417-city="shanghai">شنغهاي</a><a href="#city/beijing" data-by417-city="beijing">بكين</a><a href="#city/shenzhen" data-by417-city="shenzhen">شينزن</a><a href="#city/foshan" data-by417-city="foshan">فوشان</a><a href="#city/yiwu" data-by417-city="yiwu">إيوو</a><a href="#city/guilin" data-by417-city="guilin">قويلين</a><a href="#city/yangshuo" data-by417-city="yangshuo">يانغشوو</a><a href="#city/zhangjiajie" data-by417-city="zhangjiajie">جانغجياجيه</a><a href="#city/chongqing" data-by417-city="chongqing">تشونغتشينغ</a><a href="#city/hainan" data-by417-city="hainan">جزيرة هاينان</a></nav></details>
@@ -1188,10 +1200,10 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla strong{line-height:1.1}
 <section id="by2WeatherHome" aria-labelledby="by2WeatherHeading" dir="rtl">
   <div class="by2-w-head">
     <div>
-      <h2 class="by2-w-title" id="by2WeatherHeading">🌤️ حالة الطقس في مدن الصين</h2>
+      <h2 class="by2-w-title" id="by2WeatherHeading">🌤️ حالة الطقس</h2>
       <p class="by2-w-summary" id="by2WeatherStatus" aria-live="polite">تحديث تلقائي — درجات الحرارة الفعلية من مصدر الطقس</p>
     </div>
-    <button class="by2-w-refresh" id="by2WeatherRefresh" type="button" aria-label="تحديث حالة الطقس">🔄 تحديث</button>
+    <button class="by2-w-refresh" id="by2WeatherRefresh" type="button" aria-label="تحديث حالة الطقس" title="تحديث الطقس">🔄</button>
   </div>
   <div class="by2-w-controls" aria-label="بطاقات طقس المدن">
     <button class="by2-w-arrow" type="button" id="by2WeatherPrev" aria-label="المدن السابقة">❯</button>
