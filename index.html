@@ -1138,6 +1138,27 @@ body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer{margin-bottom:8px!importa
   #cityHome .by2-store-home-entry{margin-top:8px!important;margin-bottom:12px!important}
 }
 </style>
+
+<style id="by2-prayer-compact-20261116">
+/* Compact prayer strip: hide the compass explanation, not the qibla itself.
+   Keep city-specific prayer layouts intact. */
+#globalPrayer .qibla small{display:none!important}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer{min-height:0!important}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer-title{padding:5px 7px!important;gap:3px!important;line-height:1.25}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer-title select{min-height:32px;padding:3px 5px!important}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer-item{padding:6px 3px!important}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer-item span{margin-top:3px!important;line-height:1.2}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer-item strong{line-height:1.25}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla{padding:4px 7px!important;gap:2px!important;line-height:1.15}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla .compass{width:72px!important;height:72px!important}
+body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla strong{line-height:1.1}
+@media(max-width:680px){
+  body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer-title{padding:5px 6px!important}
+  body:not(.gz-v010):not(.gz-v008) #globalPrayer .prayer-item{padding:5px 2px!important}
+  body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla{padding:4px 6px!important}
+  body:not(.gz-v010):not(.gz-v008) #globalPrayer .qibla .compass{width:64px!important;height:64px!important}
+}
+</style>
 </head><body>
 <div class="shade" id="shade"></div>
 <aside aria-label="الأقسام الأساسية" class="sidebar" id="sideNav"><button aria-label="إغلاق القائمة" class="mobile-close" data-i18n="menuClose" id="mobileClose" type="button">✕ إغلاق</button><details class="by417-city-picker" id="by417CityPicker" dir="rtl"><summary aria-label="فتح قائمة المدن"><span class="by417-city-symbol" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span class="by417-city-title">اختر المدينة</span><span class="by417-city-arrow" aria-hidden="true">▾</span></summary><nav class="by417-city-list" aria-label="مدن الصين"><a href="#city/guangzhou" data-by417-city="guangzhou">غوانزو</a><a href="#city/shanghai" data-by417-city="shanghai">شنغهاي</a><a href="#city/beijing" data-by417-city="beijing">بكين</a><a href="#city/shenzhen" data-by417-city="shenzhen">شينزن</a><a href="#city/foshan" data-by417-city="foshan">فوشان</a><a href="#city/yiwu" data-by417-city="yiwu">إيوو</a><a href="#city/guilin" data-by417-city="guilin">قويلين</a><a href="#city/yangshuo" data-by417-city="yangshuo">يانغشوو</a><a href="#city/zhangjiajie" data-by417-city="zhangjiajie">جانغجياجيه</a><a href="#city/chongqing" data-by417-city="chongqing">تشونغتشينغ</a><a href="#city/hainan" data-by417-city="hainan">جزيرة هاينان</a></nav></details>
