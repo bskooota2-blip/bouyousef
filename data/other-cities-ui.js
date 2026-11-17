@@ -90,6 +90,7 @@
   if(/هند|باكستان/.test(x))return '🍛';
   if(/إيران/.test(x))return '🍢';
   if(/بيتزا/.test(x))return '🍕';
+  if(/برغر|برجر/.test(x))return '🍔';
   if(/مخبز|مخابز/.test(x))return '🥐';
   if(/المطاعم الصينية/.test(x))return '🥢';
   if(/دلائل عامة|غير محدد/.test(x))return '🔎';
@@ -211,7 +212,7 @@
   // V038: presentation-only icon choice; no record fields or category values are changed.
   const type=String(r.subtype||r.sourceCategory||'');
   const displayIcon=beijingDiningIcon || (r.section==='dining' ?
-    (/مخبز|مخابز|حلويات/.test(type)?'🥐':/كافيه|مقهى|قهوة/.test(type)?'☕':/بيتزا/.test(type)?'🍕':'🍽️') :
+    (/مخبز|مخابز|حلويات/.test(type)?'🥐':/كافيه|مقهى|قهوة/.test(type)?'☕':/بيتزا/.test(type)?'🍕':/برغر|برجر/.test(type)?'🍔':'🍽️') :
     (r.section==='transport' ? (/مطار|طيران/.test(type)?'✈️':/قطار|مترو/.test(type)?'🚆':'🚌') : (icons[r.section]||'📍')));
   const side=make('div','gz-place-side by3-place-side',displayIcon);
   article.append(actionsWrap,main,side);return window.BY2_FAVORITES.addHeart(article,r,({深圳:'shenzhen',佛山:'foshan',义乌:'yiwu',桂林:'guilin',阳朔:'yangshuo',张家界:'zhangjiajie',重庆:'chongqing',海南:'hainan',上海:'shanghai',北京:'beijing'}[cityCode]||cityCode));
@@ -286,7 +287,7 @@
   const regionPills=city.slug==='hainan'?make('div','gz-pills by3-hainan-regions'):null; if(regionPills)tools.prepend(regionPills);panel.append(tools);
   const counter=make('p','gz-count'),grid=make('div','gz-grid'),pager=make('div','gz-pagination');panel.append(counter,grid,pager);wrapper.append(panel);
   const shenzhen=city.slug==='shenzhen'||city.slug==='foshan'||city.slug==='yiwu'||city.slug==='guilin'||city.slug==='yangshuo'||city.slug==='zhangjiajie'||city.slug==='chongqing'||city.slug==='hainan'||city.slug==='shanghai'||city.slug==='yangshuo'||city.slug==='beijing';
-  const subtypes=city.slug==='shanghai'&&id==='mosques'?[]:[...new Set(relevant.map(r=>r.subtype).filter(Boolean))];if(city.slug==='beijing' && id==='mosques')subtypes.splice(0,subtypes.length);if(city.slug==='shanghai'&&id==='dining'){const order=['المطاعم العربية','المطاعم التركية','المطاعم الهندية والباكستانية','المطاعم الإيرانية','المطاعم الآسيوية الحلال','المطاعم الأوروبية','البيتزا','المأكولات البحرية','الكافيهات','المخابز'];subtypes.splice(0,subtypes.length,...order);}if(city.slug==='beijing'&&id==='hotels'){const order=['5 نجوم','4 نجوم','3 نجوم','غير مصنفة'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}if(city.slug==='beijing'&&id==='transport'){const order=['المطارات','محطات القطارات','المترو والمواصلات الأخرى'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}if((city.slug==='guilin'||city.slug==='yangshuo'||city.slug==='zhangjiajie'||city.slug==='chongqing'||city.slug==='hainan'||city.slug==='shanghai')&&id==='hotels'){const order=['5 نجوم','4 نجوم','3 نجوم','غير مصنفة'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}
+  const subtypes=city.slug==='shanghai'&&id==='mosques'?[]:[...new Set(relevant.map(r=>r.subtype).filter(Boolean))];if(city.slug==='beijing' && id==='mosques')subtypes.splice(0,subtypes.length);if(city.slug==='shanghai'&&id==='dining'){const order=['المطاعم العربية','المطاعم التركية','المطاعم الهندية والباكستانية','المطاعم الإيرانية','المطاعم الآسيوية الحلال','المطاعم الأوروبية','البيتزا','البرغر','المأكولات البحرية','الكافيهات','المخابز'];subtypes.splice(0,subtypes.length,...order);}if(city.slug==='beijing'&&id==='hotels'){const order=['5 نجوم','4 نجوم','3 نجوم','غير مصنفة'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}if(city.slug==='beijing'&&id==='transport'){const order=['المطارات','محطات القطارات','المترو والمواصلات الأخرى'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}if((city.slug==='guilin'||city.slug==='yangshuo'||city.slug==='zhangjiajie'||city.slug==='chongqing'||city.slug==='hainan'||city.slug==='shanghai')&&id==='hotels'){const order=['5 نجوم','4 نجوم','3 نجوم','غير مصنفة'];subtypes.sort((a,b)=>order.indexOf(a)-order.indexOf(b));}
   if(shenzhen){panel.classList.add('v022-shenzhen-panel');input.setAttribute('aria-label',tr('ابحث داخل القسم...')+' — '+tr(labels[id]||id));}
 
   function paint(){
