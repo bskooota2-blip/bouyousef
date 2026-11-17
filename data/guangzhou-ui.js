@@ -104,6 +104,16 @@
   if(r.en&&r.en!==name(r))addP(main,'gz-en',r.en);
   if(r.zh&&r.zh!==name(r))addP(main,'gz-zh',r.zh);
   if(r.metro){const shortMetro=metroCompact(r.metro);if(shortMetro)addP(main,'gz-info gz-metro-compact','🚇 '+m.metro+': '+shortMetro);}
+  // Display the verified products and indicative size for the new underground markets
+  // using the existing compact card text style; all other cards remain unchanged.
+  if(r.section==='markets'&&r.guideGroup==='underground'&&r.marketContent){
+    const marketText=lang==='en'?(r.marketContentEn||r.marketContent):lang==='zh'?(r.marketContentZh||r.marketContent):r.marketContent;
+    const marketSize=lang==='en'?(r.sizeEn||r.size):lang==='zh'?(r.sizeZh||r.size):r.size;
+    const contentsLabel=lang==='en'?'Products: ':lang==='zh'?'商品：':'التخصص: ';
+    const sizeLabel=lang==='en'?'Size: ':lang==='zh'?'规模：':'الحجم: ';
+    addP(main,'gz-info gz-underground-products','🛍️ '+contentsLabel+marketText);
+    if(marketSize)addP(main,'gz-info gz-underground-size','📏 '+sizeLabel+marketSize);
+  }
   article.append(actionsWrap,main);return window.BY2_FAVORITES.addHeart(article,r,'guangzhou');
  }
  function currentListing(){return document.getElementById('gzListing')}
