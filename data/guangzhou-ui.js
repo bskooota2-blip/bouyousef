@@ -183,10 +183,22 @@ function buildGuangzhouInformation(box){
     const b=element('button','gz-pill gz-cafe-pill'+(selectedCafeTag===key?' active':''),label);b.type='button';b.setAttribute('aria-pressed',String(selectedCafeTag===key));b.addEventListener('click',()=>{selectedCafeTag=key;pageSize=12;renderListings()});tags.append(b);
    });tagWrap.append(tags);controls.append(tagWrap);
   }
+  // 2026-11-17: children-only sub-filter for Guangzhou clothing markets.
+  if(activeSectionId==='markets'&&selectedFilter==='أهم أسواق الملابس'){
+    const tagWrap=element('div','gz-cafe-tag-wrap');
+    tagWrap.append(element('div','gz-cafe-tag-heading',lang==='en'?'🧒 Children's clothing markets':lang==='zh'?'🧒 童装市场':'🧒 تخصص أسواق الملابس'));
+    const tags=element('div','gz-cafe-tags');
+    for(const [key,label] of [['الكل',lang==='en'?'All':lang==='zh'?'全部':'الكل'],['ملابس الأطفال',lang==='en'?"Children's clothing":lang==='zh'?'童装':'ملابس الأطفال']]){
+      const btn=element('button','gz-pill gz-cafe-pill'+(selectedCafeTag===key?' active':''),(key==='الكل'?'▦ ':'🧒 ')+label);
+      btn.type='button';btn.setAttribute('aria-pressed',String(selectedCafeTag===key));
+      btn.addEventListener('click',()=>{selectedCafeTag=key;pageSize=12;renderListings()});tags.append(btn);
+    }
+    tagWrap.append(tags);controls.append(tagWrap);
+  }
   panel.append(controls);
   const counter=element('p','gz-count'),grid=element('div','gz-grid'),pager=element('div','gz-pagination');panel.append(counter,grid,pager);box.append(panel);
   if(activeSectionId==='information'){controls.hidden=true;counter.hidden=true;buildGuangzhouInformation(grid);return;}
-  function updateGrid(){const q=clean(localSearch);const filtered=source.filter(r=>(selectedFilter==='الكل'||(selectedFilter==='❤️ المفضلة'&&window.BY2_FAVORITES.isSaved('guangzhou',r.id))||subtypeFor(r,activeSectionId)===selectedFilter)&&(selectedCafeTag==='الكل'||(Array.isArray(r.cafeTags)&&r.cafeTags.includes(selectedCafeTag)))&&(!q||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.metro,r.note,r.subtype,r.addressAr,...(r.searchAliases||[])].some(v=>clean(v).includes(q))));
+  function updateGrid(){const q=clean(localSearch);const filtered=source.filter(r=>(selectedFilter==='الكل'||(selectedFilter==='❤️ المفضلة'&&window.BY2_FAVORITES.isSaved('guangzhou',r.id))||subtypeFor(r,activeSectionId)===selectedFilter)&&(selectedCafeTag==='الكل'||(activeSectionId==='markets'&&selectedFilter==='أهم أسواق الملابس'?((Array.isArray(r.marketTags)&&r.marketTags.includes(selectedCafeTag))||/ملابس الأطفال|童装/.test(String(r.ar||'')+' '+String(r.zh||''))):(Array.isArray(r.cafeTags)&&r.cafeTags.includes(selectedCafeTag))))&&(!q||[r.ar,r.en,r.zh,r.addressZh,r.addressEn,r.metro,r.note,r.subtype,r.addressAr,...(r.searchAliases||[])].some(v=>clean(v).includes(q))));
    counter.textContent=m.found+': '+filtered.length;grid.replaceChildren();pager.replaceChildren();filtered.slice(0,pageSize).forEach(r=>grid.append(recordCard(r)));
    if(!filtered.length)grid.append(element('div','gz-empty',selectedFilter==='❤️ المفضلة'?(window.BY2_L10N?.term('لم تقم بإضافة أماكن إلى المفضلة بعد ❤️')||'لم تقم بإضافة أماكن إلى المفضلة بعد ❤️'):m.noResult));
    if(filtered.length>pageSize){const b=element('button','','شاهد المزيد'+' ('+(filtered.length-pageSize)+')');b.type='button';b.addEventListener('click',()=>{pageSize+=12;updateGrid()});pager.append(b)}
