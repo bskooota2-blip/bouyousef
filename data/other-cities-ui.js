@@ -4,6 +4,17 @@
  const loc=()=>window.BY2_L10N;
  const tr=v=>loc()?.term(v)||v;
  const placeName=r=>loc()?.place(r)||r.ar||r.en||r.zh;
+ function openedIn2025or2026(r){
+  const year=Number(r.openingYear),kind=String(r.openingKind||'opened');
+  return (year===2025||year===2026)&&['opened','phased','trial'].includes(kind)&&Boolean(r.openingSourceUrl||r.openingVerified===true);
+ }
+ function appendEnglishOpeningBadge(heading,r){
+  if(!openedIn2025or2026(r))return;
+  const badge=make('span','by2-opening-new-badge','✨ NEW');
+  badge.style.cssText='display:inline-flex;align-items:center;margin-inline-start:7px;padding:2px 8px;border-radius:9px;background:#d9f7ff;border:1px solid #6ad9ee;color:#075a83;font-size:.65em;font-weight:900;line-height:1.5;white-space:nowrap;vertical-align:middle;direction:ltr';
+  badge.setAttribute('aria-label','Opened in '+r.openingYear);
+  heading.append(badge);
+ }
   // V041 – Verified opening dates for other cities, localized in three languages.
   function openingText(r){
     const year=Number(r.openingYear);
@@ -111,7 +122,7 @@
  function place(r,citySlug){
   const article=make('article','gz-place by3-place');article.id='place-'+r.id;
   const content=make('div','gz-place-main by3-place-main');
-  const heading=make('h3','gz-place-name',placeName(r));const opening=openingText(r);if(opening){const year=make('small','by2-opening-year','🗓️ '+opening);year.style.cssText='display:inline-flex;align-items:center;gap:4px;vertical-align:middle;max-width:100%;border:1px solid #9ed5fa;border-radius:9px;background:#eff9ff;padding:3px 9px;margin-inline-start:9px;margin-block:3px;color:#075b96;font-size:.7em;font-weight:750;line-height:1.55;white-space:normal';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}content.append(heading);
+  const heading=make('h3','gz-place-name',placeName(r));const opening=openingText(r);if(opening){const year=make('small','by2-opening-year','🗓️ '+opening);year.style.cssText='display:inline-flex;align-items:center;gap:4px;vertical-align:middle;max-width:100%;border:1px solid #9ed5fa;border-radius:9px;background:#eff9ff;padding:3px 9px;margin-inline-start:9px;margin-block:3px;color:#075b96;font-size:.7em;font-weight:750;line-height:1.55;white-space:normal';year.setAttribute('aria-label',opening);if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;heading.append(year)}appendEnglishOpeningBadge(heading,r);content.append(heading);
   if(available(r.ar)&&currentLang()!=='ar')content.append(make('p','gz-info by2-original-arabic',r.ar));
   if(available(r.en)&&r.en!==placeName(r))content.append(make('p','gz-en',r.en));
   if(available(r.zh)&&r.zh!==placeName(r))content.append(make('p','gz-zh',r.zh));
@@ -200,6 +211,7 @@
     if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;
     placeHeading.append(year);
   }
+  appendEnglishOpeningBadge(placeHeading,r);
   main.append(placeHeading);
   if(available(r.ar)&&currentLang()!=='ar')main.append(make('p','gz-info by2-original-arabic',r.ar));
   if(available(r.en)&&r.en!==placeName(r))main.append(make('p','gz-en',r.en));
