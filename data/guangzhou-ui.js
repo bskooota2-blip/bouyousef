@@ -100,6 +100,14 @@
     year.setAttribute('aria-label',opening);
     if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;
     heading.append(year);
+  }if(r.englishNewBadge&&r.new&&/^\d{4}-\d{2}-\d{2}$/.test(String(r.addedOn||''))){
+    const insertedAt=Date.parse(r.addedOn+'T00:00:00Z');
+    const age=Date.now()-insertedAt;
+    if(Number.isFinite(insertedAt)&&age>=0&&age<30*86400000){
+      const badge=element('span','gz-english-new-badge','✨ NEW');
+      badge.style.cssText='display:inline-flex;align-items:center;margin-inline-start:7px;padding:2px 8px;border-radius:9px;background:#d9f7ff;border:1px solid #6ad9ee;color:#075a83;font-size:.65em;font-weight:900;line-height:1.5;white-space:nowrap;vertical-align:middle;direction:ltr';
+      badge.setAttribute('aria-label','New');heading.append(badge);
+    }
   }main.append(heading);
   if(r.en&&r.en!==name(r))addP(main,'gz-en',r.en);
   if(r.zh&&r.zh!==name(r))addP(main,'gz-zh',r.zh);
