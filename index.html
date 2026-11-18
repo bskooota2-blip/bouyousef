@@ -1193,7 +1193,21 @@ var reduced=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: re
 var seen=false;try{seen=window.sessionStorage.getItem('ah_splash_seen_v2')==='1';}catch(e){}
 if(!standalone&&!reduced&&!seen){document.documentElement.classList.add('ah-splash-active');}
 })();
-</script></head><body><div id="ahSplashOverlay" role="group" aria-label="شعار الصبر" aria-live="off">
+</script><style id="by2-city-local-search-style">
+.by2-city-local-search[hidden]{display:none!important}
+.by2-city-local-search{width:100%;max-width:1180px;margin:16px auto 18px;padding:14px 16px;border:1px solid #a9def8;border-radius:17px;background:#fff;box-shadow:0 4px 16px #105f9710;color:#083e6a}
+.by2-city-search-form{margin:0}.by2-city-search-heading{display:block;font-weight:900;font-size:17px;margin-bottom:10px}
+.by2-city-search-controls{display:flex;align-items:stretch;gap:8px}
+.by2-city-search-controls input{min-width:0;flex:1;border:1px solid #95cdea;border-radius:11px;padding:12px 13px;background:#f8fdff;color:#0a3866;font:inherit;font-size:15px;outline-offset:2px}
+.by2-city-search-controls button,.by2-city-search-open{border:1px solid #a5c9ed;border-radius:11px;background:#0b78b6;color:#fff;padding:10px 18px;font:inherit;font-weight:bold;cursor:pointer}
+.by2-city-search-controls .by2-city-search-clear{background:#f1f9ff;color:#104f81}
+.by2-city-search-status{margin:9px 0 0;color:#52758c;font-size:13px}
+.by2-city-search-results:empty{display:none}.by2-city-search-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px;max-height:430px;overflow-y:auto}
+.by2-city-search-result{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #d6eaf7;border-radius:12px;padding:12px;background:#f8fcff;min-width:0}
+.by2-city-search-result-info{min-width:0;overflow-wrap:anywhere}.by2-city-search-result-info strong{display:block;font-size:14px}.by2-city-search-result-info small{display:block;font-size:11px;color:#52758c;margin-top:4px}
+.by2-city-search-open{flex-shrink:0;padding:8px 11px;font-size:12px}
+@media(max-width:650px){.by2-city-local-search{padding:11px;margin:12px auto}.by2-city-search-heading{font-size:15px}.by2-city-search-controls{gap:5px}.by2-city-search-controls input{padding:10px 7px;font-size:13px}.by2-city-search-controls button{padding:8px 9px;font-size:12px}.by2-city-search-results{grid-template-columns:1fr}}
+</style></head><body><div id="ahSplashOverlay" role="group" aria-label="شعار الصبر" aria-live="off">
 <img id="ahSplashLogo" src="assets/ah-splash-original.png" alt="AH – صديقك في الصين" width="470" height="470" fetchpriority="high"/>
 <button id="ahSplashSkip" type="button">تخطي</button></div>
 <script id="ah-splash-single-v2-run">
@@ -1276,7 +1290,12 @@ autoTimer=window.setTimeout(close,2050);
 <span class="by2-store-home-icon" aria-hidden="true">🛍️</span><div class="by2-store-home-info"><h2 id="by2StoreHomeHeading" data-by2-store-title>متجرنا</h2><p data-by2-store-description>اكتشف المنتجات والخدمات المتاحة من الصين</p></div>
 <button type="button" class="by2-store-home-open" id="by2StoreHomeOpen" data-by2-store-action>الدخول إلى متجرنا</button>
 </div></section></main>
-<section class="city-detail" hidden="" id="cityDetail"><div class="gz-overview" id="gzOverview"><div class="gz-qibla-panel" id="gzQiblaPanel"></div></div><div class="city-banner"><img alt="" id="selectedCityImage" src="assets/guangzhou.jpg"/><div><span class="city-kicker" id="cityKicker">دليل المدينة</span><h1 id="selectedCityTitle">غوانزو</h1><p id="selectedCityEnglish" lang="en">Guangzhou</p></div></div><nav aria-label="التنقل" class="breadcrumbs"><button class="back-to-main" id="cityToHome" type="button">⌂ العودة إلى الرئيسية</button><button class="back-to-city" hidden="" id="sectionToCity" type="button">↩ العودة إلى أقسام المدينة</button></nav><div id="citySectionsArea"><h2 class="subpage-heading" id="citySectionHeading">أقسام المدينة</h2><div class="section-cards" id="sectionCards"></div></div><div hidden="" id="sectionContentArea"><h2 class="subpage-heading" id="sectionContentTitle"></h2><div class="construction-box"><span class="construction-icon">🛠️</span><p id="sectionConstruction">القسم قيد التجهيز</p><button class="back-to-city" id="contentBack" type="button">↩ العودة إلى أقسام المدينة</button></div></div><nav aria-label="أزرار التنقل أسفل غوانزو" class="gz-bottom-navigation" dir="rtl" hidden="" id="gzBottomNavigation"><button aria-label="العودة إلى الأعلى" class="gz-bottom-button" id="gzBottomToTop" type="button">⬆️ العودة إلى الأعلى</button><button aria-label="العودة إلى الصفحة الرئيسية" class="gz-bottom-button gz-bottom-home" id="gzBottomToHome" type="button">🏠 العودة إلى الصفحة الرئيسية</button></nav></section><section id="by35ExchangePage" class="by35-exchange" dir="rtl" hidden aria-label="حاسبة صرف العملات">
+<section class="city-detail" hidden="" id="cityDetail"><div class="gz-overview" id="gzOverview"><div class="gz-qibla-panel" id="gzQiblaPanel"></div></div><div class="city-banner"><img alt="" id="selectedCityImage" src="assets/guangzhou.jpg"/><div><span class="city-kicker" id="cityKicker">دليل المدينة</span><h1 id="selectedCityTitle">غوانزو</h1><p id="selectedCityEnglish" lang="en">Guangzhou</p></div></div><section class="by2-city-local-search" id="by2CityLocalSearch" dir="rtl" aria-label="البحث في أماكن المدينة الحالية" hidden>
+  <form class="by2-city-search-form" role="search">
+    <label class="by2-city-search-heading" for="by2CitySearchInput">🔎 البحث داخل هذه المدينة فقط</label>
+    <div class="by2-city-search-controls"><input id="by2CitySearchInput" type="search" autocomplete="off" placeholder="ابحث عن سوق أو مطعم أو فندق أو مكان سياحي…" aria-label="البحث في أماكن المدينة"/><button type="submit">بحث</button><button type="button" class="by2-city-search-clear">مسح</button></div>
+  </form><p class="by2-city-search-status" role="status" aria-live="polite"></p><div class="by2-city-search-results" aria-label="نتائج البحث في هذه المدينة"></div>
+</section><nav aria-label="التنقل" class="breadcrumbs"><button class="back-to-main" id="cityToHome" type="button">⌂ العودة إلى الرئيسية</button><button class="back-to-city" hidden="" id="sectionToCity" type="button">↩ العودة إلى أقسام المدينة</button></nav><div id="citySectionsArea"><h2 class="subpage-heading" id="citySectionHeading">أقسام المدينة</h2><div class="section-cards" id="sectionCards"></div></div><div hidden="" id="sectionContentArea"><h2 class="subpage-heading" id="sectionContentTitle"></h2><div class="construction-box"><span class="construction-icon">🛠️</span><p id="sectionConstruction">القسم قيد التجهيز</p><button class="back-to-city" id="contentBack" type="button">↩ العودة إلى أقسام المدينة</button></div></div><nav aria-label="أزرار التنقل أسفل غوانزو" class="gz-bottom-navigation" dir="rtl" hidden="" id="gzBottomNavigation"><button aria-label="العودة إلى الأعلى" class="gz-bottom-button" id="gzBottomToTop" type="button">⬆️ العودة إلى الأعلى</button><button aria-label="العودة إلى الصفحة الرئيسية" class="gz-bottom-button gz-bottom-home" id="gzBottomToHome" type="button">🏠 العودة إلى الصفحة الرئيسية</button></nav></section><section id="by35ExchangePage" class="by35-exchange" dir="rtl" hidden aria-label="حاسبة صرف العملات">
 <div class="by35-head"><div><span class="by35-head-icon">💱</span><h1 data-xtext="heading">صرف العملات</h1><p data-xtext="subtitle">حوّل بسهولة بين العملات العالمية</p></div><button type="button" id="by35Home" class="by35-home">🏠 <span data-xtext="home">العودة إلى الرئيسية</span></button></div>
 <div class="by35-calculator">
 <div class="by35-currencies">
@@ -1448,7 +1467,7 @@ function onHistoryNavigation(){if(routeEventQueued)return;routeEventQueued=true;
 window.addEventListener('popstate',onHistoryNavigation);window.addEventListener('hashchange',onHistoryNavigation);
 translate();
 </script><script src="data/exhibitions-v037.js"></script><script src="data/exhibitions-v037-ui.js"></script>
-<script src="data/guangzhou.js?v=041233-newopen"></script>
+<script src="data/guangzhou.js?v=041233-shangheli-20261118"></script>
 <script src="data/favorites-v04121.js?v=041220"></script>
 <script src="data/guangzhou-ui.js?v=041241-newopen"></script>
 <script src="data/other-cities.js?v=041245-newopen"></script>
@@ -1464,7 +1483,7 @@ translate();
 <p aria-live="polite" id="by3GlobalSearchCount">اكتب كلمة للبحث في جميع المدن.</p><div id="by3GlobalSearchResults"></div>
 </section>
 </div>
-<script src="data/global-search.js?v=041220"></script>
+<script src="data/global-search.js?v=041220"></script><script src="data/city-local-search-v04125.js?v=1"></script>
 <script src="data/arrival-guide-v032.js"></script><script src="data/arrival-guide-v041-19-0.js?v=041193"></script>
 <script src="data/v033-updates.js"></script>
 <script src="data/v033-sidebar.js"></script>
