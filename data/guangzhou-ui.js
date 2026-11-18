@@ -81,6 +81,23 @@
     }
     return [station,line,exit].filter(Boolean).join(' — ');
   }
+ function openedIn2025or2026(r){
+  const year=Number(r.openingYear),kind=String(r.openingKind||'opened');
+  return (year===2025||year===2026)&&['opened','phased','trial'].includes(kind)&&Boolean(r.openingSourceUrl||r.openingVerified===true);
+ }
+ function appendEnglishNewBadge(heading,r){
+  const openingBadge=openedIn2025or2026(r);
+  let additionBadge=false;
+  if(r.englishNewBadge&&r.new&&/^\d{4}-\d{2}-\d{2}$/.test(String(r.addedOn||''))){
+   const insertedAt=Date.parse(r.addedOn+'T00:00:00Z'),age=Date.now()-insertedAt;
+   additionBadge=Number.isFinite(insertedAt)&&age>=0&&age<30*86400000;
+  }
+  if(!openingBadge&&!additionBadge)return;
+  const badge=element('span','gz-english-new-badge','✨ NEW');
+  badge.style.cssText='display:inline-flex;align-items:center;margin-inline-start:7px;padding:2px 8px;border-radius:9px;background:#d9f7ff;border:1px solid #6ad9ee;color:#075a83;font-size:.65em;font-weight:900;line-height:1.5;white-space:nowrap;vertical-align:middle;direction:ltr';
+  badge.setAttribute('aria-label',openingBadge?'Opened in '+r.openingYear:'New');
+  heading.append(badge);
+ }
  function recordCard(r){const m=ui[lang],article=element('article','gz-place');article.id='place-'+r.id;article.dataset.placeId=r.id;if(r.id===highlighted)article.classList.add('highlight');
   const actionsWrap=element('div','gz-place-actions');
   const actions=element('div','gz-buttons');
@@ -100,15 +117,7 @@
     year.setAttribute('aria-label',opening);
     if(r.openingSourceUrl)year.title=opening+' — '+r.openingSourceUrl;
     heading.append(year);
-  }if(r.englishNewBadge&&r.new&&/^\d{4}-\d{2}-\d{2}$/.test(String(r.addedOn||''))){
-    const insertedAt=Date.parse(r.addedOn+'T00:00:00Z');
-    const age=Date.now()-insertedAt;
-    if(Number.isFinite(insertedAt)&&age>=0&&age<30*86400000){
-      const badge=element('span','gz-english-new-badge','✨ NEW');
-      badge.style.cssText='display:inline-flex;align-items:center;margin-inline-start:7px;padding:2px 8px;border-radius:9px;background:#d9f7ff;border:1px solid #6ad9ee;color:#075a83;font-size:.65em;font-weight:900;line-height:1.5;white-space:nowrap;vertical-align:middle;direction:ltr';
-      badge.setAttribute('aria-label','New');heading.append(badge);
-    }
-  }main.append(heading);
+  }appendEnglishNewBadge(heading,r);main.append(heading);
   if(r.en&&r.en!==name(r))addP(main,'gz-en',r.en);
   if(r.zh&&r.zh!==name(r))addP(main,'gz-zh',r.zh);
   if(r.metro){const shortMetro=metroCompact(r.metro);if(shortMetro)addP(main,'gz-info gz-metro-compact','🚇 '+m.metro+': '+shortMetro);}
@@ -204,7 +213,7 @@ function buildGuangzhouInformation(box){
   // 2026-11-17: children-only sub-filter for Guangzhou clothing markets.
   if(activeSectionId==='markets'&&selectedFilter==='أهم أسواق الملابس'){
     const tagWrap=element('div','gz-cafe-tag-wrap');
-    tagWrap.append(element('div','gz-cafe-tag-heading',lang==='en'?'🧒 Children's clothing markets':lang==='zh'?'🧒 童装市场':'🧒 تخصص أسواق الملابس'));
+    tagWrap.append(element('div','gz-cafe-tag-heading',lang==='en'?"🧒 Children's clothing markets":lang==='zh'?'🧒 童装市场':'🧒 تخصص أسواق الملابس'));
     const tags=element('div','gz-cafe-tags');
     for(const [key,label] of [['الكل',lang==='en'?'All':lang==='zh'?'全部':'الكل'],['ملابس الأطفال',lang==='en'?"Children's clothing":lang==='zh'?'童装':'ملابس الأطفال']]){
       const btn=element('button','gz-pill gz-cafe-pill'+(selectedCafeTag===key?' active':''),(key==='الكل'?'▦ ':'🧒 ')+label);
