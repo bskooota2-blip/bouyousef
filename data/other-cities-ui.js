@@ -127,6 +127,8 @@
   if(available(r.en)&&r.en!==placeName(r))content.append(make('p','gz-en',r.en));
   if(available(r.zh)&&r.zh!==placeName(r))content.append(make('p','gz-zh',r.zh));
   if(available(r.sourceCategory))content.prepend(make('span','gz-tag',tr(r.sourceCategory)));
+  // Show a verified Chinese street address on specially completed place cards only.
+  if(r.showAddressOnCard && available(r.addressZh))content.append(make('p','gz-info gz-address-zh','📍 '+r.addressZh));
   if(available(r.metro)){const shortMetro=metroCompact(r.metro);if(shortMetro)content.append(make('p','gz-info gz-metro-compact','🚇 '+tr('المترو')+': '+shortMetro));}
   // Keep original addresses and notes in the records for copy, maps, and search.
   const actions=make('div','gz-place-actions by3-place-actions');

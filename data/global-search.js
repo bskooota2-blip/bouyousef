@@ -21,7 +21,7 @@
  (window.BY3_GUANGZHOU.items||[]).forEach(r=>addRecord(r,0));
  Object.entries(window.BY3_OTHER_CITIES.cities||{}).forEach(([slug,db])=>{const i=cityIndex[slug];if(i===undefined)return;(db.items||[]).filter(r=>!((slug==='guilin'||slug==='yangshuo'||slug==='zhangjiajie'||slug==='chongqing'||slug==='hainan'||slug==='shanghai'||slug==='beijing')&&r.excludeFromListing)).forEach(r=>addRecord(r,i));});
  cities.forEach((c,i)=>{data.push({type:'city',city:i,name:c.ar,en:c.en,search:norm([c.ar,c.en,zhCity[i]].join(' '))});
-   sections.forEach(s=>data.push({type:'section',city:i,section:s.id,name:s.ar,en:s.en,search:norm([c.ar,c.en,zhCity[i],s.ar,s.en,s.zh].join(' '))}));});
+   sections.filter(s=>s.id!=='manager').forEach(s=>data.push({type:'section',city:i,section:s.id,name:s.ar,en:s.en,search:norm([c.ar,c.en,zhCity[i],s.ar,s.en,s.zh].join(' '))}));});
  serviceIds.forEach(id=>{data.push({type:'service',service:id,name:locales.ar['nav_'+id],en:locales.en['nav_'+id],search:norm([locales.ar['nav_'+id],locales.en['nav_'+id],locales.zh['nav_'+id]].join(' '))});});
  let priorFocus=null;
  const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
