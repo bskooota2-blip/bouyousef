@@ -1,5 +1,6 @@
 (()=>{'use strict';
-const version='v04120', CACHE='by2-public-offline-'+version;
+const CACHE='by2-public-offline-v041231';
+const refreshFiles=new Set(['index.html','data/other-cities.js','data/global-search.js','data/city-local-search-v04125.js','data/search-index-v04140.js','offline-download.js','sw.js','offline-files-v04120.json']);
 const section=document.querySelector('#by2OfflinePanel');if(!section)return;
 const btn=section.querySelector('[data-by2-download]'),clear=section.querySelector('[data-by2-clear]'),status=section.querySelector('[data-by2-status]'),bar=section.querySelector('[data-by2-progress]'),indicator=document.querySelector('#by2OfflineBadge');
 let running=false;
@@ -15,7 +16,7 @@ try{if(!(await register()))return;const r=await fetch(new URL('offline-files-v04
 const cache=await caches.open(CACHE);let done=0,failed=[];
 // Try bounded parallel downloads, remain same origin, never cache external content or private API responses.
 let ix=0;async function worker(){while(ix<files.length){const f=files[ix++];try{const u=new URL(f,base);if(u.origin!==location.origin||!u.pathname.startsWith(base.pathname))throw Error('out of scope');
-const existing=await cache.match(u.href);if(!existing){const res=await fetch(u.href,{credentials:'same-origin',cache:'reload'});if(!res.ok||res.type==='opaque')throw Error('HTTP '+res.status);if(!['basic','default'].includes(res.type))throw Error('unsafe response');await cache.put(u.href,res);}}
+const existing=await cache.match(u.href);if(!existing||refreshFiles.has(f.startsWith('./')?f.slice(2):f)){const res=await fetch(u.href,{credentials:'same-origin',cache:'reload'});if(!res.ok||res.type==='opaque')throw Error('HTTP '+res.status);if(!['basic','default'].includes(res.type))throw Error('unsafe response');await cache.put(u.href,res);}}
 catch(e){failed.push(f);}done++;bar.value=Math.round(done/files.length*100);notice('تحميل الدليل: '+done+' من '+files.length+' ملف ('+bar.value+'٪)');}}
 await Promise.all([worker(),worker(),worker()]);if(failed.length){notice('تم تنزيل '+(files.length-failed.length)+' ملفاً. تعذر حفظ '+failed.length+' ملفاً؛ تأكد من المساحة والاتصال ثم أعد المحاولة.');}
 else{notice('اكتمل حفظ الدليل ('+files.length+' ملفاً). اختبره بوضع الطيران بعد فتحه مرة واحدة. الخرائط والمحادثات والعضوية المباشرة تحتاج إنترنت.');}
