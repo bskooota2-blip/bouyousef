@@ -17,21 +17,31 @@
    listing.replaceChildren();if(!listing.isConnected)area.append(listing);
    const heading=text('h3','by41-private-heading','🔐 المدير – مراكز العلاج الطبيعي والتدليك – غوانزو');
    const note=text('p','by41-private-note','تظهر هذه القائمة للمدير المعتمد فقط. تضم مراكز تدليك تقليدي وتوينا؛ ولا يُفترض أن جميعها تقدم علاجًا طبيعيًا طبيًا مرخّصًا. تأكد من الخدمات والعناوين قبل الزيارة.');
+   const isSavedPlace=r=>String(r.id||'').startsWith('gz-manager-place-');
    const cards=document.createElement('div');cards.className='by41-private-grid';
-   records.forEach(r=>{
+   function renderPlace(r,targetCards){
      const item=document.createElement('article');item.className='by41-private-place';
      item.append(text('h4','',r.name_ar||r.name_zh),text('p','by41-private-english',r.name_en),text('p','by41-private-chinese',r.name_zh));
      item.append(text('p','',r.area_ar||'غوانزو'),text('p','by41-private-address',r.address_zh));
      item.append(text('p','',r.services_ar));
      if(r.note_ar)item.append(text('p','by41-private-caution',r.note_ar));
      const tools=document.createElement('div');tools.className='by41-private-actions';
-     const target=r.address_zh||r.name_zh;
-     tools.append(action('نسخ الاسم الصيني',()=>copy(r.name_zh)),action('نسخ العنوان',()=>copy(target)));
-     tools.append(action('AMAP',()=>window.open('https://uri.amap.com/search?keyword='+encodeURIComponent(target),'_blank','noopener,noreferrer')));
-     tools.append(action('DiDi – نسخ الوجهة',()=>copy(target)));
-     item.append(tools);cards.append(item);
-   });
+     const address=r.address_zh||r.name_zh;
+     tools.append(action('نسخ الاسم الصيني',()=>copy(r.name_zh)),action('نسخ العنوان',()=>copy(address)));
+     tools.append(action('AMAP',()=>window.open('https://uri.amap.com/search?keyword='+encodeURIComponent(address),'_blank','noopener,noreferrer')));
+     tools.append(action('DiDi – نسخ الوجهة',()=>copy(address)));
+     item.append(tools);targetCards.append(item);
+   }
+   records.filter(r=>!isSavedPlace(r)).forEach(r=>renderPlace(r,cards));
    listing.append(heading,note,cards);
+   const savedPlaces=records.filter(isSavedPlace);
+   if(savedPlaces.length){
+     const savedTitle=text('h3','by41-private-heading','📍 المدير – العناوين الخاصة المحفوظة – غوانزو');
+     const savedNote=text('p','by41-private-note','عناوين خاصة بالمدير فقط؛ راجع ملاحظات التحقق قبل الزيارة.');
+     const savedCards=document.createElement('div');savedCards.className='by41-private-grid';
+     savedPlaces.forEach(r=>renderPlace(r,savedCards));
+     listing.append(savedTitle,savedNote,savedCards);
+   }
  };
  function redraw(){if(typeof createCards==='function')createCards();if(sectionRoute())window.BY41_RENDER_GZ_MANAGER();}
  async function updateAuth(){
