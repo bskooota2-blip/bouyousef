@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const CACHE='by2-public-offline-v041231';
-const refreshFiles=new Set(['index.html','data/other-cities.js','data/global-search.js','data/city-local-search-v04125.js','data/search-index-v04140.js','offline-download.js','sw.js','offline-files-v04120.json']);
+const refreshFiles=new Set(['index.html','data/admin-editorial-v04143.js','data/admin-editorial-v04143.css','data/favorites-v04121.js','data/guangzhou-ui.js','data/other-cities-ui.js','data/other-cities.js','data/global-search.js','data/city-local-search-v04125.js','data/search-index-v04140.js','offline-download.js','sw.js','offline-files-v04120.json']);
 const section=document.querySelector('#by2OfflinePanel');if(!section)return;
 const btn=section.querySelector('[data-by2-download]'),clear=section.querySelector('[data-by2-clear]'),status=section.querySelector('[data-by2-status]'),bar=section.querySelector('[data-by2-progress]'),indicator=document.querySelector('#by2OfflineBadge');
 let running=false;

@@ -27,11 +27,11 @@
    list.replaceChildren();const terms=normalize(input.value).split(' ').filter(Boolean);
    if(!terms.length){status.textContent='اكتب اسم المكان بالعربية أو الإنجليزية أو الصينية للبحث في هذه المدينة فقط.';return;}
    const hits=index.find(input.value,city.slug);
-   status.textContent=hits.length?'عدد النتائج في '+city.ar+': '+hits.length+(hits.length>100?' (تُعرض أول 100 نتيجة)':''):'لا توجد نتائج مطابقة داخل '+city.ar+'.';
+   status.textContent=hits.length?'نتائج مطابقة في '+city.ar+(hits.length>100?' — خصّص البحث لعرض المزيد.':''):'لا توجد نتائج مطابقة داخل '+city.ar+'.';
    hits.slice(0,100).forEach(r=>{
      const card=node('div','by2-city-search-result'),info=node('div','by2-city-search-result-info'),name=node('strong','',r.ar),sec=sections.find(s=>s.id===r.section);
      info.append(name,node('small','',(sec?.ar||r.section)+(r.en?' · '+r.en:'')));
-     if(r.zh)info.append(node('small','',r.zh));
+     if(r.zh)info.append(node('small','',r.zh));if(r.worthVisit)info.append(node('small','by50-worth','💎 يستحق الزيارة'));if(r.recommended)info.append(node('small','by43-label','⭐ من أهم الأماكن'));if(r.editorialNote)info.append(node('small','by43-note-text','📝 '+r.editorialNote));
      const open=node('button','by2-city-search-open','عرض المكان');open.type='button';
      open.addEventListener('click',()=>{
        const ci=idx.get(city.slug),target={kind:'section',city:ci,section:r.section};
@@ -51,5 +51,6 @@
  // Hash navigation is often via history.pushState (no hashchange event).
  const cityHeading=document.getElementById('selectedCityTitle');
  if(cityHeading)new MutationObserver(sync).observe(cityHeading,{childList:true,characterData:true,subtree:true});
+ document.addEventListener('by43-editorial-changed',()=>{if(active()&&input.value.trim())render()});
  sync();
 })();

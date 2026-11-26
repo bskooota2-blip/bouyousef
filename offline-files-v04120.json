@@ -240,7 +240,20 @@
     "./assets/opening-language-v04123.css",
     "./data/language-toggle-v04123.js",
     "./data/search-index-v04140.js",
-    "./data/city-local-search-v04125.js"
+    "./data/city-local-search-v04125.js",
+    "./data/admin-editorial-v04143.js",
+    "./data/admin-editorial-v04143.css",
+    "./assets/city-illustrations/guangzhou.svg",
+    "./assets/city-illustrations/shanghai.svg",
+    "./assets/city-illustrations/beijing.svg",
+    "./assets/city-illustrations/shenzhen.svg",
+    "./assets/city-illustrations/foshan.svg",
+    "./assets/city-illustrations/yiwu.svg",
+    "./assets/city-illustrations/guilin.svg",
+    "./assets/city-illustrations/yangshuo.svg",
+    "./assets/city-illustrations/zhangjiajie.svg",
+    "./assets/city-illustrations/chongqing.svg",
+    "./assets/city-illustrations/hainan.svg"
   ],
   "note": "Only same-origin public static files; no API, login or external content, videos excluded."
 }
